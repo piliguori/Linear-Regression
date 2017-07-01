@@ -1,0 +1,103 @@
+Convenzione: n.m = intera.decimale
+La somma tra intera e decimale deve fare nbit-1
+
+MULT1:
+	#prim= 4.0 (significa da 0 a 4 la parte intera, quindi 5 bit, e 0 bit per la decimale);
+	sum2= 2.21 (quindi 3 bit la parte intera, 21 quelle decimali);
+	
+	Normalizzazione:
+	#prim va da 4.0 a 4.21 (21 bit pari a 0 in coda)
+	sum2 va da 2.21 a 4.21 (2 bit, estensione del segno, in testa)
+	
+	MOLTIPLICAZIONE: 
+	P3= 9.42 dobbiamo portarlo in 4.19 
+	Quindi truncate--> togliamo 5 bit in testa e 23 in coda
+	
+	
+MULT2:
+	Sum2= 2.21
+	b= 2.21
+	I fattori sono allineati, nessuna normalizzazione
+	
+	Moltiplicazione
+	P2= 5.42 dobbiamo portarlo in -3.26
+	Quindi dobbiamo tagliare 8 bit in testa e 16 in coda
+	
+MUL3:
+	b= 2.21
+	sum1= 7.16
+	
+	Normalizzaione:
+	b va da 2.21 a 7.21 (add 5 bit in testa, estensione del segno)
+	sum1 va 7.16 a 7.21 (add 5 bit '0' in coda)
+	
+	Molt:
+	P1= 15.42 dobb portarlo in 3.20
+	Quindi tagliamo 12 bit dalla testa e 22 dalla coda
+	
+MULT4:
+	sum1= 7.16
+	c= -10.33
+	
+	Normalizzazione
+	sum1 va da 7.16 a 7.33 (aggiungi 17 bit pari a 0 in coda)
+	c va da -10.33 a 7.33 (aggiungi 17 bit di estensione del segno)
+	
+	Moltiplicazione:
+	P4 in 15.66 lo dobb portare in -3.26
+	quindi tronchiamo 18 bit in testa e 40 bit in coda 
+	
+ADD1:
+	P1= 3.20
+	P3= 4.19
+	
+	Normalizzazione:
+	P1 va da 3.20 a 4.20 (aggiungi un bit di estensione del segno)
+	P3 va da 4.19 a 4.20 (aggiungi uno zero in coda)
+	
+	Addizione:
+	S5= 4.20 e lo vuole in 4.19 (quindi togli un bit in coda)
+	
+	
+ADD2: 
+	P4= -3.26
+	p2= -3.26
+	
+	Nessuna normalizzazione
+	
+	Addizione:
+	S6= -3.26 ma la vuole in -2.25 (estendi un bit in testa e tronca un bit in coda)
+	
+MULT5:
+	s5: 4.19
+	a: 15.8
+	
+	Normalizzazione:
+	s5 da 4.19 a 15.19 (estendi 11 bit di segno)
+	a da 15.8 a 15.19 (aggiungi 11 bit 0 in coda)
+	
+	Moltiplicazione
+	m= 31.38 e la vuole 15.8
+	quindi tronca 16 bit in testa e 30 in coda
+	
+MULT6:
+	s6: -2.25
+	a: 15.8
+	
+	Normalizzazione:
+	s6 da -2.25 a 15.25 (estendi 17 bit di segno)
+	a da 15.8 a 15.25 (aggiungi 17 bit 0 in coda)
+	
+	Moltiplicazione
+	q= 31.50 e la vuole 7.16
+	quindi tronca 24 bit in testa e 34 in coda
+	
+
+	
+	
+	
+	
+
+	
+
+
