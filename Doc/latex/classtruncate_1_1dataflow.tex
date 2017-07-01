@@ -1,21 +1,80 @@
 \hypertarget{classtruncate_1_1dataflow}{\section{dataflow Architecture Reference}
 \label{classtruncate_1_1dataflow}\index{dataflow@{dataflow}}
 }
+
+
+Implementazione dataflow dell'entity truncate.  
+
+
 \subsection*{Constants}
  \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classtruncate_1_1dataflow_ga63701d8af27da7452a7588efcff357bc}{\hyperlink{group___truncation_ga63701d8af27da7452a7588efcff357bc}{x} {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncation_gabe72b503b8140ab0d84911165e959b53}{s\+\_\+in\+\_\+int}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncation_ga4ca792ca981e2f9d82bf36d9c82c08af}{s\+\_\+out\+\_\+int}} \textcolor{vhdlchar}{ }} }\label{classtruncate_1_1dataflow_ga63701d8af27da7452a7588efcff357bc}
-
+\hyperlink{classtruncate_1_1dataflow_a63701d8af27da7452a7588efcff357bc}{x} {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{classtruncate_abe72b503b8140ab0d84911165e959b53}{s\+\_\+in\+\_\+int}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{classtruncate_a4ca792ca981e2f9d82bf36d9c82c08af}{s\+\_\+out\+\_\+int}} \textcolor{vhdlchar}{ }} 
 \begin{DoxyCompactList}\small\item\em differenza, in termini di numero di bit usati per la rappresentazione della parte intera, tra formato di partenza e formato di arrivo \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Signals}
  \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classtruncate_1_1dataflow_gac257856843ad01f95857ccecfea5e47e}{\hyperlink{group___truncation_gac257856843ad01f95857ccecfea5e47e}{padding\+\_\+pos} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncation_ga63701d8af27da7452a7588efcff357bc}{x}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} }\label{classtruncate_1_1dataflow_gac257856843ad01f95857ccecfea5e47e}
+\hyperlink{classtruncate_1_1dataflow_ac257856843ad01f95857ccecfea5e47e}{padding\+\_\+pos} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{classtruncate_1_1dataflow_a63701d8af27da7452a7588efcff357bc}{x}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em segnale di zero-\/padding, usato a seguito del troncamento, quando il numero di di bit usato per rappresentare la parte intera, nel formato di uscita, e' maggiore o uguale a zero. \end{DoxyCompactList}\item 
+\hyperlink{classtruncate_1_1dataflow_a130836df2917c4b75d1fc24500082e76}{padding\+\_\+neg} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{classtruncate_a8b62f8bfecb0fab845995b8b051101bc}{s\+\_\+out\+\_\+dim}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{classtruncate_ad3d18243ad6fe53a2277e2aa9b94ca45}{s\+\_\+in\+\_\+dim}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{classtruncate_1_1dataflow_a63701d8af27da7452a7588efcff357bc}{x}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em segnale di zero padding,, usato a seguito del troncamento, quando il numero di di bit usato per rappresentare la parte intera, nel formato di uscita, e' minore di zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\begin{DoxyCompactList}\small\item\em segnale di zero-\/padding, \end{DoxyCompactList}\item 
-\hypertarget{classtruncate_1_1dataflow_ga130836df2917c4b75d1fc24500082e76}{\hyperlink{group___truncation_ga130836df2917c4b75d1fc24500082e76}{padding\+\_\+neg} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncation_ga8b62f8bfecb0fab845995b8b051101bc}{s\+\_\+out\+\_\+dim}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncation_gad3d18243ad6fe53a2277e2aa9b94ca45}{s\+\_\+in\+\_\+dim}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncation_ga63701d8af27da7452a7588efcff357bc}{x}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} }\label{classtruncate_1_1dataflow_ga130836df2917c4b75d1fc24500082e76}
 
-\begin{DoxyCompactList}\small\item\em segnale di zero padding, \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection{Descrizione dettagliata}
+Implementazione dataflow dell'entity truncate. 
+
+\paragraph*{Controllo dell'input}
+
+Viene controllato che siano valide le seguenti assunzioni sui valori dei parametri generici\+:
+\begin{DoxyItemize}
+\item il numero totale di bit su cui e' espresso il segnale di ingresso non sia inferiore al numero di bit con cui viene espressa la parte frazionaria;
+\item il numero totale di bit su cui verra' espresso il segnale di uscita non sia inferiore al numero di bit con cui verra' espressa la parte frazionaria;
+\item il numero di bit totali su cui e' espresso il segnale di ingresso sia maggiore o uguale di quello sul quale verra' espresso il segnale di uscita;
+\item il numero di bit su cui e' espressa la parte intera del segnale di ingresso non puo' essere minore di quella sul quale verra' espressa quella del segnale di uscita;
+\end{DoxyItemize}
+
+\paragraph*{Esecuzione del troncamento}
+
+E' possibile distinguere due casi\+:
+\begin{DoxyEnumerate}
+\item il formato di destinazione ha numero di bit per esprimere la parte intera maggiore uguale di zero.~\newline
+ In questo caso
+\item il formato di destinazione ha numero di bit per esprimere la parte intera minore di zero.~\newline
+ In questo caso
+\end{DoxyEnumerate}
+
+\begin{DoxyRefDesc}{Da fare}
+\item[\hyperlink{todo__todo000001}{Da fare}]
+\begin{DoxyItemize}
+\item Definizione dei test-\/case
+\item Scrittura del testbench
+\item Esecuzione dei test
+\item Trovare un modo per includere la documentazione interna ad architecture 
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+\subsection{Documentazione dei membri dato}
+\hypertarget{classtruncate_1_1dataflow_a130836df2917c4b75d1fc24500082e76}{\index{truncate\+::dataflow@{truncate\+::dataflow}!padding\+\_\+neg@{padding\+\_\+neg}}
+\index{padding\+\_\+neg@{padding\+\_\+neg}!truncate\+::dataflow@{truncate\+::dataflow}}
+\subsubsection[{padding\+\_\+neg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf padding\+\_\+neg} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf s\+\_\+out\+\_\+dim}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf s\+\_\+in\+\_\+dim}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf x}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}}\label{classtruncate_1_1dataflow_a130836df2917c4b75d1fc24500082e76}
+
+
+segnale di zero padding,, usato a seguito del troncamento, quando il numero di di bit usato per rappresentare la parte intera, nel formato di uscita, e' minore di zero. 
+
+\hypertarget{classtruncate_1_1dataflow_ac257856843ad01f95857ccecfea5e47e}{\index{truncate\+::dataflow@{truncate\+::dataflow}!padding\+\_\+pos@{padding\+\_\+pos}}
+\index{padding\+\_\+pos@{padding\+\_\+pos}!truncate\+::dataflow@{truncate\+::dataflow}}
+\subsubsection[{padding\+\_\+pos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf padding\+\_\+pos} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf x}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}}\label{classtruncate_1_1dataflow_ac257856843ad01f95857ccecfea5e47e}
+
+
+segnale di zero-\/padding, usato a seguito del troncamento, quando il numero di di bit usato per rappresentare la parte intera, nel formato di uscita, e' maggiore o uguale a zero. 
+
+\hypertarget{classtruncate_1_1dataflow_a63701d8af27da7452a7588efcff357bc}{\index{truncate\+::dataflow@{truncate\+::dataflow}!x@{x}}
+\index{x@{x}!truncate\+::dataflow@{truncate\+::dataflow}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}{\bf x} {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf s\+\_\+in\+\_\+int}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf s\+\_\+out\+\_\+int}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Constant]}}}\label{classtruncate_1_1dataflow_a63701d8af27da7452a7588efcff357bc}
+
+
+differenza, in termini di numero di bit usati per la rappresentazione della parte intera, tra formato di partenza e formato di arrivo 
+
 
 
 La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
