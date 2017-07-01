@@ -7,11 +7,11 @@
 
 var indexSectionsWithContent =
 {
-  0: "dpstx",
+  0: "depstx",
   1: "dt",
   2: "t",
   3: "psx",
-  4: "t"
+  4: "e"
 };
 
 var indexSectionNames =
