@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['basicfixedpointoperation',['BasicFixedPointOperation',['../group___basic_fixed_point_operation.html',1,'']]]
+  ['fixedpointbasic',['FixedPointBasic',['../group___fixed_point_basic.html',1,'']]]
 ];

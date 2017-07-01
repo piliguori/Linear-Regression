@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['truncation',['Truncation',['../group___truncation.html',1,'']]]
+  ['truncate',['Truncate',['../group___truncate.html',1,'']]]
 ];

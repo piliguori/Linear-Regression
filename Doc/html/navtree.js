@@ -1,17 +1,18 @@
 var NAVTREE =
 [
-  [ "Linear-Regression", "index.html", [
-    [ "Moduli", "modules.html", "modules" ],
+  [ "Linear Regression", "index.html", [
+    [ "Todo List", "todo.html", null ],
+    [ "Modules", "modules.html", "modules" ],
     [ "Design Unit List", null, [
       [ "Design Unit List", "annotated.html", "annotated" ],
       [ "Design Units", "classes.html", null ],
       [ "Design Unit Members", "functions.html", [
-        [ "Tutto", "functions.html", null ],
-        [ "Variabili", "functions_vars.html", null ]
+        [ "All", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
-    [ "File", null, [
-      [ "Elenco dei file", "files.html", "files" ]
+    [ "Files", null, [
+      [ "File List", "files.html", "files" ]
     ] ]
   ] ]
 ];

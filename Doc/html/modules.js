@@ -1,4 +1,4 @@
 var modules =
 [
-    [ "BasicFixedPointOperation", "group___basic_fixed_point_operation.html", "group___basic_fixed_point_operation" ]
+    [ "FixedPointBasic", "group___fixed_point_basic.html", "group___fixed_point_basic" ]
 ];

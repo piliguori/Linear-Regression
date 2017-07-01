@@ -1,0 +1,124 @@
+\hypertarget{group___truncate}{\section{Truncate}
+\label{group___truncate}\index{Truncate@{Truncate}}
+}
+
+
+Operazione di troncamento.  
+
+
+Collaboration diagram for Truncate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{group___truncate}
+\end{center}
+\end{figure}
+\subsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtruncate}{truncate} entity
+\begin{DoxyCompactList}\small\item\em Tronca un numero signed fixed-\/point di ingresso, espresso in uno specifico formato, restituendone un'equivalente rappresentazione in uno specifico formato di uscita. Per eseguire il troncamento e' necessario conoscere a priori il numero totale di bit usati per la rappresentazione del numero in ingresso ed il numero di bit usati per rappresentare la sua parte intera. \end{DoxyCompactList}\item 
+\hyperlink{classtruncate_1_1dataflow}{dataflow} architecture
+\begin{DoxyCompactList}\small\item\em Implementazione dataflow dell'entity truncate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Constants}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___truncate_ga63701d8af27da7452a7588efcff357bc}{x} {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncate_gabe72b503b8140ab0d84911165e959b53}{s\+\_\+in\+\_\+int}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncate_ga4ca792ca981e2f9d82bf36d9c82c08af}{s\+\_\+out\+\_\+int}} \textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em differenza, in termini di numero di bit usati per la rappresentazione della parte intera, tra formato di partenza e formato di arrivo \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Generics}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___truncate_gad3d18243ad6fe53a2277e2aa9b94ca45}{s\+\_\+in\+\_\+dim} {\bfseries {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }}}
+\begin{DoxyCompactList}\small\item\em numero di bit totali su cui e' espresso il segnale di ingresso \end{DoxyCompactList}\item 
+\hyperlink{group___truncate_gabe72b503b8140ab0d84911165e959b53}{s\+\_\+in\+\_\+int} {\bfseries {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }}}
+\begin{DoxyCompactList}\small\item\em numero di bit su cui e' espressa la parte frazionaria del segnale di ingresso \end{DoxyCompactList}\item 
+\hyperlink{group___truncate_ga8b62f8bfecb0fab845995b8b051101bc}{s\+\_\+out\+\_\+dim} {\bfseries {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }}}
+\begin{DoxyCompactList}\small\item\em numero di bit totali su cui e' espresso il segnale di uscita \end{DoxyCompactList}\item 
+\hyperlink{group___truncate_ga4ca792ca981e2f9d82bf36d9c82c08af}{s\+\_\+out\+\_\+int} {\bfseries {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }}}
+\begin{DoxyCompactList}\small\item\em numero di bit su cui e' espressa la parte frazionaria del segnale di uscita \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___truncate_ga6d6bd3ddfff26c223f1752f25545e304}{s\+\_\+in}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncate_gad3d18243ad6fe53a2277e2aa9b94ca45}{s\+\_\+in\+\_\+dim}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em segnale di ingresso \end{DoxyCompactList}\item 
+\hyperlink{group___truncate_ga7c0b5e84820296cfa624ce710d19debd}{s\+\_\+out}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncate_ga8b62f8bfecb0fab845995b8b051101bc}{s\+\_\+out\+\_\+dim}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em segnale di uscita, troncato \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___truncate_gac257856843ad01f95857ccecfea5e47e}{padding\+\_\+pos} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncate_ga63701d8af27da7452a7588efcff357bc}{x}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em segnale di zero-\/padding, usato a seguito del troncamento, quando il numero di di bit usato per rappresentare la parte intera, nel formato di uscita, e' maggiore o uguale a zero. \end{DoxyCompactList}\item 
+\hyperlink{group___truncate_ga130836df2917c4b75d1fc24500082e76}{padding\+\_\+neg} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncate_ga8b62f8bfecb0fab845995b8b051101bc}{s\+\_\+out\+\_\+dim}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncate_gad3d18243ad6fe53a2277e2aa9b94ca45}{s\+\_\+in\+\_\+dim}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___truncate_ga63701d8af27da7452a7588efcff357bc}{x}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em segnale di zero padding,, usato a seguito del troncamento, quando il numero di di bit usato per rappresentare la parte intera, nel formato di uscita, e' minore di zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Operazione di troncamento. 
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{group___truncate_ga130836df2917c4b75d1fc24500082e76}{\index{Truncate@{Truncate}!padding\+\_\+neg@{padding\+\_\+neg}}
+\index{padding\+\_\+neg@{padding\+\_\+neg}!Truncate@{Truncate}}
+\subsubsection[{padding\+\_\+neg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf padding\+\_\+neg} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf s\+\_\+out\+\_\+dim}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf s\+\_\+in\+\_\+dim}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf x}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}}\label{group___truncate_ga130836df2917c4b75d1fc24500082e76}
+
+
+segnale di zero padding,, usato a seguito del troncamento, quando il numero di di bit usato per rappresentare la parte intera, nel formato di uscita, e' minore di zero. 
+
+\hypertarget{group___truncate_gac257856843ad01f95857ccecfea5e47e}{\index{Truncate@{Truncate}!padding\+\_\+pos@{padding\+\_\+pos}}
+\index{padding\+\_\+pos@{padding\+\_\+pos}!Truncate@{Truncate}}
+\subsubsection[{padding\+\_\+pos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf padding\+\_\+pos} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf x}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{$>$}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}}\label{group___truncate_gac257856843ad01f95857ccecfea5e47e}
+
+
+segnale di zero-\/padding, usato a seguito del troncamento, quando il numero di di bit usato per rappresentare la parte intera, nel formato di uscita, e' maggiore o uguale a zero. 
+
+\hypertarget{group___truncate_ga6d6bd3ddfff26c223f1752f25545e304}{\index{Truncate@{Truncate}!s\+\_\+in@{s\+\_\+in}}
+\index{s\+\_\+in@{s\+\_\+in}!Truncate@{Truncate}}
+\subsubsection[{s\+\_\+in}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s\+\_\+in} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf s\+\_\+in\+\_\+dim}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___truncate_ga6d6bd3ddfff26c223f1752f25545e304}
+
+
+segnale di ingresso 
+
+\hypertarget{group___truncate_gad3d18243ad6fe53a2277e2aa9b94ca45}{\index{Truncate@{Truncate}!s\+\_\+in\+\_\+dim@{s\+\_\+in\+\_\+dim}}
+\index{s\+\_\+in\+\_\+dim@{s\+\_\+in\+\_\+dim}!Truncate@{Truncate}}
+\subsubsection[{s\+\_\+in\+\_\+dim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s\+\_\+in\+\_\+dim} {\bfseries \textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Generic]}}}\label{group___truncate_gad3d18243ad6fe53a2277e2aa9b94ca45}
+
+
+numero di bit totali su cui e' espresso il segnale di ingresso 
+
+\hypertarget{group___truncate_gabe72b503b8140ab0d84911165e959b53}{\index{Truncate@{Truncate}!s\+\_\+in\+\_\+int@{s\+\_\+in\+\_\+int}}
+\index{s\+\_\+in\+\_\+int@{s\+\_\+in\+\_\+int}!Truncate@{Truncate}}
+\subsubsection[{s\+\_\+in\+\_\+int}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s\+\_\+in\+\_\+int} {\bfseries \textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Generic]}}}\label{group___truncate_gabe72b503b8140ab0d84911165e959b53}
+
+
+numero di bit su cui e' espressa la parte frazionaria del segnale di ingresso 
+
+\hypertarget{group___truncate_ga7c0b5e84820296cfa624ce710d19debd}{\index{Truncate@{Truncate}!s\+\_\+out@{s\+\_\+out}}
+\index{s\+\_\+out@{s\+\_\+out}!Truncate@{Truncate}}
+\subsubsection[{s\+\_\+out}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s\+\_\+out} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf s\+\_\+out\+\_\+dim}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___truncate_ga7c0b5e84820296cfa624ce710d19debd}
+
+
+segnale di uscita, troncato 
+
+\hypertarget{group___truncate_ga8b62f8bfecb0fab845995b8b051101bc}{\index{Truncate@{Truncate}!s\+\_\+out\+\_\+dim@{s\+\_\+out\+\_\+dim}}
+\index{s\+\_\+out\+\_\+dim@{s\+\_\+out\+\_\+dim}!Truncate@{Truncate}}
+\subsubsection[{s\+\_\+out\+\_\+dim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s\+\_\+out\+\_\+dim} {\bfseries \textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Generic]}}}\label{group___truncate_ga8b62f8bfecb0fab845995b8b051101bc}
+
+
+numero di bit totali su cui e' espresso il segnale di uscita 
+
+\hypertarget{group___truncate_ga4ca792ca981e2f9d82bf36d9c82c08af}{\index{Truncate@{Truncate}!s\+\_\+out\+\_\+int@{s\+\_\+out\+\_\+int}}
+\index{s\+\_\+out\+\_\+int@{s\+\_\+out\+\_\+int}!Truncate@{Truncate}}
+\subsubsection[{s\+\_\+out\+\_\+int}]{\setlength{\rightskip}{0pt plus 5cm}{\bf s\+\_\+out\+\_\+int} {\bfseries \textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Generic]}}}\label{group___truncate_ga4ca792ca981e2f9d82bf36d9c82c08af}
+
+
+numero di bit su cui e' espressa la parte frazionaria del segnale di uscita 
+
+\hypertarget{group___truncate_ga63701d8af27da7452a7588efcff357bc}{\index{Truncate@{Truncate}!x@{x}}
+\index{x@{x}!Truncate@{Truncate}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}{\bf x} {\bfseries \textcolor{vhdlchar}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf s\+\_\+in\+\_\+int}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries {\bf s\+\_\+out\+\_\+int}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Constant]}}}\label{group___truncate_ga63701d8af27da7452a7588efcff357bc}
+
+
+differenza, in termini di numero di bit usati per la rappresentazione della parte intera, tra formato di partenza e formato di arrivo 
+
