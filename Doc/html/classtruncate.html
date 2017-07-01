@@ -46,7 +46,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="annotated.html"><span>Design&#160;Unit&#160;List</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -94,7 +93,7 @@ $(document).ready(function(){initNavTree('classtruncate.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,11 +107,11 @@ $(document).ready(function(){initNavTree('classtruncate.html','');});
 <a href="#Generics">Generics</a> &#124;
 <a href="#Ports">Ports</a>  </div>
   <div class="headertitle">
-<div class="title">truncate Entity Reference<div class="ingroups"><a class="el" href="group___fixed_point_basic.html">FixedPointBasic</a> &raquo; <a class="el" href="group___truncate.html">Truncate</a></div></div>  </div>
+<div class="title">truncate Entity Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Tronca un numero signed fixed-point di ingresso, espresso in uno specifico formato, restituendone un'equivalente rappresentazione in uno specifico formato di uscita. Per eseguire il troncamento e' necessario conoscere a priori il numero totale di bit usati per la rappresentazione del numero in ingresso ed il numero di bit usati per rappresentare la sua parte intera.  
+<p>BasicFixedPointOperation @{  Operazioni fixed-point basilari  Truncation @{  Operazione di troncamentoTronca un numero signed fixed-point di ingresso, espresso in uno specifico formato, restituendone un'equivalente rappresentazione in uno specifico formato di uscita. Per eseguire il troncamento e' necessario conoscere a priori il numero totale di bit usati per la rappresentazione del numero in ingresso ed il numero di bit usati per rappresentare la sua parte intera.  
  <a href="classtruncate.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -123,25 +122,159 @@ Entities</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Generics"></a>
 Generics</h2></td></tr>
- <tr class="memitem:gad3d18243ad6fe53a2277e2aa9b94ca45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___truncate.html#gad3d18243ad6fe53a2277e2aa9b94ca45">s_in_dim</a> &#160;</td><td class="memItemRight" valign="bottom"><b><b><span class="vhdlchar">integer</span><span class="vhdlchar"> </span></b></b></td></tr>
-<tr class="memdesc:gad3d18243ad6fe53a2277e2aa9b94ca45"><td class="mdescLeft">&#160;</td><td class="mdescRight">numero di bit totali su cui e' espresso il segnale di ingresso  <a href="group___truncate.html#gad3d18243ad6fe53a2277e2aa9b94ca45"></a><br /></td></tr>
-<tr class="memitem:gabe72b503b8140ab0d84911165e959b53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___truncate.html#gabe72b503b8140ab0d84911165e959b53">s_in_int</a> &#160;</td><td class="memItemRight" valign="bottom"><b><b><span class="vhdlchar">integer</span><span class="vhdlchar"> </span></b></b></td></tr>
-<tr class="memdesc:gabe72b503b8140ab0d84911165e959b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">numero di bit su cui e' espressa la parte frazionaria del segnale di ingresso  <a href="group___truncate.html#gabe72b503b8140ab0d84911165e959b53"></a><br /></td></tr>
-<tr class="memitem:ga8b62f8bfecb0fab845995b8b051101bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___truncate.html#ga8b62f8bfecb0fab845995b8b051101bc">s_out_dim</a> &#160;</td><td class="memItemRight" valign="bottom"><b><b><span class="vhdlchar">integer</span><span class="vhdlchar"> </span></b></b></td></tr>
-<tr class="memdesc:ga8b62f8bfecb0fab845995b8b051101bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">numero di bit totali su cui e' espresso il segnale di uscita  <a href="group___truncate.html#ga8b62f8bfecb0fab845995b8b051101bc"></a><br /></td></tr>
-<tr class="memitem:ga4ca792ca981e2f9d82bf36d9c82c08af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___truncate.html#ga4ca792ca981e2f9d82bf36d9c82c08af">s_out_int</a> &#160;</td><td class="memItemRight" valign="bottom"><b><b><span class="vhdlchar">integer</span><span class="vhdlchar"> </span></b></b></td></tr>
-<tr class="memdesc:ga4ca792ca981e2f9d82bf36d9c82c08af"><td class="mdescLeft">&#160;</td><td class="mdescRight">numero di bit su cui e' espressa la parte frazionaria del segnale di uscita  <a href="group___truncate.html#ga4ca792ca981e2f9d82bf36d9c82c08af"></a><br /></td></tr>
+ <tr class="memitem:ad3d18243ad6fe53a2277e2aa9b94ca45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtruncate.html#ad3d18243ad6fe53a2277e2aa9b94ca45">s_in_dim</a> &#160;</td><td class="memItemRight" valign="bottom"><b><b><span class="vhdlchar">integer</span><span class="vhdlchar"> </span></b></b></td></tr>
+<tr class="memdesc:ad3d18243ad6fe53a2277e2aa9b94ca45"><td class="mdescLeft">&#160;</td><td class="mdescRight">numero di bit totali su cui e' espresso il segnale di ingresso  <a href="#ad3d18243ad6fe53a2277e2aa9b94ca45"></a><br /></td></tr>
+<tr class="memitem:abe72b503b8140ab0d84911165e959b53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtruncate.html#abe72b503b8140ab0d84911165e959b53">s_in_int</a> &#160;</td><td class="memItemRight" valign="bottom"><b><b><span class="vhdlchar">integer</span><span class="vhdlchar"> </span></b></b></td></tr>
+<tr class="memdesc:abe72b503b8140ab0d84911165e959b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">numero di bit su cui e' espressa la parte frazionaria del segnale di ingresso  <a href="#abe72b503b8140ab0d84911165e959b53"></a><br /></td></tr>
+<tr class="memitem:a8b62f8bfecb0fab845995b8b051101bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtruncate.html#a8b62f8bfecb0fab845995b8b051101bc">s_out_dim</a> &#160;</td><td class="memItemRight" valign="bottom"><b><b><span class="vhdlchar">integer</span><span class="vhdlchar"> </span></b></b></td></tr>
+<tr class="memdesc:a8b62f8bfecb0fab845995b8b051101bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">numero di bit totali su cui e' espresso il segnale di uscita  <a href="#a8b62f8bfecb0fab845995b8b051101bc"></a><br /></td></tr>
+<tr class="memitem:a4ca792ca981e2f9d82bf36d9c82c08af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtruncate.html#a4ca792ca981e2f9d82bf36d9c82c08af">s_out_int</a> &#160;</td><td class="memItemRight" valign="bottom"><b><b><span class="vhdlchar">integer</span><span class="vhdlchar"> </span></b></b></td></tr>
+<tr class="memdesc:a4ca792ca981e2f9d82bf36d9c82c08af"><td class="mdescLeft">&#160;</td><td class="mdescRight">numero di bit su cui e' espressa la parte frazionaria del segnale di uscita  <a href="#a4ca792ca981e2f9d82bf36d9c82c08af"></a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Ports"></a>
 Ports</h2></td></tr>
- <tr class="memitem:ga6d6bd3ddfff26c223f1752f25545e304"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___truncate.html#ga6d6bd3ddfff26c223f1752f25545e304">s_in</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="group___truncate.html#gad3d18243ad6fe53a2277e2aa9b94ca45">s_in_dim</a></b> <span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
-<tr class="memdesc:ga6d6bd3ddfff26c223f1752f25545e304"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale di ingresso  <a href="group___truncate.html#ga6d6bd3ddfff26c223f1752f25545e304"></a><br /></td></tr>
-<tr class="memitem:ga7c0b5e84820296cfa624ce710d19debd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___truncate.html#ga7c0b5e84820296cfa624ce710d19debd">s_out</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="group___truncate.html#ga8b62f8bfecb0fab845995b8b051101bc">s_out_dim</a></b> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
-<tr class="memdesc:ga7c0b5e84820296cfa624ce710d19debd"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale di uscita, troncato  <a href="group___truncate.html#ga7c0b5e84820296cfa624ce710d19debd"></a><br /></td></tr>
+ <tr class="memitem:a6d6bd3ddfff26c223f1752f25545e304"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtruncate.html#a6d6bd3ddfff26c223f1752f25545e304">s_in</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="classtruncate.html#ad3d18243ad6fe53a2277e2aa9b94ca45">s_in_dim</a></b> <span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a6d6bd3ddfff26c223f1752f25545e304"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale di ingresso  <a href="#a6d6bd3ddfff26c223f1752f25545e304"></a><br /></td></tr>
+<tr class="memitem:a7c0b5e84820296cfa624ce710d19debd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtruncate.html#a7c0b5e84820296cfa624ce710d19debd">s_out</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="classtruncate.html#a8b62f8bfecb0fab845995b8b051101bc">s_out_dim</a></b> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:a7c0b5e84820296cfa624ce710d19debd"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale di uscita, troncato  <a href="#a7c0b5e84820296cfa624ce710d19debd"></a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Tronca un numero signed fixed-point di ingresso, espresso in uno specifico formato, restituendone un'equivalente rappresentazione in uno specifico formato di uscita. Per eseguire il troncamento e' necessario conoscere a priori il numero totale di bit usati per la rappresentazione del numero in ingresso ed il numero di bit usati per rappresentare la sua parte intera. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>BasicFixedPointOperation @{  Operazioni fixed-point basilari  Truncation @{  Operazione di troncamento</p>
+<p>Tronca un numero signed fixed-point di ingresso, espresso in uno specifico formato, restituendone un'equivalente rappresentazione in uno specifico formato di uscita. Per eseguire il troncamento e' necessario conoscere a priori il numero totale di bit usati per la rappresentazione del numero in ingresso ed il numero di bit usati per rappresentare la sua parte intera. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a6d6bd3ddfff26c223f1752f25545e304"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtruncate.html#a6d6bd3ddfff26c223f1752f25545e304">s_in</a> <b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="classtruncate.html#ad3d18243ad6fe53a2277e2aa9b94ca45">s_in_dim</a></b> <span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Port</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>segnale di ingresso </p>
+
+</div>
+</div>
+<a class="anchor" id="ad3d18243ad6fe53a2277e2aa9b94ca45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtruncate.html#ad3d18243ad6fe53a2277e2aa9b94ca45">s_in_dim</a> <b><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">integer</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Generic</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>numero di bit totali su cui e' espresso il segnale di ingresso </p>
+
+</div>
+</div>
+<a class="anchor" id="abe72b503b8140ab0d84911165e959b53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtruncate.html#abe72b503b8140ab0d84911165e959b53">s_in_int</a> <b><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">integer</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Generic</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>numero di bit su cui e' espressa la parte frazionaria del segnale di ingresso </p>
+
+</div>
+</div>
+<a class="anchor" id="a7c0b5e84820296cfa624ce710d19debd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtruncate.html#a7c0b5e84820296cfa624ce710d19debd">s_out</a> <b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="classtruncate.html#a8b62f8bfecb0fab845995b8b051101bc">s_out_dim</a></b> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Port</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>segnale di uscita, troncato </p>
+
+</div>
+</div>
+<a class="anchor" id="a8b62f8bfecb0fab845995b8b051101bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtruncate.html#a8b62f8bfecb0fab845995b8b051101bc">s_out_dim</a> <b><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">integer</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Generic</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>numero di bit totali su cui e' espresso il segnale di uscita </p>
+
+</div>
+</div>
+<a class="anchor" id="a4ca792ca981e2f9d82bf36d9c82c08af"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtruncate.html#a4ca792ca981e2f9d82bf36d9c82c08af">s_out_int</a> <b><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">integer</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Generic</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>numero di bit su cui e' espressa la parte frazionaria del segnale di uscita </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>Src/<a class="el" href="truncate_8vhd.html">truncate.vhd</a></li>
 </ul>
 </div><!-- contents -->
@@ -150,7 +283,7 @@ Ports</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classtruncate.html">truncate</a></li>
-    <li class="footer">Generated on Sat Jul 1 2017 10:06:40 for Linear Regression by
+    <li class="footer">Generated on Sat Jul 1 2017 10:10:05 for Linear Regression by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

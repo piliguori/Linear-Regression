@@ -3,27 +3,18 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
 <link rel="stylesheet" type="text/css" href="search.css"/>
-<script type="text/javascript" src="variables_3.js"></script>
+<script type="text/javascript" src="all_6.js"></script>
 <script type="text/javascript" src="search.js"></script>
 </head>
 <body class="SRPage">
 <div id="SRIndex">
-<<<<<<< HEAD
-<div class="SRStatus" id="Loading">Loading...</div>
-=======
 <div class="SRStatus" id="Loading">Caricamento in corso...</div>
->>>>>>> d2c285d160df3da3b9cf089979446510de16f43e
 <div id="SRResults"></div>
 <script type="text/javascript"><!--
 createResults();
 --></script>
-<<<<<<< HEAD
-<div class="SRStatus" id="Searching">Searching...</div>
-<div class="SRStatus" id="NoMatches">No Matches</div>
-=======
 <div class="SRStatus" id="Searching">Ricerca in corso...</div>
 <div class="SRStatus" id="NoMatches">Nessun risultato</div>
->>>>>>> d2c285d160df3da3b9cf089979446510de16f43e
 <script type="text/javascript"><!--
 document.getElementById("Loading").style.display="none";
 document.getElementById("NoMatches").style.display="none";

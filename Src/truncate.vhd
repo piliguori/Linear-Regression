@@ -28,13 +28,6 @@
 --! USA.
 --! 
 
---! @addtogroup FixedPointBasic
---! @{
---! @brief Operazioni basilari su numeri fixed-point
---! @addtogroup Truncate
---! @{
---! @brief Operazione di troncamento
-
 --! @cond
 library ieee;
 use ieee.std_logic_1164.all;
@@ -42,7 +35,13 @@ use ieee.std_logic_1164.all;
 -- use ieee.std_logic_misc.all;
 --! @endcond
 
-
+--! @addtogroup BasicFixedPointOperation
+--! @{
+--! @brief Operazioni fixed-point basilari
+--! @addtogroup Truncation
+--! @{
+--! @brief Operazione di troncamento
+--! 
 --! Tronca un numero signed fixed-point di ingresso, espresso in uno specifico formato, restituendone un'equivalente rappresentazione in uno specifico
 --! formato di uscita. Per eseguire il troncamento e' necessario conoscere a priori il numero totale di bit usati per la rappresentazione del numero in
 --! ingresso ed il numero di bit usati per rappresentare la sua parte intera.

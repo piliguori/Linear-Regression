@@ -7,12 +7,11 @@
 
 var indexSectionsWithContent =
 {
-  0: "dfpstx",
+  0: "dpstx",
   1: "dt",
   2: "t",
   3: "psx",
-  4: "ft",
-  5: "t"
+  4: "t"
 };
 
 var indexSectionNames =
@@ -21,8 +20,7 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "variables",
-  4: "groups",
-  5: "pages"
+  4: "pages"
 };
 
 function convertToId(search)

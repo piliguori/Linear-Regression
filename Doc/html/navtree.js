@@ -2,7 +2,6 @@ var NAVTREE =
 [
   [ "Linear Regression", "index.html", [
     [ "Todo List", "todo.html", null ],
-    [ "Modules", "modules.html", "modules" ],
     [ "Design Unit List", null, [
       [ "Design Unit List", "annotated.html", "annotated" ],
       [ "Design Units", "classes.html", null ],
