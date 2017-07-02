@@ -1,0 +1,45 @@
+\hypertarget{classnibble__adder_1_1structural}{\section{structural Architecture Reference}
+\label{classnibble__adder_1_1structural}\index{structural@{structural}}
+}
+
+
+Implementazione structural dell'entità \hyperlink{classnibble__adder}{nibble\+\_\+adder}.  
+
+
+\subsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___nibble_adder_ga12bdc5892f526938e1447d663d152df8}{cla\+\_\+carry\+\_\+net}  {\bfseries }  
+\item 
+\hyperlink{group___nibble_adder_ga4f13eb52457f650b1d2cd352d9cacca9}{cla\+\_\+adder\+\_\+cell}  {\bfseries }  
+\end{DoxyCompactItemize}
+\subsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnibble__adder_1_1structural_abbf8fdf15c2d70392ab929c8ebe57439}{cla\+\_\+net}  {\bfseries cla\+\_\+carry\+\_\+net}   
+\begin{DoxyCompactList}\small\item\em funzione “propagazione” prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; prop(i) = add(i) O\+R add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi \end{DoxyCompactList}\item 
+\hyperlink{classnibble__adder_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}{adder}  {\bfseries cla\+\_\+adder\+\_\+cell}   
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Implementazione structural dell'entità \hyperlink{classnibble__adder}{nibble\+\_\+adder}. 
+
+Questa architettura istanzia una entità \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} ed una entità \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} per ogni bit su cui sono espressi gli addendi, connettendoli tra loro secondo lo schema riportato di seguito\+:  
+
+\subsection{Documentazione dei membri dato}
+\hypertarget{classnibble__adder_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}{\index{nibble\+\_\+adder\+::structural@{nibble\+\_\+adder\+::structural}!adder@{adder}}
+\index{adder@{adder}!nibble\+\_\+adder\+::structural@{nibble\+\_\+adder\+::structural}}
+\subsubsection[{adder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf adder} {\bfseries \textcolor{vhdlchar}{cla\+\_\+adder\+\_\+cell}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{classnibble__adder_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}
+\hypertarget{classnibble__adder_1_1structural_abbf8fdf15c2d70392ab929c8ebe57439}{\index{nibble\+\_\+adder\+::structural@{nibble\+\_\+adder\+::structural}!cla\+\_\+net@{cla\+\_\+net}}
+\index{cla\+\_\+net@{cla\+\_\+net}!nibble\+\_\+adder\+::structural@{nibble\+\_\+adder\+::structural}}
+\subsubsection[{cla\+\_\+net}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cla\+\_\+net} {\bfseries \textcolor{vhdlchar}{cla\+\_\+carry\+\_\+net}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{classnibble__adder_1_1structural_abbf8fdf15c2d70392ab929c8ebe57439}
+
+
+funzione “propagazione” prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; prop(i) = add(i) O\+R add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi 
+
+carry calcolati sulla base delle funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti dai blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, e sulla base delle funzioni \char`\"{}carry-\/in\char`\"{}, \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti da eventuali blocchi a monte; ciascuno dei bit dovra' essere posto in ingresso ad un blocco \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} differente, affinche' possa essere calcolata la somma degli addendi 
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+Src/adder/\hyperlink{nibble__adder_8vhd}{nibble\+\_\+adder.\+vhd}\end{DoxyCompactItemize}

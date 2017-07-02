@@ -2,11 +2,14 @@ var NAVTREE =
 [
   [ "Linear Regression", "index.html", [
     [ "Elenco delle cose da fare", "todo.html", null ],
+    [ "Moduli", "modules.html", "modules" ],
     [ "Design Unit List", null, [
       [ "Design Unit List", "annotated.html", "annotated" ],
       [ "Design Units", "classes.html", null ],
+      [ "Design Unit Hierarchy", "hierarchy.html", null ],
       [ "Design Unit Members", "functions.html", [
         [ "Tutto", "functions.html", null ],
+        [ "Functions/Procedures/Processes", "functions_func.html", null ],
         [ "Variabili", "functions_vars.html", null ]
       ] ]
     ] ],
@@ -18,7 +21,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"adder_8vhd.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

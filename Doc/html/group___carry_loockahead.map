@@ -1,0 +1,6 @@
+<map id="CarryLoockahead" name="CarryLoockahead">
+<area shape="rect" id="node2" href="$group___carry_network.html" title="Rete di generazione dei segnali di carry per un adder a quattro bit. " alt="" coords="281,5,384,32"/>
+<area shape="rect" id="node3" href="$group___nibble_adder.html" title="Blocco elementare di somma a quattro bit. " alt="" coords="286,56,379,83"/>
+<area shape="rect" id="node5" href="$group___base_cell.html" title="Implementazione della cella base di un adder. " alt="" coords="295,107,370,133"/>
+<area shape="rect" id="node4" href="$group___adder.html" title="Adder per la somma di due addendi con numero di bit variabile. " alt="" coords="5,56,61,83"/>
+</map>

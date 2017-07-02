@@ -7,11 +7,13 @@
 
 var indexSectionsWithContent =
 {
-  0: "depstx",
-  1: "dt",
-  2: "t",
-  3: "psx",
-  4: "e"
+  0: "abcdegimnopstuxy",
+  1: "abcdgnpst",
+  2: "acgnpt",
+  3: "ps",
+  4: "acgimnopsuxy",
+  5: "abcn",
+  6: "e"
 };
 
 var indexSectionNames =
@@ -19,8 +21,10 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "files",
-  3: "variables",
-  4: "pages"
+  3: "functions",
+  4: "variables",
+  5: "groups",
+  6: "pages"
 };
 
 function convertToId(search)

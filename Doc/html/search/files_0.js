@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['truncate_2evhd',['truncate.vhd',['../truncate_8vhd.html',1,'']]]
+  ['adder_2evhd',['adder.vhd',['../adder_8vhd.html',1,'']]]
 ];

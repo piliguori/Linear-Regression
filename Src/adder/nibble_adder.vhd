@@ -28,57 +28,108 @@
 --! USA.
 --! 
 
+--! @addtogroup Adder
+--! @{
+--! @addtogroup CarryLoockahead
+--! @{
+--! @addtogroup NibbleAdder
+--! @brief Blocco elementare di somma a quattro bit. 
+--! @{
+
 --! @cond
 library ieee;
 use ieee.std_logic_1164.all;
--- use ieee.numeric_std.all;
--- use ieee.std_logic_misc.all;
 --! @endcond
 
--- adder con carry-lookahead
--- la rete di carry e' porzionata su quattro bit (nibble)
+--! Addizionatore con carry-lookahead a quattro bit.
+--! 
+--! La cella somma tra loro due addendi ed un carry in ingresso; gli addendi sono espressi su quattro bit. Oltre a
+--! generare la somma, genera le funzioni "propagazione" e "generazione" del carry per eventuali blocchi nibble_adder
+--! posti a valle.
 entity nibble_adder is
-    Port ( adderA : in  STD_LOGIC_VECTOR (3 downto 0);	-- nibble dell'addendo A
-           adderB : in  STD_LOGIC_VECTOR (3 downto 0);	-- nibble dell'addendo B
-           carryIn : in  STD_LOGIC;						-- carry in ingresso
-           propIn : in  STD_LOGIC;						-- segnale "propagate" in ingresso (dal blocco precedente)
-           genIn : in  STD_LOGIC;						-- segnale "generate" in ingresso (dal blocco precedente)
-           propOut : out  STD_LOGIC;					-- segnale "propagate" in uscita (per il blocco successivo)
-           genOut : out  STD_LOGIC;						-- segnale "generate" in uscita (per il blocco successivo)
-           sum : out  STD_LOGIC_VECTOR (3 downto 0));	-- nibble somma
+    port ( addendum1	: in	std_logic_vector (3 downto 0);	--! addendo 1
+           addendum2	: in	std_logic_vector (3 downto 0);	--! addendo 2
+           carryin		: in	std_logic;	--! segnale di "carry-in", prodotto da un eventuale nibble_adder a monte. 
+           propin		: in	std_logic;	--! funzione "propagazione", prodotta da una eventuale nibble_adder a monte 
+           genin		: in	std_logic;	--! funzione "generazione", prodotta da una eventuale nibble_adder a monte 
+           propout		: out	std_logic;	--! funzione "propagazione" da porre in ingresso ad un eventuale blocco
+											--! nibble_adder a valle
+           genout		: out	std_logic;	--! funzione "generazione" da porre in ingresso ad un eventuale blocco
+											--! nibble_adder a valle
+           sum			: out	std_logic_vector (3 downto 0));	--! funzione "somma", rappresenta la somma tra gli
+																--! addendi ed il carry in ingresso
 end nibble_adder;
 
+--! Implementazione structural dell'entità nibble_adder.
+--! 
+--! Questa architettura istanzia una entità cla_carry_net ed una entità cla_adder_cell per ogni bit su cui sono
+--! espressi gli addendi, connettendoli tra loro secondo lo schema riportato di seguito:
+--! @htmlonly
+--! <div align='center'>
+--! <img src="../../Doc/schemes/nibble_adder.jpg"/>
+--! </div>
+--! @endhtmlonly
 architecture structural of nibble_adder is
 	
-	-- rete di calcolo dei carry
-	component cla_carry_net
-		port (	prop, gen : in std_logic_vector(3 downto 0);
-				carryin, propin, genin : in std_logic;
-				carryout : out std_logic_vector(3 downto 0);
-				propout, genout : out std_logic); 
+	component cla_carry_net is
+		port (	prop 		: in 	std_logic_vector(3 downto 0);
+				gen 		: in 	std_logic_vector(3 downto 0);
+				carryin 	: in 	std_logic;
+				propin 		: in 	std_logic;
+				genin 		: in 	std_logic;
+				carryout	: out 	std_logic_vector(3 downto 0);
+				propout 	: out 	std_logic;
+				genout 		: out 	std_logic); 
 	end component;
 	
-	-- cella elementare di somma
-	component cla_adder_cell
-		port (	add1, add2, carryin: in std_logic;
-			prop, gen, sum: out std_logic);
-	end component;
+	component cla_adder_cell is
+		port (	add1	: in	std_logic;
+				add2	: in	std_logic;
+				carryin	: in	std_logic;
+				prop	: out	std_logic;
+				gen		: out	std_logic;
+				sum		: out	std_logic);
+	component cla_adder_cell;
 	
-	-- segnali "propagate" e "generate" prodotti dalle singole celle adder
-	-- segnale "carry" prodotto dalla rete di carry-lookahead
-	signal p, g, carryGenerati : std_logic_vector(3 downto 0);
+	signal prop : std_logic_vector(3 downto 0);		--! funzione “propagazione” prodotta da cla_adder_cell;
+	--! vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; 
+	--! prop(i) = add(i) OR add(i); in questo caso viene prodotta da quattro blocchi cla_adder_cell sulla base dei
+	--! loro ingressi
+	signal gen : std_logic_vector(3 downto 0);		--! funzione "generazione" prodotta da cla_adder_cell;
+	--! vale 1 quando, sulla base degli ingressi, un adder generera' un carry in uscita; gen(i) = add(i) AND add(i);
+	--! in questo caso viene prodotta da quattro blocchi cla_adder_cell sulla base dei loro ingressi
+	signal carry : std_logic_vector(3 downto 0);	--! carry calcolati sulla base delle funzioni "propagazione"
+	--! e "generazione" prodotti dai blocchi cla_adder_cell, e sulla base delle funzioni "carry-in", "propagazione"
+	--! e "generazione" prodotti da eventuali blocchi a monte; ciascuno dei bit dovra' essere posto in ingresso ad
+	--! un blocco cla_adder_cell differente, affinche' possa essere calcolata la somma degli addendi
 	
 begin
 	
-	-- istanza di rete di calcolo dei carry
-	cla_net:	cla_carry_net
-				port map (p, g, carryIn, propIn, genIn, carryGenerati, propOut, genOut);
-		
-	-- istanziazione delle celle elementari di somma
+	cla_net : cla_carry_net
+		port map (	prop 		=> prop,
+					gen 		=> gen,
+					carryin 	=> carryIn,
+					propin 		=> propIn,
+					genin 		=> genIn,
+					carryout	=> carry,
+					propout 	=> propOut,
+					genout 		=> genOut); 
+	
 	adders : for i in 0 to 3 generate		
 		adder :	cla_adder_cell
-				port map (adderA(i), adderB(i), carryGenerati(i), p(i), g(i), sum(i));
+			port map (	add1	=> addendum1(i),
+						add2	=> addendum2(i),
+						carryin	=> carry(i),
+						prop	=> prop(i),
+						gen		=> gen(i),
+						sum		=> sum(i));
 	end generate;
 
 end structural;
+
+--! @}
+--! @}
+--! @}
+
+
 

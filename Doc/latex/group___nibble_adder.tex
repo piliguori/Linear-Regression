@@ -1,0 +1,120 @@
+\hypertarget{group___nibble_adder}{\section{Nibble\+Adder}
+\label{group___nibble_adder}\index{Nibble\+Adder@{Nibble\+Adder}}
+}
+
+
+Blocco elementare di somma a quattro bit.  
+
+
+Diagramma di collaborazione per Nibble\+Adder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{group___nibble_adder}
+\end{center}
+\end{figure}
+\subsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnibble__adder}{nibble\+\_\+adder} entity
+\begin{DoxyCompactList}\small\item\em Addizionatore con carry-\/lookahead a quattro bit.
+
+La cella somma tra loro due addendi ed un carry in ingresso; gli addendi sono espressi su quattro bit. Oltre a generare la somma, genera le funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} del carry per eventuali blocchi \hyperlink{classnibble__adder}{nibble\+\_\+adder} posti a valle. \end{DoxyCompactList}\item 
+\hyperlink{classnibble__adder_1_1structural}{structural} architecture
+\begin{DoxyCompactList}\small\item\em Implementazione structural dell'entità \hyperlink{classnibble__adder}{nibble\+\_\+adder}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___nibble_adder_ga12bdc5892f526938e1447d663d152df8}{cla\+\_\+carry\+\_\+net}  {\bfseries }  
+\item 
+\hyperlink{group___nibble_adder_ga4f13eb52457f650b1d2cd352d9cacca9}{cla\+\_\+adder\+\_\+cell}  {\bfseries }  
+\end{DoxyCompactItemize}
+\subsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___nibble_adder_ga2c8945f4747b9a5448412c95fc281c87}{addendum1}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em addendo 1 \end{DoxyCompactList}\item 
+\hyperlink{group___nibble_adder_gad1fa6d9d78208885ad2f4c417fc4b530}{addendum2}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em addendo 2 \end{DoxyCompactList}\item 
+\hyperlink{group___nibble_adder_gaa556a73dc4a4de1a0d662b25adbcbe33}{carryin}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em segnale di \char`\"{}carry-\/in\char`\"{}, prodotto da un eventuale \hyperlink{classnibble__adder}{nibble\+\_\+adder} a monte. \end{DoxyCompactList}\item 
+\hyperlink{group___nibble_adder_ga422e8e7ee01fc7ac7b7390cd2ad8c87b}{propin}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione \char`\"{}propagazione\char`\"{}, prodotta da una eventuale \hyperlink{classnibble__adder}{nibble\+\_\+adder} a monte \end{DoxyCompactList}\item 
+\hyperlink{group___nibble_adder_ga0a46d5193cb73eb993bc5d4f69741d0a}{genin}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione \char`\"{}generazione\char`\"{}, prodotta da una eventuale \hyperlink{classnibble__adder}{nibble\+\_\+adder} a monte \end{DoxyCompactList}\item 
+\hyperlink{group___nibble_adder_ga5957c9cdd706cafd2da8855133a002c9}{propout}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione \char`\"{}propagazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classnibble__adder}{nibble\+\_\+adder} a valle \end{DoxyCompactList}\item 
+\hyperlink{group___nibble_adder_ga068cd5c4d23e284cb942702252ed1491}{genout}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione \char`\"{}generazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classnibble__adder}{nibble\+\_\+adder} a valle \end{DoxyCompactList}\item 
+\hyperlink{group___nibble_adder_gadfe538323c3296159dd3b383325a996b}{sum}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione \char`\"{}somma\char`\"{}, rappresenta la somma tra gli addendi ed il carry in ingresso \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Blocco elementare di somma a quattro bit. 
+
+
+
+\subsection{Documentazione delle variabili}
+\hypertarget{group___nibble_adder_ga2c8945f4747b9a5448412c95fc281c87}{\index{Nibble\+Adder@{Nibble\+Adder}!addendum1@{addendum1}}
+\index{addendum1@{addendum1}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{addendum1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf addendum1} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___nibble_adder_ga2c8945f4747b9a5448412c95fc281c87}
+
+
+addendo 1 
+
+\hypertarget{group___nibble_adder_gad1fa6d9d78208885ad2f4c417fc4b530}{\index{Nibble\+Adder@{Nibble\+Adder}!addendum2@{addendum2}}
+\index{addendum2@{addendum2}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{addendum2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf addendum2} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___nibble_adder_gad1fa6d9d78208885ad2f4c417fc4b530}
+
+
+addendo 2 
+
+\hypertarget{group___nibble_adder_gaa556a73dc4a4de1a0d662b25adbcbe33}{\index{Nibble\+Adder@{Nibble\+Adder}!carryin@{carryin}}
+\index{carryin@{carryin}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{carryin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carryin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___nibble_adder_gaa556a73dc4a4de1a0d662b25adbcbe33}
+
+
+segnale di \char`\"{}carry-\/in\char`\"{}, prodotto da un eventuale \hyperlink{classnibble__adder}{nibble\+\_\+adder} a monte. 
+
+\hypertarget{group___nibble_adder_ga4f13eb52457f650b1d2cd352d9cacca9}{\index{Nibble\+Adder@{Nibble\+Adder}!cla\+\_\+adder\+\_\+cell@{cla\+\_\+adder\+\_\+cell}}
+\index{cla\+\_\+adder\+\_\+cell@{cla\+\_\+adder\+\_\+cell}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{cla\+\_\+adder\+\_\+cell}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cla\+\_\+adder\+\_\+cell} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}}\label{group___nibble_adder_ga4f13eb52457f650b1d2cd352d9cacca9}
+\hypertarget{group___nibble_adder_ga12bdc5892f526938e1447d663d152df8}{\index{Nibble\+Adder@{Nibble\+Adder}!cla\+\_\+carry\+\_\+net@{cla\+\_\+carry\+\_\+net}}
+\index{cla\+\_\+carry\+\_\+net@{cla\+\_\+carry\+\_\+net}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{cla\+\_\+carry\+\_\+net}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cla\+\_\+carry\+\_\+net} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}}\label{group___nibble_adder_ga12bdc5892f526938e1447d663d152df8}
+\hypertarget{group___nibble_adder_ga0a46d5193cb73eb993bc5d4f69741d0a}{\index{Nibble\+Adder@{Nibble\+Adder}!genin@{genin}}
+\index{genin@{genin}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{genin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf genin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___nibble_adder_ga0a46d5193cb73eb993bc5d4f69741d0a}
+
+
+funzione \char`\"{}generazione\char`\"{}, prodotta da una eventuale \hyperlink{classnibble__adder}{nibble\+\_\+adder} a monte 
+
+\hypertarget{group___nibble_adder_ga068cd5c4d23e284cb942702252ed1491}{\index{Nibble\+Adder@{Nibble\+Adder}!genout@{genout}}
+\index{genout@{genout}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{genout}]{\setlength{\rightskip}{0pt plus 5cm}{\bf genout} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___nibble_adder_ga068cd5c4d23e284cb942702252ed1491}
+
+
+funzione \char`\"{}generazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classnibble__adder}{nibble\+\_\+adder} a valle 
+
+\hypertarget{group___nibble_adder_ga422e8e7ee01fc7ac7b7390cd2ad8c87b}{\index{Nibble\+Adder@{Nibble\+Adder}!propin@{propin}}
+\index{propin@{propin}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{propin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf propin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___nibble_adder_ga422e8e7ee01fc7ac7b7390cd2ad8c87b}
+
+
+funzione \char`\"{}propagazione\char`\"{}, prodotta da una eventuale \hyperlink{classnibble__adder}{nibble\+\_\+adder} a monte 
+
+\hypertarget{group___nibble_adder_ga5957c9cdd706cafd2da8855133a002c9}{\index{Nibble\+Adder@{Nibble\+Adder}!propout@{propout}}
+\index{propout@{propout}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{propout}]{\setlength{\rightskip}{0pt plus 5cm}{\bf propout} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___nibble_adder_ga5957c9cdd706cafd2da8855133a002c9}
+
+
+funzione \char`\"{}propagazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classnibble__adder}{nibble\+\_\+adder} a valle 
+
+\hypertarget{group___nibble_adder_gadfe538323c3296159dd3b383325a996b}{\index{Nibble\+Adder@{Nibble\+Adder}!sum@{sum}}
+\index{sum@{sum}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{sum}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sum} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___nibble_adder_gadfe538323c3296159dd3b383325a996b}
+
+
+funzione \char`\"{}somma\char`\"{}, rappresenta la somma tra gli addendi ed il carry in ingresso 
+
