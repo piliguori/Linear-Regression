@@ -17,7 +17,7 @@ var group___carry_loockahead =
       [ "gen", "group___carry_loockahead.html#ga7a68948b7b96c7b51036939fad8e71b3", null ],
       [ "nibble_adder", "group___carry_loockahead.html#ga98a3a5b152caf0f2de1e31ac60088369", null ],
       [ "prop", "group___carry_loockahead.html#ga19afe0b89973d7fc29362431f2e828b7", null ],
-      [ "sum_tmp", "group___carry_loockahead.html#ga6cccc2d4712341bbafb7f30f9e9c0f79", null ]
+      [ "sum_tmp", "group___carry_loockahead.html#ga3c7f619aa6449e06bf0dd48a7db92b84", null ]
     ] ],
     [ "addendum1", "group___carry_loockahead.html#gae4a2e124144a2f35270a55f0cf32a5ee", null ],
     [ "addendum2", "group___carry_loockahead.html#ga2715463c615cf8418f85c6a1427ce62c", null ],
@@ -29,5 +29,5 @@ var group___carry_loockahead =
     [ "overflow", "group___carry_loockahead.html#ga9650307dde287e0bcfa1e26370c006c2", null ],
     [ "prop", "group___carry_loockahead.html#ga19afe0b89973d7fc29362431f2e828b7", null ],
     [ "sum", "group___carry_loockahead.html#ga1b4798a9e96bb32e9c08ce68e24e7871", null ],
-    [ "sum_tmp", "group___carry_loockahead.html#ga6cccc2d4712341bbafb7f30f9e9c0f79", null ]
+    [ "sum_tmp", "group___carry_loockahead.html#ga3c7f619aa6449e06bf0dd48a7db92b84", null ]
 ];

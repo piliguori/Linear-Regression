@@ -89,7 +89,7 @@ end LinearRegression;
 --! 	<td>Verificare che il troncamento post-moltiplicazione venga effettuato correttamente (tagliare 3 bit in testa, 2 in coda)</td>
 --! 	<td align="right">
 --! 		#prim=b"10110"<br>
---! 		Sum2=b"100000010011011110101011"
+--! 		#Sum2=b"100000010011011110101011"
 --! 	</td>
 --! 	<td align="right">
 --! 		mult1_out=	b"00100111100111101001101010010"<br>
