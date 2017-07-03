@@ -1,0 +1,16 @@
+digraph "tb_adder"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node6 [label="tb_adder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="adder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classadder.html"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="generic_cla_adder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgeneric__cla__adder.html",tooltip="Adder custom con carry-lookaheadgeneric_cla_adder somma tra loro due addendi ed un carry in ingresso;..."];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="nibble_adder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classnibble__adder.html",tooltip="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in..."];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="cla_carry_net",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcla__carry__net.html",tooltip="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni \"propagazione\" e \"generazione\" prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=\"../../Doc/schemes/nibble_adder.jpg\"/>  </div>  . "];
+  Node11 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="cla_adder_cell",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcla__adder__cell.html",tooltip="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in..."];
+}

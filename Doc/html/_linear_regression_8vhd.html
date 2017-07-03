@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Linear Regression: Riferimenti per il file Src/LinearRegression.vhd</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -14,14 +15,10 @@
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
-  $(window).load(resizeHeight);
 </script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { init_search(); });
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -40,39 +37,19 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generato da Doxygen 1.8.11 -->
+<!-- Generato da Doxygen 1.8.13 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
-  <div id="navrow1" class="tabs">
-    <ul class="tablist">
-      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
-      <li><a href="modules.html"><span>Moduli</span></a></li>
-      <li><a href="annotated.html"><span>Design&#160;Unit&#160;List</span></a></li>
-      <li class="current"><a href="files.html"><span>File</span></a></li>
-      <li>
-        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
-    </ul>
-  </div>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -115,6 +92,35 @@ Entities</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_linear_regression.html">LinearRegression</a> &#160;</td><td class="memItemRight" valign="bottom">entity</td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_linear_regression_1_1_structural.html">Structural</a> &#160;</td><td class="memItemRight" valign="bottom">architecture</td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">8 MULT1, MULT2, MULT3, MULT4, ADD5, ADD6, MULT6 Verificare che il troncamento post MULT6 venga effettuato correttamente (7 bit in testa e 17 in coda) C=b"011000011101000101011010"<br />
+ Sum2=b"001010111100110111101111"<br />
+ B=b"001000110100010101100111"<br />
+ Sum1=b"001101001011110110010011"<br />
+ A=b"000111101111000111001010"  mult2_out=b"000001100000100100000111110011100100011000101001"<br />
+ P2= b"000010010000011111001110"<br />
+ mult4_out=b"000101000010011011110110000000101010100010101110"<br />
+ P4= b"001010000100110111101100"<br />
+ add2_out= b"001100010101010110111010"<br />
+ S6= b"000110001010101011011101"<br />
+ mult1_out=b"00001101101100000101101010110"<br />
+ P3= b"011011011000001011010101"<br />
+ mult3_out=b"000001110100010000110111011010011110010100100101"<br />
+ P1= b"110100010000110111011010"<br />
+ S5= b"001111101001000010101111"<br />
+ mult6_out=b"000000101111101101010010001101101101111101100010"<br />
+ q =b"011111011010100100011011"  mult2_out=b"000001100000100100000111110011100100011000101001"<br />
+ P2= b"000010010000011111001110"<br />
+ mult4_out=b"000101000010011011110110000000101010100010101110"<br />
+ P4= b"001010000100110111101100"<br />
+ add2_out= b"001100010101010110111010"<br />
+ S6= b"000110001010101011011101"<br />
+ mult1_out=b"00001101101100000101101010110"<br />
+ P3= b"011011011000001011010101"<br />
+ mult3_out=b"000001110100010000110111011010011110010100100101"<br />
+ P1= b"110100010000110111011010"<br />
+ S5= b"001111101001000010101111"<br />
+ mult6_out=b"000000101111101101010010001101101101111101100010"<br />
+ q =b"       011111011010100100011011"  Superato   <a href="class_linear_regression_1_1_structural.html#details">Continua...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
@@ -139,9 +145,9 @@ Entities</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="_linear_regression_8vhd.html">LinearRegression.vhd</a></li>
-    <li class="footer">Generato Lun 3 Lug 2017 15:04:09 per Linear Regression da
+    <li class="footer">Generato Lun 3 Lug 2017 18:08:12 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
 </div>
 </body>

@@ -43,6 +43,12 @@ use IEEE.NUMERIC_STD.ALL;
 --! Prende 5 segnali in ingresso, e attraverso l'utilizzo di moltiplicatori e addizionatori / sottrattori, oltre 
 --! all'opportuno troncamento dei valori intermedi calcolati, restituisce i parametri di uscita m ed q per la regressione.
 --! La rappresentazione dei segnali è in signed fixed point.
+--! @htmlonly
+--! <div align='center'>
+--! <img src="../schemes/LinearRegressionBlackBox.jpg"/>
+--! </div>
+--! @endhtmlonly
+
 
 entity LinearRegression is
     Port ( prim : in STD_LOGIC_VECTOR (4 downto 0);		--! costante in input, 5 bit di parte intera e 0 decimale (m.n = 4.0)
@@ -65,6 +71,227 @@ end LinearRegression;
 --! <img src="../schemes/LinearRegression.jpg"/>
 --! </div>
 --! @endhtmlonly
+--!<table cellspacing="10">
+--!<tr>
+--!	<th>Test Case #</th>
+--! 	<th>Componente interessato</th>
+--! 	<th>Obbiettivo</th>
+--! 	<th>Input</th>
+--! 	<th>Output ottenuto</th>
+--! 	<th>Output atteso</th>
+--! 	<th>Esito</th>
+--! <tr>
+--! <tr>
+--! 	<td>1</td>
+--! 	<td>MULT1</td>
+--! 	<td>Verificare che il troncamento post-moltiplicazione venga effettuato correttamente (tagliare 3 bit in testa, 2 in coda)</td>
+--! 	<td align="right">
+--! 		#prim=b"10110"<br>
+--! 		Sum2=b"100000010011011110101011"
+--! 	</td>
+--! 	<td align="right">
+--! 		mult1_out=	b"00100111100111101001101010010"<br>
+--! 		P3=			b"   001111001111010011010100  "</td>
+--! 	<td align="right">
+--! 		mult1_out=	b"00100111100111101001101010010"<br>
+--! 		P3=			b"   001111001111010011010100  "</td>
+--! 	<td>Superato</td>
+--! </tr>
+--! <tr>
+--! 	<td>2</td>
+--! 	<td>MULT2</td>
+--! 	<td>Verificare che il troncamento post-moltiplicazione venga effettuato correttamente (tagliare 8 bit in testa e 16 in coda)</td>
+--! 	<td align="right">
+--! 		B=b"001100000000000000000000"<br>
+--! 		Sum2=b"101000000000000000000000"
+--! 	</td>
+--! 	<td align="right">
+--! 		mult2_out=b"111011100000000000000000000000000000000000000000"<br>
+--! 		P2=		  b"        000000000000000000000000                "</td>
+--! 	<td align="right">
+--! 		mult2_out=b"111011100000000000000000000000000000000000000000"<br>
+--! 		P2=		  b"        000000000000000000000000                "</td>
+--! 	<td>Superato</td>
+--! </tr>
+--! <tr>
+--! 	<td>3</td>
+--! 	<td>MULT3</td>
+--! 	<td>Verificare che il troncamento post-moltiplicazione venga effettuato correttamente (tagliare 6 bit dalla testa e 18 dalla coda)</td>
+--! 	<td align="right">
+--! 		B=b"101011001010110011001010"<br>
+--! 		Sum1=b"000011001010110011001010"
+--! 	</td>
+--! 	<td align="right">
+--! 		mult3_out=b"111110111101111111011011110100000000111101100100"<br>
+--! 		P1=		  b"111101111111011011110100"</td>
+--! 	<td align="right">
+--! 		mult3_out=b"111110111101111111011011110100000000111101100100"<br>
+--! 		P1=		  b"      111101111111011011110100                  "</td>
+--! 	<td>Superato</td>
+--! </tr>
+--! <tr>
+--! 	<td>4</td>
+--! 	<td>MULT4</td>
+--! 	<td>Verificare che il troncamento post-moltiplicazione venga effettuato correttamente (tagliare 1 bit in testa e 23 bit in coda)</td>
+--! 	<td align="right">
+--! 		C=b"111111111111000100100011"<br>
+--! 		Sum1=b"110100100101101000001000"
+--! 	</td>
+--! 	<td align="right">
+--! 		mult4_out=b"000000000000001010100110011110111101011100011000"<br>
+--! 		P4=		  b" 000000000000010101001100"</td>
+--! 	<td align="right">
+--! 		mult4_out=b"000000000000001010100110011110111101011100011000"<br>
+--! 		P4=		  b" 000000000000010101001100"</td>
+--! 	<td>Superato</td>
+--! </tr>
+
+--! <tr>
+--! 	<td>5</td>
+--! 	<td>MULT1, MULT3, ADD1</td>
+--! 	<td>Verificare che il sommatore ADD1 venga sollecitato correttamente e che produca una somma corretta</td>
+--! 	<td align="right">
+--! 		#prim=b"01010"<br>
+--! 		Sum2=b"001010111100110111101111"<br>
+--! 		B=b"001000110100010101100111"<br>
+--! 		Sum1=b"001101001011110110010011"
+--! 	</td>
+--! 	<td align="right">
+--! 		mult1_out=b"00001101101100000101101010110"<br>
+--! 		P3=		  b"011011011000001011010101"<br>
+--! 		mult3_out=b"000001110100010000110111011010011110010100100101"<br>
+--! 		P1=		  b"110100010000110111011010"<br>
+--! 		S5=       b"001111101001000010101111"
+--! 	</td>
+--! 	<td align="right">
+--! 		mult1_out=b"00001101101100000101101010110"<br>
+--! 		P3=		  b"011011011000001011010101"<br>
+--! 		mult3_out=b"000001110100010000110111011010011110010100100101"<br>
+--! 		P1=		  b"110100010000110111011010"<br>
+--! 		S5=       b"001111101001000010101111"
+--! 	</td>
+--! 	<td>Superato</td>
+--! </tr>
+
+--! <tr>
+--! 	<td>6</td>
+--! 	<td>MULT2, MULT4, ADD6</td>
+--! 	<td>Verificare che il sommatore ADD2 venga sollecitato correttamente e che produca una somma corretta</td>
+--! 	<td align="right">
+--! 		C=b"011000011101000101011010"<br>
+--! 		Sum2=b"001010111100110111101111"<br>
+--! 		B=b"001000110100010101100111"<br>
+--! 		Sum1=b"001101001011110110010011"
+--! 	</td>
+--! 	<td align="right">
+--! 		mult2_out=b"000001100000100100000111110011100100011000101001"<br>
+--! 		P2=		  b"000010010000011111001110"<br>
+--! 		mult4_out=b"000101000010011011110110000000101010100010101110"<br>
+--! 		P4=		  b"001010000100110111101100"<br>
+--! 		add2_out= b"001100010101010110111010"<br>
+--! 		S6=       b"000110001010101011011101"
+		
+--! 	</td>
+--! 	<td align="right">
+--! 		mult2_out=b"000001100000100100000111110011100100011000101001"<br>
+--! 		P2=		  b"000010010000011111001110"<br>
+--! 		mult4_out=b"000101000010011011110110000000101010100010101110"<br>
+--! 		P4=		  b"001010000100110111101100"<br>
+--! 		add2_out= b"001100010101010110111010"<br>
+--! 		S6=       b"000110001010101011011101"
+--! 	</td>
+--! 	<td>Superato</td>
+--! </tr>
+
+--! <tr>
+--! 	<td>7</td>
+--! 	<td>MULT1, MULT2, MULT3, MULT4, ADD5, ADD6, MULT5</td>
+--! 	<td>Verificare che il troncamento post MULT5 venga effettuato correttamente (tronca 5 bit in testa e 19 in coda)</td>
+--! 	<td align="right">
+--! 		C=b"011000011101000101011010"<br>
+--! 		Sum2=b"001010111100110111101111"<br>
+--! 		B=b"001000110100010101100111"<br>
+--! 		Sum1=b"001101001011110110010011"<br>
+--! 		A=b"000111101111000111001010"
+--! 	</td>
+--! 	<td align="right">
+--! 		mult2_out=b"000001100000100100000111110011100100011000101001"<br>
+--! 		P2=		  b"000010010000011111001110"<br>
+--! 		mult4_out=b"000101000010011011110110000000101010100010101110"<br>
+--! 		P4=		  b"001010000100110111101100"<br>
+--! 		add2_out= b"001100010101010110111010"<br>
+--! 		S6=       b"000110001010101011011101"<br>
+--! 		mult1_out=b"00001101101100000101101010110"<br>
+--! 		P3=		  b"011011011000001011010101"<br>
+--! 		mult3_out=b"000001110100010000110111011010011110010100100101"<br>
+--! 		P1=		  b"110100010000110111011010"<br>
+--! 		S5=       b"001111101001000010101111"<br>
+--! 		mult5_out=b"000001111001000000001100000101001110100100010110"<br>
+--! 		m        =b"111100100000000110000010"
+--! 	</td>
+--! 	<td align="right">
+--! 		mult2_out=b"000001100000100100000111110011100100011000101001"<br>
+--! 		P2=		  b"000010010000011111001110"<br>
+--! 		mult4_out=b"000101000010011011110110000000101010100010101110"<br>
+--! 		P4=		  b"001010000100110111101100"<br>
+--! 		add2_out= b"001100010101010110111010"<br>
+--! 		S6=       b"000110001010101011011101"<br>
+--! 		mult1_out=b"00001101101100000101101010110"<br>
+--! 		P3=		  b"011011011000001011010101"<br>
+--! 		mult3_out=b"000001110100010000110111011010011110010100100101"<br>
+--! 		P1=		  b"110100010000110111011010"<br>
+--! 		S5=       b"001111101001000010101111"<br>
+--! 		mult5_out=b"000001111001000000001100000101001110100100010110"<br>
+--! 		m        =b"     111100100000000110000010"
+--! 	</td>
+--! 	<td>Superato</td>
+--! </tr>
+
+--! <tr>
+--! 	<td>8</td>
+--! 	<td>MULT1, MULT2, MULT3, MULT4, ADD5, ADD6, MULT6</td>
+--! 	<td>Verificare che il troncamento post MULT6 venga effettuato correttamente (7 bit in testa e 17 in coda)</td>
+--! 	<td align="right">
+--! 		C=b"011000011101000101011010"<br>
+--! 		Sum2=b"001010111100110111101111"<br>
+--! 		B=b"001000110100010101100111"<br>
+--! 		Sum1=b"001101001011110110010011"<br>
+--! 		A=b"000111101111000111001010"
+--! 	</td>
+--! 	<td align="right">
+--! 		mult2_out=b"000001100000100100000111110011100100011000101001"<br>
+--! 		P2=		  b"000010010000011111001110"<br>
+--! 		mult4_out=b"000101000010011011110110000000101010100010101110"<br>
+--! 		P4=		  b"001010000100110111101100"<br>
+--! 		add2_out= b"001100010101010110111010"<br>
+--! 		S6=       b"000110001010101011011101"<br>
+--! 		mult1_out=b"00001101101100000101101010110"<br>
+--! 		P3=		  b"011011011000001011010101"<br>
+--! 		mult3_out=b"000001110100010000110111011010011110010100100101"<br>
+--! 		P1=		  b"110100010000110111011010"<br>
+--! 		S5=       b"001111101001000010101111"<br>
+--! 		mult6_out=b"000000101111101101010010001101101101111101100010"<br>
+--! 		q        =b"011111011010100100011011"
+--! 	</td>
+--! 	<td align="right">
+--! 		mult2_out=b"000001100000100100000111110011100100011000101001"<br>
+--! 		P2=		  b"000010010000011111001110"<br>
+--! 		mult4_out=b"000101000010011011110110000000101010100010101110"<br>
+--! 		P4=		  b"001010000100110111101100"<br>
+--! 		add2_out= b"001100010101010110111010"<br>
+--! 		S6=       b"000110001010101011011101"<br>
+--! 		mult1_out=b"00001101101100000101101010110"<br>
+--! 		P3=		  b"011011011000001011010101"<br>
+--! 		mult3_out=b"000001110100010000110111011010011110010100100101"<br>
+--! 		P1=		  b"110100010000110111011010"<br>
+--! 		S5=       b"001111101001000010101111"<br>
+--! 		mult6_out=b"000000101111101101010010001101101101111101100010"<br>
+--! 		q        =b"       011111011010100100011011"
+--! 	</td>
+--! 	<td>Superato</td>
+--! </tr>
+--! </table>
+
 architecture Structural of LinearRegression is
 
 component multiplier is

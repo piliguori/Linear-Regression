@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Linear Regression: LinearRegression</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -14,14 +15,10 @@
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
-  $(window).load(resizeHeight);
 </script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() { init_search(); });
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -40,34 +37,19 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generato da Doxygen 1.8.11 -->
+<!-- Generato da Doxygen 1.8.13 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
-  <div id="navrow1" class="tabs">
-    <ul class="tablist">
-      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
-      <li class="current"><a href="modules.html"><span>Moduli</span></a></li>
-      <li><a href="annotated.html"><span>Design&#160;Unit&#160;List</span></a></li>
-      <li><a href="files.html"><span>File</span></a></li>
-      <li>
-        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.png"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
-          </span>
-        </div>
-      </li>
-    </ul>
-  </div>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -114,6 +96,35 @@ Entities</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_linear_regression.html">LinearRegression</a> &#160;</td><td class="memItemRight" valign="bottom">entity</td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_linear_regression_1_1_structural.html">Structural</a> &#160;</td><td class="memItemRight" valign="bottom">architecture</td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">8 MULT1, MULT2, MULT3, MULT4, ADD5, ADD6, MULT6 Verificare che il troncamento post MULT6 venga effettuato correttamente (7 bit in testa e 17 in coda) C=b"011000011101000101011010"<br />
+ Sum2=b"001010111100110111101111"<br />
+ B=b"001000110100010101100111"<br />
+ Sum1=b"001101001011110110010011"<br />
+ A=b"000111101111000111001010"  mult2_out=b"000001100000100100000111110011100100011000101001"<br />
+ P2= b"000010010000011111001110"<br />
+ mult4_out=b"000101000010011011110110000000101010100010101110"<br />
+ P4= b"001010000100110111101100"<br />
+ add2_out= b"001100010101010110111010"<br />
+ S6= b"000110001010101011011101"<br />
+ mult1_out=b"00001101101100000101101010110"<br />
+ P3= b"011011011000001011010101"<br />
+ mult3_out=b"000001110100010000110111011010011110010100100101"<br />
+ P1= b"110100010000110111011010"<br />
+ S5= b"001111101001000010101111"<br />
+ mult6_out=b"000000101111101101010010001101101101111101100010"<br />
+ q =b"011111011010100100011011"  mult2_out=b"000001100000100100000111110011100100011000101001"<br />
+ P2= b"000010010000011111001110"<br />
+ mult4_out=b"000101000010011011110110000000101010100010101110"<br />
+ P4= b"001010000100110111101100"<br />
+ add2_out= b"001100010101010110111010"<br />
+ S6= b"000110001010101011011101"<br />
+ mult1_out=b"00001101101100000101101010110"<br />
+ P3= b"011011011000001011010101"<br />
+ mult3_out=b"000001110100010000110111011010011110010100100101"<br />
+ P1= b"110100010000110111011010"<br />
+ S5= b"001111101001000010101111"<br />
+ mult6_out=b"000000101111101101010010001101101101111101100010"<br />
+ q =b"       011111011010100100011011"  Superato   <a href="class_linear_regression_1_1_structural.html#details">Continua...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Libraries"></a>
@@ -145,9 +156,9 @@ Ports</h2></td></tr>
 <tr class="memitem:gae1ad6503d157f6c26abdce1131d31ec2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___linear_regression.html#gae1ad6503d157f6c26abdce1131d31ec2">A</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">STD_LOGIC_VECTOR</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">23</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
 <tr class="memdesc:gae1ad6503d157f6c26abdce1131d31ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale in input, 16 bit di parte intera e 8 decimale (m.n = 15.8)  <a href="group___linear_regression.html#gae1ad6503d157f6c26abdce1131d31ec2"></a><br /></td></tr>
 <tr class="memitem:gad943f01112876248a4734aa3c3d2e3f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___linear_regression.html#gad943f01112876248a4734aa3c3d2e3f2">m</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">STD_LOGIC_VECTOR</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">23</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
-<tr class="memdesc:gad943f01112876248a4734aa3c3d2e3f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnali in output, 16 bit di parte intera e 8 decimale (m.n = 15.8)  <a href="group___linear_regression.html#gad943f01112876248a4734aa3c3d2e3f2"></a><br /></td></tr>
+<tr class="memdesc:gad943f01112876248a4734aa3c3d2e3f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale in output, 16 bit di parte intera e 8 decimale (m.n = 15.8)  <a href="group___linear_regression.html#gad943f01112876248a4734aa3c3d2e3f2"></a><br /></td></tr>
 <tr class="memitem:gacec4f4b6d139d1ada088ca2d3d881418"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___linear_regression.html#gacec4f4b6d139d1ada088ca2d3d881418">q</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">STD_LOGIC_VECTOR</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">23</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
-<tr class="memdesc:gacec4f4b6d139d1ada088ca2d3d881418"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnali in output, 8 bit di parte intera e 16 decimale (m.n = 7.16)  <a href="group___linear_regression.html#gacec4f4b6d139d1ada088ca2d3d881418"></a><br /></td></tr>
+<tr class="memdesc:gacec4f4b6d139d1ada088ca2d3d881418"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnaes in output, 8 bit di parte intera e 16 decimale (m.n = 7.16)  <a href="group___linear_regression.html#gacec4f4b6d139d1ada088ca2d3d881418"></a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Signals"></a>
 Signals</h2></td></tr>
@@ -168,7 +179,9 @@ Signals</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
 <p>Regressione Lineare in VHDL. </p>
 <h2 class="groupheader">Documentazione delle variabili</h2>
-<a class="anchor" id="gae1ad6503d157f6c26abdce1131d31ec2"></a>
+<a id="gae1ad6503d157f6c26abdce1131d31ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae1ad6503d157f6c26abdce1131d31ec2">&#9670;&nbsp;</a></span>A</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -190,7 +203,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gabe0971183491c9fa959c5609d09b3714"></a>
+<a id="gabe0971183491c9fa959c5609d09b3714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe0971183491c9fa959c5609d09b3714">&#9670;&nbsp;</a></span>add2_out</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -211,7 +226,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga9d7a8a381439c61aea549e7a47ec7a6f"></a>
+<a id="ga9d7a8a381439c61aea549e7a47ec7a6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d7a8a381439c61aea549e7a47ec7a6f">&#9670;&nbsp;</a></span>adder</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -231,7 +248,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gab6685be06ffd9f2425d01307287a4454"></a>
+<a id="gab6685be06ffd9f2425d01307287a4454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab6685be06ffd9f2425d01307287a4454">&#9670;&nbsp;</a></span>B</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -253,7 +272,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga17058a6bcb609074c49be51d09202870"></a>
+<a id="ga17058a6bcb609074c49be51d09202870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17058a6bcb609074c49be51d09202870">&#9670;&nbsp;</a></span>C</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -275,7 +296,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gae4f03c286607f3181e16b9aa12d0c6d4"></a>
+<a id="gae4f03c286607f3181e16b9aa12d0c6d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae4f03c286607f3181e16b9aa12d0c6d4">&#9670;&nbsp;</a></span>IEEE</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -295,7 +318,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gad943f01112876248a4734aa3c3d2e3f2"></a>
+<a id="gad943f01112876248a4734aa3c3d2e3f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad943f01112876248a4734aa3c3d2e3f2">&#9670;&nbsp;</a></span>m</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -313,11 +338,13 @@ Signals</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>segnali in output, 16 bit di parte intera e 8 decimale (m.n = 15.8) </p>
+<p>segnale in output, 16 bit di parte intera e 8 decimale (m.n = 15.8) </p>
 
 </div>
 </div>
-<a class="anchor" id="ga8e3ef6c468a1560f19de3430d956a75c"></a>
+<a id="ga8e3ef6c468a1560f19de3430d956a75c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8e3ef6c468a1560f19de3430d956a75c">&#9670;&nbsp;</a></span>mult1_out</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -337,7 +364,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gac6c586bcd10a70e181cf575558678c99"></a>
+<a id="gac6c586bcd10a70e181cf575558678c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac6c586bcd10a70e181cf575558678c99">&#9670;&nbsp;</a></span>mult2_out</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -358,7 +387,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gae87513d13999dbb668a8ca5becdf44e1"></a>
+<a id="gae87513d13999dbb668a8ca5becdf44e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae87513d13999dbb668a8ca5becdf44e1">&#9670;&nbsp;</a></span>mult3_out</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -379,7 +410,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga5a0832f93305c3e0a37293a00e17a538"></a>
+<a id="ga5a0832f93305c3e0a37293a00e17a538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a0832f93305c3e0a37293a00e17a538">&#9670;&nbsp;</a></span>mult4_out</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -400,7 +433,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga308e89f3c1df2b63a7dad6d0efa94e66"></a>
+<a id="ga308e89f3c1df2b63a7dad6d0efa94e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga308e89f3c1df2b63a7dad6d0efa94e66">&#9670;&nbsp;</a></span>mult5_out</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -421,7 +456,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga207c875b3cd576e5064d6fd3b2a36759"></a>
+<a id="ga207c875b3cd576e5064d6fd3b2a36759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga207c875b3cd576e5064d6fd3b2a36759">&#9670;&nbsp;</a></span>mult6_out</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -442,7 +479,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga3cf9cbfc3e637ae0660c32ceef50386f"></a>
+<a id="ga3cf9cbfc3e637ae0660c32ceef50386f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3cf9cbfc3e637ae0660c32ceef50386f">&#9670;&nbsp;</a></span>multiplier</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -462,7 +501,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gae00f3f04545af57582ff10609eee23e2"></a>
+<a id="gae00f3f04545af57582ff10609eee23e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae00f3f04545af57582ff10609eee23e2">&#9670;&nbsp;</a></span>NUMERIC_STD</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -482,7 +523,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga6628650c9428eb89bdfa36a2efa1cb37"></a>
+<a id="ga6628650c9428eb89bdfa36a2efa1cb37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6628650c9428eb89bdfa36a2efa1cb37">&#9670;&nbsp;</a></span>P1</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -503,7 +546,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gab0bf0189296a8c52f6e36c853c8d3a77"></a>
+<a id="gab0bf0189296a8c52f6e36c853c8d3a77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab0bf0189296a8c52f6e36c853c8d3a77">&#9670;&nbsp;</a></span>P2</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -524,7 +569,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gaa427886ed37e5d29753362483ce7fae2"></a>
+<a id="gaa427886ed37e5d29753362483ce7fae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa427886ed37e5d29753362483ce7fae2">&#9670;&nbsp;</a></span>P3</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -545,7 +592,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga4fb44e5594257c32300225a509c90dd7"></a>
+<a id="ga4fb44e5594257c32300225a509c90dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4fb44e5594257c32300225a509c90dd7">&#9670;&nbsp;</a></span>P4</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -566,7 +615,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga6b9afe9c48db695b7336519281c099a8"></a>
+<a id="ga6b9afe9c48db695b7336519281c099a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6b9afe9c48db695b7336519281c099a8">&#9670;&nbsp;</a></span>prim</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -588,7 +639,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gacec4f4b6d139d1ada088ca2d3d881418"></a>
+<a id="gacec4f4b6d139d1ada088ca2d3d881418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacec4f4b6d139d1ada088ca2d3d881418">&#9670;&nbsp;</a></span>q</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -606,11 +659,13 @@ Signals</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>segnali in output, 8 bit di parte intera e 16 decimale (m.n = 7.16) </p>
+<p>segnaes in output, 8 bit di parte intera e 16 decimale (m.n = 7.16) </p>
 
 </div>
 </div>
-<a class="anchor" id="gaf847f35901bdae7b10eff5f0576735ec"></a>
+<a id="gaf847f35901bdae7b10eff5f0576735ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf847f35901bdae7b10eff5f0576735ec">&#9670;&nbsp;</a></span>S5</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -631,7 +686,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gaad1e5951d0d38888c5deafab1b89df1a"></a>
+<a id="gaad1e5951d0d38888c5deafab1b89df1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaad1e5951d0d38888c5deafab1b89df1a">&#9670;&nbsp;</a></span>S6</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -652,7 +709,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gaa4b2b25246a821511120e3149b003563"></a>
+<a id="gaa4b2b25246a821511120e3149b003563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4b2b25246a821511120e3149b003563">&#9670;&nbsp;</a></span>STD_LOGIC_1164</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -672,7 +731,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga43a9a0da4f44006af5631ed5ee8ad924"></a>
+<a id="ga43a9a0da4f44006af5631ed5ee8ad924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43a9a0da4f44006af5631ed5ee8ad924">&#9670;&nbsp;</a></span>Sum1</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -694,7 +755,9 @@ Signals</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga4c98819455589b84c5e250a97e9bdfa1"></a>
+<a id="ga4c98819455589b84c5e250a97e9bdfa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c98819455589b84c5e250a97e9bdfa1">&#9670;&nbsp;</a></span>Sum2</h2>
+
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -721,9 +784,9 @@ Signals</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generato Lun 3 Lug 2017 15:04:09 per Linear Regression da
+    <li class="footer">Generato Lun 3 Lug 2017 18:08:12 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
 </div>
 </body>

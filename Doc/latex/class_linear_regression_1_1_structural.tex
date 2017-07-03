@@ -1,5 +1,50 @@
 \hypertarget{class_linear_regression_1_1_structural}{}\section{Structural Architecture Reference}
 \label{class_linear_regression_1_1_structural}\index{Structural@{Structural}}
+
+
+8 
+
+M\+U\+L\+T1, M\+U\+L\+T2, M\+U\+L\+T3, M\+U\+L\+T4, A\+D\+D5, A\+D\+D6, M\+U\+L\+T6 
+
+Verificare che il troncamento post M\+U\+L\+T6 venga effettuato correttamente (7 bit in testa e 17 in coda) 
+
+C=b\char`\"{}011000011101000101011010\char`\"{}~\newline
+ Sum2=b\char`\"{}001010111100110111101111\char`\"{}~\newline
+ B=b\char`\"{}001000110100010101100111\char`\"{}~\newline
+ Sum1=b\char`\"{}001101001011110110010011\char`\"{}~\newline
+ A=b\char`\"{}000111101111000111001010\char`\"{}  
+
+mult2\+\_\+out=b\char`\"{}000001100000100100000111110011100100011000101001\char`\"{}~\newline
+ P2= b\char`\"{}000010010000011111001110\char`\"{}~\newline
+ mult4\+\_\+out=b\char`\"{}000101000010011011110110000000101010100010101110\char`\"{}~\newline
+ P4= b\char`\"{}001010000100110111101100\char`\"{}~\newline
+ add2\+\_\+out= b\char`\"{}001100010101010110111010\char`\"{}~\newline
+ S6= b\char`\"{}000110001010101011011101\char`\"{}~\newline
+ mult1\+\_\+out=b\char`\"{}00001101101100000101101010110\char`\"{}~\newline
+ P3= b\char`\"{}011011011000001011010101\char`\"{}~\newline
+ mult3\+\_\+out=b\char`\"{}000001110100010000110111011010011110010100100101\char`\"{}~\newline
+ P1= b\char`\"{}110100010000110111011010\char`\"{}~\newline
+ S5= b\char`\"{}001111101001000010101111\char`\"{}~\newline
+ mult6\+\_\+out=b\char`\"{}000000101111101101010010001101101101111101100010\char`\"{}~\newline
+ q =b\char`\"{}011111011010100100011011\char`\"{}  
+
+mult2\+\_\+out=b\char`\"{}000001100000100100000111110011100100011000101001\char`\"{}~\newline
+ P2= b\char`\"{}000010010000011111001110\char`\"{}~\newline
+ mult4\+\_\+out=b\char`\"{}000101000010011011110110000000101010100010101110\char`\"{}~\newline
+ P4= b\char`\"{}001010000100110111101100\char`\"{}~\newline
+ add2\+\_\+out= b\char`\"{}001100010101010110111010\char`\"{}~\newline
+ S6= b\char`\"{}000110001010101011011101\char`\"{}~\newline
+ mult1\+\_\+out=b\char`\"{}00001101101100000101101010110\char`\"{}~\newline
+ P3= b\char`\"{}011011011000001011010101\char`\"{}~\newline
+ mult3\+\_\+out=b\char`\"{}000001110100010000110111011010011110010100100101\char`\"{}~\newline
+ P1= b\char`\"{}110100010000110111011010\char`\"{}~\newline
+ S5= b\char`\"{}001111101001000010101111\char`\"{}~\newline
+ mult6\+\_\+out=b\char`\"{}000000101111101101010010001101101101111101100010\char`\"{}~\newline
+ q =b\char`\"{}       011111011010100100011011\char`\"{}  
+
+Superato   
+
+
 \subsection*{Components}
  \begin{DoxyCompactItemize}
 \item 
@@ -58,33 +103,179 @@
 
 
 \subsection{Descrizione dettagliata}
-Per il calcolo dei parametri della regressione vengono utilizzati opportunamente dei moltiplicatori e addizionatori/sottrattori. Per effettuare i calcoli in fixed point vengono adoperati opportuni troncamenti/ espansioni dei segnali.  
+8 
+
+M\+U\+L\+T1, M\+U\+L\+T2, M\+U\+L\+T3, M\+U\+L\+T4, A\+D\+D5, A\+D\+D6, M\+U\+L\+T6 
+
+Verificare che il troncamento post M\+U\+L\+T6 venga effettuato correttamente (7 bit in testa e 17 in coda) 
+
+C=b\char`\"{}011000011101000101011010\char`\"{}~\newline
+ Sum2=b\char`\"{}001010111100110111101111\char`\"{}~\newline
+ B=b\char`\"{}001000110100010101100111\char`\"{}~\newline
+ Sum1=b\char`\"{}001101001011110110010011\char`\"{}~\newline
+ A=b\char`\"{}000111101111000111001010\char`\"{}  
+
+mult2\+\_\+out=b\char`\"{}000001100000100100000111110011100100011000101001\char`\"{}~\newline
+ P2= b\char`\"{}000010010000011111001110\char`\"{}~\newline
+ mult4\+\_\+out=b\char`\"{}000101000010011011110110000000101010100010101110\char`\"{}~\newline
+ P4= b\char`\"{}001010000100110111101100\char`\"{}~\newline
+ add2\+\_\+out= b\char`\"{}001100010101010110111010\char`\"{}~\newline
+ S6= b\char`\"{}000110001010101011011101\char`\"{}~\newline
+ mult1\+\_\+out=b\char`\"{}00001101101100000101101010110\char`\"{}~\newline
+ P3= b\char`\"{}011011011000001011010101\char`\"{}~\newline
+ mult3\+\_\+out=b\char`\"{}000001110100010000110111011010011110010100100101\char`\"{}~\newline
+ P1= b\char`\"{}110100010000110111011010\char`\"{}~\newline
+ S5= b\char`\"{}001111101001000010101111\char`\"{}~\newline
+ mult6\+\_\+out=b\char`\"{}000000101111101101010010001101101101111101100010\char`\"{}~\newline
+ q =b\char`\"{}011111011010100100011011\char`\"{}  
+
+mult2\+\_\+out=b\char`\"{}000001100000100100000111110011100100011000101001\char`\"{}~\newline
+ P2= b\char`\"{}000010010000011111001110\char`\"{}~\newline
+ mult4\+\_\+out=b\char`\"{}000101000010011011110110000000101010100010101110\char`\"{}~\newline
+ P4= b\char`\"{}001010000100110111101100\char`\"{}~\newline
+ add2\+\_\+out= b\char`\"{}001100010101010110111010\char`\"{}~\newline
+ S6= b\char`\"{}000110001010101011011101\char`\"{}~\newline
+ mult1\+\_\+out=b\char`\"{}00001101101100000101101010110\char`\"{}~\newline
+ P3= b\char`\"{}011011011000001011010101\char`\"{}~\newline
+ mult3\+\_\+out=b\char`\"{}000001110100010000110111011010011110010100100101\char`\"{}~\newline
+ P1= b\char`\"{}110100010000110111011010\char`\"{}~\newline
+ S5= b\char`\"{}001111101001000010101111\char`\"{}~\newline
+ mult6\+\_\+out=b\char`\"{}000000101111101101010010001101101101111101100010\char`\"{}~\newline
+ q =b\char`\"{}       011111011010100100011011\char`\"{}  
+
+Superato  
+
+Per il calcolo dei parametri della regressione vengono utilizzati opportunamente dei moltiplicatori e addizionatori/sottrattori. Per effettuare i calcoli in fixed point vengono adoperati opportuni troncamenti/ espansioni dei segnali.  \tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{7}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Test Case \# }&\textbf{ Componente interessato }&\textbf{ Obbiettivo }&\textbf{ Input }&\textbf{ Output ottenuto }&\textbf{ Output atteso }&\textbf{ Esito }\\\cline{1-7}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Test Case \# }&\textbf{ Componente interessato }&\textbf{ Obbiettivo }&\textbf{ Input }&\textbf{ Output ottenuto }&\textbf{ Output atteso }&\textbf{ Esito }\\\cline{1-7}
+\endhead
+\\\cline{1-7}
+\end{longtabu}
+
+
+1 
+
+M\+U\+L\+T1 
+
+Verificare che il troncamento post-\/moltiplicazione venga effettuato correttamente (tagliare 3 bit in testa, 2 in coda) 
+
+\hyperlink{group___linear_regression_ga6b9afe9c48db695b7336519281c099a8}{prim}=b\char`\"{}10110\char`\"{}~\newline
+ Sum2=b\char`\"{}100000010011011110101011\char`\"{}  
+
+mult1\+\_\+out= b\char`\"{}00100111100111101001101010010\char`\"{}~\newline
+ P3= b\char`\"{}   001111001111010011010100  \char`\"{} 
+
+mult1\+\_\+out= b\char`\"{}00100111100111101001101010010\char`\"{}~\newline
+ P3= b\char`\"{}   001111001111010011010100  \char`\"{} 
+
+Superato  
+
+2 
+
+M\+U\+L\+T2 
+
+Verificare che il troncamento post-\/moltiplicazione venga effettuato correttamente (tagliare 8 bit in testa e 16 in coda) 
+
+B=b\char`\"{}001100000000000000000000\char`\"{}~\newline
+ Sum2=b\char`\"{}101000000000000000000000\char`\"{}  
+
+mult2\+\_\+out=b\char`\"{}111011100000000000000000000000000000000000000000\char`\"{}~\newline
+ P2= b\char`\"{}        000000000000000000000000                \char`\"{} 
+
+mult2\+\_\+out=b\char`\"{}111011100000000000000000000000000000000000000000\char`\"{}~\newline
+ P2= b\char`\"{}        000000000000000000000000                \char`\"{} 
+
+Superato  
+
+3 
+
+M\+U\+L\+T3 
+
+Verificare che il troncamento post-\/moltiplicazione venga effettuato correttamente (tagliare 6 bit dalla testa e 18 dalla coda) 
+
+B=b\char`\"{}101011001010110011001010\char`\"{}~\newline
+ Sum1=b\char`\"{}000011001010110011001010\char`\"{}  
+
+mult3\+\_\+out=b\char`\"{}111110111101111111011011110100000000111101100100\char`\"{}~\newline
+ P1= b\char`\"{}111101111111011011110100\char`\"{} 
+
+mult3\+\_\+out=b\char`\"{}111110111101111111011011110100000000111101100100\char`\"{}~\newline
+ P1= b\char`\"{}      111101111111011011110100                  \char`\"{} 
+
+Superato  
+
+4 
+
+M\+U\+L\+T4 
+
+Verificare che il troncamento post-\/moltiplicazione venga effettuato correttamente (tagliare 1 bit in testa e 23 bit in coda) 
+
+C=b\char`\"{}111111111111000100100011\char`\"{}~\newline
+ Sum1=b\char`\"{}110100100101101000001000\char`\"{}  
+
+mult4\+\_\+out=b\char`\"{}000000000000001010100110011110111101011100011000\char`\"{}~\newline
+ P4= b\char`\"{} 000000000000010101001100\char`\"{} 
+
+mult4\+\_\+out=b\char`\"{}000000000000001010100110011110111101011100011000\char`\"{}~\newline
+ P4= b\char`\"{} 000000000000010101001100\char`\"{} 
+
+Superato  
 
 \subsection{Documentazione dei membri dato}
+\mbox{\Hypertarget{class_linear_regression_1_1_structural_adea88291834bfbc1cfe284774c792d37}\label{class_linear_regression_1_1_structural_adea88291834bfbc1cfe284774c792d37}} 
 \index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!add1@{add1}}
 \index{add1@{add1}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{\texorpdfstring{add1}{add1}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf add1} {\bfseries \textcolor{vhdlchar}{adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}\hypertarget{class_linear_regression_1_1_structural_adea88291834bfbc1cfe284774c792d37}{}\label{class_linear_regression_1_1_structural_adea88291834bfbc1cfe284774c792d37}
-Cambio di rappresentazione dell\textquotesingle{}uscita di M\+U\+L\+T4 da 48 bit, in cui l\textquotesingle{}msb ha peso -\/2 (m.\+n = -\/2.\+49), a 24 bit, in cui l\textquotesingle{}msb ha peso -\/3 (m.\+n = -\/3.\+26). Quindi tronchiamo 1 bit in testa e 23 in coda. \index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!add2@{add2}}
+\subsubsection{\texorpdfstring{add1}{add1}}
+{\footnotesize\ttfamily \hyperlink{class_linear_regression_1_1_structural_adea88291834bfbc1cfe284774c792d37}{add1} {\bfseries \textcolor{vhdlchar}{adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+Cambio di rappresentazione dell\textquotesingle{}uscita di M\+U\+L\+T4 da 48 bit, in cui l\textquotesingle{}msb ha peso -\/2 (m.\+n = -\/2.\+49), a 24 bit, in cui l\textquotesingle{}msb ha peso -\/3 (m.\+n = -\/3.\+26). Quindi tronchiamo 1 bit in testa e 23 in coda. \mbox{\Hypertarget{class_linear_regression_1_1_structural_a09e3b860880a85f376374594ffd092fb}\label{class_linear_regression_1_1_structural_a09e3b860880a85f376374594ffd092fb}} 
+\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!add2@{add2}}
 \index{add2@{add2}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{\texorpdfstring{add2}{add2}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf add2} {\bfseries \textcolor{vhdlchar}{adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}\hypertarget{class_linear_regression_1_1_structural_a09e3b860880a85f376374594ffd092fb}{}\label{class_linear_regression_1_1_structural_a09e3b860880a85f376374594ffd092fb}
+\subsubsection{\texorpdfstring{add2}{add2}}
+{\footnotesize\ttfamily \hyperlink{class_linear_regression_1_1_structural_a09e3b860880a85f376374594ffd092fb}{add2} {\bfseries \textcolor{vhdlchar}{adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\mbox{\Hypertarget{class_linear_regression_1_1_structural_abe2dbada52541335e367815bffe06c28}\label{class_linear_regression_1_1_structural_abe2dbada52541335e367815bffe06c28}} 
 \index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!mult1@{mult1}}
 \index{mult1@{mult1}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{\texorpdfstring{mult1}{mult1}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mult1} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}\hypertarget{class_linear_regression_1_1_structural_abe2dbada52541335e367815bffe06c28}{}\label{class_linear_regression_1_1_structural_abe2dbada52541335e367815bffe06c28}
-Uscita di M\+U\+L\+T2 espressa su 48 bit, di cui 15 per la parte intera e 33 per quella decimale (m.\+n = 14.\+330). \index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!mult2@{mult2}}
+\subsubsection{\texorpdfstring{mult1}{mult1}}
+{\footnotesize\ttfamily \hyperlink{class_linear_regression_1_1_structural_abe2dbada52541335e367815bffe06c28}{mult1} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+Uscita di M\+U\+L\+T2 espressa su 48 bit, di cui 15 per la parte intera e 33 per quella decimale (m.\+n = 14.\+330). \mbox{\Hypertarget{class_linear_regression_1_1_structural_a7c5c7b6fb03b66e49b0eb767162f01a8}\label{class_linear_regression_1_1_structural_a7c5c7b6fb03b66e49b0eb767162f01a8}} 
+\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!mult2@{mult2}}
 \index{mult2@{mult2}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{\texorpdfstring{mult2}{mult2}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mult2} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}\hypertarget{class_linear_regression_1_1_structural_a7c5c7b6fb03b66e49b0eb767162f01a8}{}\label{class_linear_regression_1_1_structural_a7c5c7b6fb03b66e49b0eb767162f01a8}
-Cambio di rappresentazione dell\textquotesingle{}uscita di M\+U\+L\+T1 da 29 bit, di cui 8 per la parte intera (m.\+n = 7.\+21) a 24 bit, di cui 5 per la parte intera (m.\+n = 4.\+19). Quindi tronchiamo 3 bit in testa e 2 in coda. \index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!mult3@{mult3}}
+\subsubsection{\texorpdfstring{mult2}{mult2}}
+{\footnotesize\ttfamily \hyperlink{class_linear_regression_1_1_structural_a7c5c7b6fb03b66e49b0eb767162f01a8}{mult2} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+Cambio di rappresentazione dell\textquotesingle{}uscita di M\+U\+L\+T1 da 29 bit, di cui 8 per la parte intera (m.\+n = 7.\+21) a 24 bit, di cui 5 per la parte intera (m.\+n = 4.\+19). Quindi tronchiamo 3 bit in testa e 2 in coda. \mbox{\Hypertarget{class_linear_regression_1_1_structural_adf80c8ef67f9eb716830cfb9a6d3a980}\label{class_linear_regression_1_1_structural_adf80c8ef67f9eb716830cfb9a6d3a980}} 
+\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!mult3@{mult3}}
 \index{mult3@{mult3}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{\texorpdfstring{mult3}{mult3}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mult3} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}\hypertarget{class_linear_regression_1_1_structural_adf80c8ef67f9eb716830cfb9a6d3a980}{}\label{class_linear_regression_1_1_structural_adf80c8ef67f9eb716830cfb9a6d3a980}
-Cambio di rappresentazione dell\textquotesingle{}uscita di M\+U\+L\+T2 da 48 bit, di cui 6 per la parte intera (m.\+n = 5.\+42) a 24 bit, in cui l\textquotesingle{}msb ha peso -\/3 (m.\+n = -\/3.\+26). Quindi tronchiamo 8 bit in testa e 16 in coda. \index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!mult4@{mult4}}
+\subsubsection{\texorpdfstring{mult3}{mult3}}
+{\footnotesize\ttfamily \hyperlink{class_linear_regression_1_1_structural_adf80c8ef67f9eb716830cfb9a6d3a980}{mult3} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+Cambio di rappresentazione dell\textquotesingle{}uscita di M\+U\+L\+T2 da 48 bit, di cui 6 per la parte intera (m.\+n = 5.\+42) a 24 bit, in cui l\textquotesingle{}msb ha peso -\/3 (m.\+n = -\/3.\+26). Quindi tronchiamo 8 bit in testa e 16 in coda. \mbox{\Hypertarget{class_linear_regression_1_1_structural_a65ae62ab3b1e6675bf4e4bcf572d2025}\label{class_linear_regression_1_1_structural_a65ae62ab3b1e6675bf4e4bcf572d2025}} 
+\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!mult4@{mult4}}
 \index{mult4@{mult4}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{\texorpdfstring{mult4}{mult4}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mult4} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}\hypertarget{class_linear_regression_1_1_structural_a65ae62ab3b1e6675bf4e4bcf572d2025}{}\label{class_linear_regression_1_1_structural_a65ae62ab3b1e6675bf4e4bcf572d2025}
-Cambio di rappresentazione dell\textquotesingle{}uscita di M\+U\+L\+T3 da 48 bit, di cui 11 per la parte intera (m.\+n = 10.\+37) a 24 bit, di cui 5 per la parte intera (m.\+n = 4.\+19). Quindi tronchiamo 6 bit in testa e 18 in coda. \index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!mult5@{mult5}}
+\subsubsection{\texorpdfstring{mult4}{mult4}}
+{\footnotesize\ttfamily \hyperlink{class_linear_regression_1_1_structural_a65ae62ab3b1e6675bf4e4bcf572d2025}{mult4} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+Cambio di rappresentazione dell\textquotesingle{}uscita di M\+U\+L\+T3 da 48 bit, di cui 11 per la parte intera (m.\+n = 10.\+37) a 24 bit, di cui 5 per la parte intera (m.\+n = 4.\+19). Quindi tronchiamo 6 bit in testa e 18 in coda. \mbox{\Hypertarget{class_linear_regression_1_1_structural_aed551c15ed15fe4ab7d0c073a7e33b9c}\label{class_linear_regression_1_1_structural_aed551c15ed15fe4ab7d0c073a7e33b9c}} 
+\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!mult5@{mult5}}
 \index{mult5@{mult5}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{\texorpdfstring{mult5}{mult5}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mult5} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}\hypertarget{class_linear_regression_1_1_structural_aed551c15ed15fe4ab7d0c073a7e33b9c}{}\label{class_linear_regression_1_1_structural_aed551c15ed15fe4ab7d0c073a7e33b9c}
-L\textquotesingle{}uscita di A\+D\+D2 deve essere portata da una rappresentazione a 24 bit con peso dell\textquotesingle{}msb pari a -\/3 (m.\+n = -\/3.\+26) a una con 24 bit con peso dell\textquotesingle{}msb pari a -\/2 (m.\+n = -\/2.\+25). Quindi tronchiamo un bit in coda ed aggiungiamo un bit in testa con estensione del segno. \index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!mult6@{mult6}}
+\subsubsection{\texorpdfstring{mult5}{mult5}}
+{\footnotesize\ttfamily \hyperlink{class_linear_regression_1_1_structural_aed551c15ed15fe4ab7d0c073a7e33b9c}{mult5} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+L\textquotesingle{}uscita di A\+D\+D2 deve essere portata da una rappresentazione a 24 bit con peso dell\textquotesingle{}msb pari a -\/3 (m.\+n = -\/3.\+26) a una con 24 bit con peso dell\textquotesingle{}msb pari a -\/2 (m.\+n = -\/2.\+25). Quindi tronchiamo un bit in coda ed aggiungiamo un bit in testa con estensione del segno. \mbox{\Hypertarget{class_linear_regression_1_1_structural_afa25d32bbc0881baaa179e393e1964c5}\label{class_linear_regression_1_1_structural_afa25d32bbc0881baaa179e393e1964c5}} 
+\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!mult6@{mult6}}
 \index{mult6@{mult6}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{\texorpdfstring{mult6}{mult6}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mult6} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}\hypertarget{class_linear_regression_1_1_structural_afa25d32bbc0881baaa179e393e1964c5}{}\label{class_linear_regression_1_1_structural_afa25d32bbc0881baaa179e393e1964c5}
+\subsubsection{\texorpdfstring{mult6}{mult6}}
+{\footnotesize\ttfamily \hyperlink{class_linear_regression_1_1_structural_afa25d32bbc0881baaa179e393e1964c5}{mult6} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
 L\textquotesingle{}uscita di M\+U\+L\+T5 deve essere portata da una rappresentazione di 48 bit con 21 bit di parte intera e 27 decimale (m.\+n = 20.\+27), ad una di 24 bit con 16 bit di parte intera e 8 decimale (m.\+n = 15.\+8). Qindi tronca 5 bit in testa e 19 in coda. 
 
 La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}

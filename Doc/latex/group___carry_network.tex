@@ -50,40 +50,64 @@ Rete di generazione dei segnali di carry per un adder a quattro bit.
 
 
 \subsection{Documentazione delle variabili}
+\mbox{\Hypertarget{group___carry_network_gaa556a73dc4a4de1a0d662b25adbcbe33}\label{group___carry_network_gaa556a73dc4a4de1a0d662b25adbcbe33}} 
 \index{Carry\+Network@{Carry\+Network}!carryin@{carryin}}
 \index{carryin@{carryin}!Carry\+Network@{Carry\+Network}}
-\subsubsection[{\texorpdfstring{carryin}{carryin}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carryin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}\hypertarget{group___carry_network_gaa556a73dc4a4de1a0d662b25adbcbe33}{}\label{group___carry_network_gaa556a73dc4a4de1a0d662b25adbcbe33}
+\subsubsection{\texorpdfstring{carryin}{carryin}}
+{\footnotesize\ttfamily \hyperlink{group___carry_network_gaa556a73dc4a4de1a0d662b25adbcbe33}{carryin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
 
 
 segnale di \char`\"{}carry-\/in\char`\"{}, prodotto da un eventuale \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a monte. 
 
-funzione \char`\"{}generazione\char`\"{} prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder generera\textquotesingle{} un carry in uscita; gen(i) = add(i) A\+ND add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi \index{Carry\+Network@{Carry\+Network}!carryout@{carryout}}
+funzione \char`\"{}generazione\char`\"{} prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder generera\textquotesingle{} un carry in uscita; gen(i) = add(i) A\+ND add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi \mbox{\Hypertarget{group___carry_network_ga6b265f3fe41195485dfedd9824c3598f}\label{group___carry_network_ga6b265f3fe41195485dfedd9824c3598f}} 
+\index{Carry\+Network@{Carry\+Network}!carryout@{carryout}}
 \index{carryout@{carryout}!Carry\+Network@{Carry\+Network}}
-\subsubsection[{\texorpdfstring{carryout}{carryout}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carryout} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}\hypertarget{group___carry_network_ga6b265f3fe41195485dfedd9824c3598f}{}\label{group___carry_network_ga6b265f3fe41195485dfedd9824c3598f}
+\subsubsection{\texorpdfstring{carryout}{carryout}}
+{\footnotesize\ttfamily \hyperlink{group___carry_network_ga6b265f3fe41195485dfedd9824c3598f}{carryout} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+\mbox{\Hypertarget{group___carry_network_ga1ff97daaf4e03defc21748593cacfaa7}\label{group___carry_network_ga1ff97daaf4e03defc21748593cacfaa7}} 
 \index{Carry\+Network@{Carry\+Network}!gen@{gen}}
 \index{gen@{gen}!Carry\+Network@{Carry\+Network}}
-\subsubsection[{\texorpdfstring{gen}{gen}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gen} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}\hypertarget{group___carry_network_ga1ff97daaf4e03defc21748593cacfaa7}{}\label{group___carry_network_ga1ff97daaf4e03defc21748593cacfaa7}
-funzione “propagazione” prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder propaghera\textquotesingle{} un eventuale carry in ingresso; prop(i) = add(i) OR add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi \index{Carry\+Network@{Carry\+Network}!genin@{genin}}
+\subsubsection{\texorpdfstring{gen}{gen}}
+{\footnotesize\ttfamily \hyperlink{group___carry_network_ga1ff97daaf4e03defc21748593cacfaa7}{gen} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+funzione “propagazione” prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder propaghera\textquotesingle{} un eventuale carry in ingresso; prop(i) = add(i) OR add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi \mbox{\Hypertarget{group___carry_network_ga0a46d5193cb73eb993bc5d4f69741d0a}\label{group___carry_network_ga0a46d5193cb73eb993bc5d4f69741d0a}} 
+\index{Carry\+Network@{Carry\+Network}!genin@{genin}}
 \index{genin@{genin}!Carry\+Network@{Carry\+Network}}
-\subsubsection[{\texorpdfstring{genin}{genin}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf genin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}\hypertarget{group___carry_network_ga0a46d5193cb73eb993bc5d4f69741d0a}{}\label{group___carry_network_ga0a46d5193cb73eb993bc5d4f69741d0a}
+\subsubsection{\texorpdfstring{genin}{genin}}
+{\footnotesize\ttfamily \hyperlink{group___carry_network_ga0a46d5193cb73eb993bc5d4f69741d0a}{genin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
 
 
 funzione \char`\"{}generazione\char`\"{}, prodotta da una eventuale \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a monte 
 
+\mbox{\Hypertarget{group___carry_network_ga068cd5c4d23e284cb942702252ed1491}\label{group___carry_network_ga068cd5c4d23e284cb942702252ed1491}} 
 \index{Carry\+Network@{Carry\+Network}!genout@{genout}}
 \index{genout@{genout}!Carry\+Network@{Carry\+Network}}
-\subsubsection[{\texorpdfstring{genout}{genout}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf genout} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}\hypertarget{group___carry_network_ga068cd5c4d23e284cb942702252ed1491}{}\label{group___carry_network_ga068cd5c4d23e284cb942702252ed1491}
-funzione \char`\"{}propagazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a valle \index{Carry\+Network@{Carry\+Network}!prop@{prop}}
+\subsubsection{\texorpdfstring{genout}{genout}}
+{\footnotesize\ttfamily \hyperlink{group___carry_network_ga068cd5c4d23e284cb942702252ed1491}{genout} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+funzione \char`\"{}propagazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a valle \mbox{\Hypertarget{group___carry_network_gac1f84cd3374a5a4d2ee2669ebdadafe8}\label{group___carry_network_gac1f84cd3374a5a4d2ee2669ebdadafe8}} 
+\index{Carry\+Network@{Carry\+Network}!prop@{prop}}
 \index{prop@{prop}!Carry\+Network@{Carry\+Network}}
-\subsubsection[{\texorpdfstring{prop}{prop}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf prop} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}\hypertarget{group___carry_network_gac1f84cd3374a5a4d2ee2669ebdadafe8}{}\label{group___carry_network_gac1f84cd3374a5a4d2ee2669ebdadafe8}
+\subsubsection{\texorpdfstring{prop}{prop}}
+{\footnotesize\ttfamily \hyperlink{group___carry_network_gac1f84cd3374a5a4d2ee2669ebdadafe8}{prop} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+\mbox{\Hypertarget{group___carry_network_ga422e8e7ee01fc7ac7b7390cd2ad8c87b}\label{group___carry_network_ga422e8e7ee01fc7ac7b7390cd2ad8c87b}} 
 \index{Carry\+Network@{Carry\+Network}!propin@{propin}}
 \index{propin@{propin}!Carry\+Network@{Carry\+Network}}
-\subsubsection[{\texorpdfstring{propin}{propin}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf propin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}\hypertarget{group___carry_network_ga422e8e7ee01fc7ac7b7390cd2ad8c87b}{}\label{group___carry_network_ga422e8e7ee01fc7ac7b7390cd2ad8c87b}
+\subsubsection{\texorpdfstring{propin}{propin}}
+{\footnotesize\ttfamily \hyperlink{group___carry_network_ga422e8e7ee01fc7ac7b7390cd2ad8c87b}{propin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
 
 
 funzione \char`\"{}propagazione\char`\"{}, prodotta da una eventuale \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a monte 
 
+\mbox{\Hypertarget{group___carry_network_ga5957c9cdd706cafd2da8855133a002c9}\label{group___carry_network_ga5957c9cdd706cafd2da8855133a002c9}} 
 \index{Carry\+Network@{Carry\+Network}!propout@{propout}}
 \index{propout@{propout}!Carry\+Network@{Carry\+Network}}
-\subsubsection[{\texorpdfstring{propout}{propout}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf propout} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}\hypertarget{group___carry_network_ga5957c9cdd706cafd2da8855133a002c9}{}\label{group___carry_network_ga5957c9cdd706cafd2da8855133a002c9}
+\subsubsection{\texorpdfstring{propout}{propout}}
+{\footnotesize\ttfamily \hyperlink{group___carry_network_ga5957c9cdd706cafd2da8855133a002c9}{propout} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
 carry calcolati sulla base delle funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti dai blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, e sulla base delle funzioni \char`\"{}carry-\/in\char`\"{}, \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti da eventuali blocchi a monte; ciascuno dei bit dovra\textquotesingle{} essere posto in ingresso ad un blocco \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} differente, affinche\textquotesingle{} possa essere calcolata la somma degli addendi 
