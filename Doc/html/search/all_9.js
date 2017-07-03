@@ -7,5 +7,5 @@ var searchData=
   ['nibble_5fadder_2evhd',['nibble_adder.vhd',['../nibble__adder_8vhd.html',1,'']]],
   ['nibbleadder',['NibbleAdder',['../group___nibble_adder.html',1,'']]],
   ['nibbles',['nibbles',['../group___carry_loockahead.html#ga0b63b586531492d0fa882246cca071c1',1,'generic_cla_adder']]],
-  ['numeric_5fstd',['NUMERIC_STD',['../group___linear_regression.html#gae00f3f04545af57582ff10609eee23e2',1,'LinearRegression']]]
+  ['numeric_5fstd',['NUMERIC_STD',['../group___linear_regression.html#gae00f3f04545af57582ff10609eee23e2',1,'LinearRegression.NUMERIC_STD()'],['../classtb___linear_regression.html#ae00f3f04545af57582ff10609eee23e2',1,'tb_LinearRegression.NUMERIC_STD()']]]
 ];

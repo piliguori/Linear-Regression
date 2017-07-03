@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['c',['C',['../group___linear_regression.html#ga17058a6bcb609074c49be51d09202870',1,'LinearRegression']]],
+  ['c',['C',['../group___linear_regression.html#ga17058a6bcb609074c49be51d09202870',1,'LinearRegression.C()'],['../classtb___linear_regression_1_1_behavioral.html#a70a44c14255b0f239e64481331464e77',1,'tb_LinearRegression.Behavioral.C()']]],
   ['carry',['carry',['../group___nibble_adder.html#ga8f5524d80e551d479327a16bb32abcaa',1,'nibble_adder::structural']]],
   ['carry_5fin',['carry_in',['../group___carry_loockahead.html#ga1c211cdf2d4cf97e869c442832c53439',1,'generic_cla_adder.carry_in()'],['../classtb__generic__cla__adder_1_1behavior.html#a674dc264b83bd397c51160bed4eaede8',1,'tb_generic_cla_adder.behavior.carry_in()']]],
   ['carry_5fout',['carry_out',['../group___carry_loockahead.html#ga851aaea297bdc862fba5478c4bf0e214',1,'generic_cla_adder.carry_out()'],['../classtb__generic__cla__adder_1_1behavior.html#a0599dd129c582752ab70084bd7bd6305',1,'tb_generic_cla_adder.behavior.carry_out()']]],

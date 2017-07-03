@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['m',['m',['../group___linear_regression.html#gad943f01112876248a4734aa3c3d2e3f2',1,'LinearRegression']]],
+  ['m',['m',['../group___linear_regression.html#gad943f01112876248a4734aa3c3d2e3f2',1,'LinearRegression.m()'],['../classtb___linear_regression_1_1_behavioral.html#aca8d70a7c18dcae84a7d59556bf399c6',1,'tb_LinearRegression.Behavioral.m()']]],
   ['mult1_5fout',['mult1_out',['../group___linear_regression.html#ga8e3ef6c468a1560f19de3430d956a75c',1,'LinearRegression::Structural']]],
   ['mult2_5fout',['mult2_out',['../group___linear_regression.html#gac6c586bcd10a70e181cf575558678c99',1,'LinearRegression::Structural']]],
   ['mult3_5fout',['mult3_out',['../group___linear_regression.html#gae87513d13999dbb668a8ca5becdf44e1',1,'LinearRegression::Structural']]],

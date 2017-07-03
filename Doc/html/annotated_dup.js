@@ -12,5 +12,6 @@ var annotated_dup =
     ] ],
     [ "tb_generic_cla_adder", "classtb__generic__cla__adder.html", [
       [ "tb_generic_cla_adder.behavior", "classtb__generic__cla__adder_1_1behavior.html", "classtb__generic__cla__adder_1_1behavior" ]
-    ] ]
+    ] ],
+    [ "tb_LinearRegression", "classtb___linear_regression.html", "classtb___linear_regression" ]
 ];
