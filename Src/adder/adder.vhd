@@ -59,7 +59,7 @@ entity adder is
 												--! opposto.
 end adder;
 
---! Implementazione mistra structural per l'entity adder.
+--! Implementazione mista structural per l'entity adder.
 --!
 --! A seconda del valore del parametro use_custom, verrà istanziato
 --!  - un sommatore full-custom generic_cla_adder, se use_custom = true;
