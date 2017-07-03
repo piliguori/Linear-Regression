@@ -125,8 +125,8 @@ MUL3:
 	
 	
 	Molt:
-	P1= 10.37 dobb portarlo in 3.20
-	Quindi tagliamo 7 bit dalla testa e 17 dalla coda
+	P1= 10.37 dobb portarlo in 4.19
+	Quindi tagliamo 6 bit dalla testa e 18 dalla coda
 	
 MULT4:
 	sum1= 7.16
@@ -137,15 +137,16 @@ MULT4:
 	quindi tronchiamo 1 bit in testa e 23 bit in coda 
 	
 ADD1:
-	P1= 3.20
+	P1= 4.19
 	P3= 4.19
-	
-	Normalizzazione:
-	P1 va da 3.20 a 4.20 (aggiungi un bit di estensione del segno)
-	P3 va da 4.19 a 4.20 (aggiungi uno zero in coda)
+	//comment
+//	Normalizzazione:
+//	P1 va da 3.20 a 4.20 (aggiungi un bit di estensione del segno)
+//	P3 va da 4.19 a 4.20 (aggiungi uno zero in coda)
+
 	
 	Addizione:
-	S5= 4.20 e lo vuole in 4.19 (quindi togli un bit in coda)
+	S5= 4.19
 	
 	
 ADD2: 
