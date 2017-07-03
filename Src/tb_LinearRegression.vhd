@@ -30,7 +30,7 @@
 --! 
 
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL
+use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity tb_LinearRegression is
@@ -59,8 +59,11 @@ signal A 	: STD_LOGIC_VECTOR (23 downto 0):= (others => '0');
 signal m 	: STD_LOGIC_VECTOR (23 downto 0):= (others => '0');
 signal q 	: STD_LOGIC_VECTOR (23 downto 0):= (others => '0');
 
+
+begin
+
 uut: LinearRegression 
-    Port map ( 	prim 	=> prim
+    Port map ( 	prim 	=> prim,
            		Sum2 	=> Sum2,
 		   		B 		=> B,
 		   		Sum1 	=> Sum1,
@@ -71,7 +74,36 @@ uut: LinearRegression
 		   		
 stim_proc: process
 begin
+	--Test MULT1
+--	prim <= b"10110";
+--	Sum2 <= x"8137AB";
 	
+	--Test MULT2
+--	B <= x"300000";
+--	Sum2 <= x"A00000";
+
+
+	--Test MULT3
+--	B <= x"ACACCA";
+--	Sum1 <= x"0CACCA";
+	
+	--Test MULT4
+--	Sum1 <= x"D25A08";
+--	C <= x"fff123";
+
+	--Test Add1 ed Add2
+	prim <= b"01010";
+	Sum2 <= x"2BCDEF";
+	
+	B <= x"234567";
+	Sum1<= x"34BD93";
+	
+	C <= x"61d15a";
+	
+	--Test m e q
+	A <=x"1ef1ca";
+	
+	 
 wait;
 end process;		   		
 
