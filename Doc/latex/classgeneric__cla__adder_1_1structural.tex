@@ -1,9 +1,10 @@
-\hypertarget{classgeneric__cla__adder_1_1structural}{\section{structural Architecture Reference}
+\hypertarget{classgeneric__cla__adder_1_1structural}{}\section{structural Architecture Reference}
 \label{classgeneric__cla__adder_1_1structural}\index{structural@{structural}}
-}
 
 
-Implementazione structural di \hyperlink{classgeneric__cla__adder}{generic\+\_\+cla\+\_\+adder}.  
+Implementazione structural di \hyperlink{classgeneric__cla__adder}{generic\+\_\+cla\+\_\+adder}.
+
+Questa implementazione istanzia tanti blocchi \hyperlink{classnibble__adder}{nibble\+\_\+adder} quanti siano i nibble in cui sono rappresentati gli addendi. La somma è espressa sullo stesso numero di bit. I diversi blocchi sono connessi tra loro come indicato nello schema ricordato di seguito\+: .  
 
 
 \subsection*{Components}
@@ -15,11 +16,11 @@ Implementazione structural di \hyperlink{classgeneric__cla__adder}{generic\+\_\+
  \begin{DoxyCompactItemize}
 \item 
 \hyperlink{group___carry_loockahead_ga19afe0b89973d7fc29362431f2e828b7}{prop} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{to}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___carry_loockahead_ga0b63b586531492d0fa882246cca071c1}{nibbles}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em funzione \char`\"{}propagazione\char`\"{} del carry, prodotta dai diversi blocchi \hyperlink{classnibble__adder}{nibble\+\_\+adder}; prop(i) vale 1 quando, sulla base degli ingressi, l'i-\/esimo \hyperlink{classnibble__adder}{nibble\+\_\+adder} propaghera' un eventuale carry in ingresso; prop(0) = '1'; \end{DoxyCompactList}\item 
+\item 
 \hyperlink{group___carry_loockahead_ga7a68948b7b96c7b51036939fad8e71b3}{gen} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{to}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___carry_loockahead_ga0b63b586531492d0fa882246cca071c1}{nibbles}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em funzione \char`\"{}generazione\char`\"{} del carry, prodotta dai diversi blocchi \hyperlink{classnibble__adder}{nibble\+\_\+adder}; gen(i) vale 1 quando, sulla base degli ingressi, l'i-\/esimo \hyperlink{classnibble__adder}{nibble\+\_\+adder} genera carry in uscita; gen(0) = '0'; \end{DoxyCompactList}\item 
-\hyperlink{group___carry_loockahead_ga99974841945a5f91b014f0149e173356}{sum\+\_\+tmp} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___carry_loockahead_ga0b63b586531492d0fa882246cca071c1}{nibbles}} \textcolor{vhdlchar}{$\ast$}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{4} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em segnale temporaneo nel quale viene posto il risultato della somma per effettuare il calcolo della condizione di overflow \end{DoxyCompactList}\end{DoxyCompactItemize}
+\item 
+\hyperlink{group___carry_loockahead_ga3c7f619aa6449e06bf0dd48a7db92b84}{sum\+\_\+tmp} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___carry_loockahead_ga0b63b586531492d0fa882246cca071c1}{nibbles}} \textcolor{vhdlchar}{$\ast$}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{4} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
 \subsection*{Instantiations}
  \begin{DoxyCompactItemize}
 \item 
@@ -28,15 +29,17 @@ Implementazione structural di \hyperlink{classgeneric__cla__adder}{generic\+\_\+
 
 
 \subsection{Descrizione dettagliata}
-Implementazione structural di \hyperlink{classgeneric__cla__adder}{generic\+\_\+cla\+\_\+adder}. 
+Implementazione structural di \hyperlink{classgeneric__cla__adder}{generic\+\_\+cla\+\_\+adder}.
 
-Questa implementazione istanzia tanti blocchi \hyperlink{classnibble__adder}{nibble\+\_\+adder} quanti siano i nibble in cui sono rappresentati gli addendi. La somma è espressa sullo stesso numero di bit. I diversi blocchi sono connessi tra loro come indicato nello schema ricordato di seguito\+:  
+Questa implementazione istanzia tanti blocchi \hyperlink{classnibble__adder}{nibble\+\_\+adder} quanti siano i nibble in cui sono rappresentati gli addendi. La somma è espressa sullo stesso numero di bit. I diversi blocchi sono connessi tra loro come indicato nello schema ricordato di seguito\+: . 
+
+flag di overflow; è \textquotesingle{}1\textquotesingle{} quando il risultato prodotto dalla somma degli addendi non è rappresentabile su 4$\ast$nibbles bit\+: si verifica overflow se, sommando due numeri dello stesso segno, si ottiene un numero di segno opposto. 
 
 \subsection{Documentazione dei membri dato}
-\hypertarget{classgeneric__cla__adder_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}{\index{generic\+\_\+cla\+\_\+adder\+::structural@{generic\+\_\+cla\+\_\+adder\+::structural}!adder@{adder}}
+\index{generic\+\_\+cla\+\_\+adder\+::structural@{generic\+\_\+cla\+\_\+adder\+::structural}!adder@{adder}}
 \index{adder@{adder}!generic\+\_\+cla\+\_\+adder\+::structural@{generic\+\_\+cla\+\_\+adder\+::structural}}
-\subsubsection[{adder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf adder} {\bfseries \textcolor{vhdlchar}{nibble\+\_\+adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{classgeneric__cla__adder_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}
-
+\subsubsection[{\texorpdfstring{adder}{adder}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf adder} {\bfseries \textcolor{vhdlchar}{nibble\+\_\+adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}\hypertarget{classgeneric__cla__adder_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}{}\label{classgeneric__cla__adder_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}
+segnale temporaneo nel quale viene posto il risultato della somma per effettuare il calcolo della condizione di overflow 
 
 La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
 \item 

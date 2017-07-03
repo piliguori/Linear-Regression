@@ -1,6 +1,5 @@
-\hypertarget{nibble__adder_8vhd}{\section{Riferimenti per il file Src/adder/nibble\+\_\+adder.vhd}
+\hypertarget{nibble__adder_8vhd}{}\section{Riferimenti per il file Src/adder/nibble\+\_\+adder.vhd}
 \label{nibble__adder_8vhd}\index{Src/adder/nibble\+\_\+adder.\+vhd@{Src/adder/nibble\+\_\+adder.\+vhd}}
-}
 \subsection*{Entities}
 \begin{DoxyCompactItemize}
 \item 
@@ -9,7 +8,9 @@
 
 La cella somma tra loro due addendi ed un carry in ingresso; gli addendi sono espressi su quattro bit. Oltre a generare la somma, genera le funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} del carry per eventuali blocchi \hyperlink{classnibble__adder}{nibble\+\_\+adder} posti a valle. \end{DoxyCompactList}\item 
 \hyperlink{classnibble__adder_1_1structural}{structural} architecture
-\begin{DoxyCompactList}\small\item\em Implementazione structural dell'entità \hyperlink{classnibble__adder}{nibble\+\_\+adder}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Implementazione structural dell\textquotesingle{}entità \hyperlink{classnibble__adder}{nibble\+\_\+adder}.
+
+Questa architettura istanzia una entità \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} ed una entità \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} per ogni bit su cui sono espressi gli addendi, connettendoli tra loro secondo lo schema riportato di seguito\+: . \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Descrizione dettagliata}
@@ -32,8 +33,8 @@ Copyright 2017 Salvatore Barone \href{mailto:salvator.barone@gmail.com}{\tt salv
 \end{DoxyCopyright}
 This file is part of Linear-\/\+Regression.
 
-Linear-\/\+Regression is free software; you can redistribute it and/or modify it under the terms of the G\+N\+U General Public License as published by the Free Software Foundation; either version 3 of the License, or any later version.
+Linear-\/\+Regression is free software; you can redistribute it and/or modify it under the terms of the G\+NU General Public License as published by the Free Software Foundation; either version 3 of the License, or any later version.
 
-Linear-\/\+Regression is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U General Public License for more details.
+Linear-\/\+Regression is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+UT A\+NY W\+A\+R\+R\+A\+N\+TY; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY or F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE. See the G\+NU General Public License for more details.
 
-You should have received a copy of the G\+N\+U General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, M\+A 02110-\/1301, U\+S\+A. 
+You should have received a copy of the G\+NU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-\/1301, U\+SA. 

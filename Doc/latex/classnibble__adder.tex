@@ -1,6 +1,5 @@
-\hypertarget{classnibble__adder}{\section{nibble\+\_\+adder Entity Reference}
+\hypertarget{classnibble__adder}{}\section{nibble\+\_\+adder Entity Reference}
 \label{classnibble__adder}\index{nibble\+\_\+adder@{nibble\+\_\+adder}}
-}
 
 
 Addizionatore con carry-\/lookahead a quattro bit.
@@ -15,7 +14,7 @@ Diagramma delle classi per nibble\+\_\+adder
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=266pt]{classnibble__adder__inherit__graph}
+\includegraphics[width=319pt]{classnibble__adder__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -31,7 +30,9 @@ Diagramma di collaborazione per nibble\+\_\+adder\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classnibble__adder_1_1structural}{structural} architecture
-\begin{DoxyCompactList}\small\item\em Implementazione structural dell'entità \hyperlink{classnibble__adder}{nibble\+\_\+adder}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Implementazione structural dell\textquotesingle{}entità \hyperlink{classnibble__adder}{nibble\+\_\+adder}.
+
+Questa architettura istanzia una entità \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} ed una entità \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} per ogni bit su cui sono espressi gli addendi, connettendoli tra loro secondo lo schema riportato di seguito\+: . \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Ports}
  \begin{DoxyCompactItemize}
 \item 
@@ -46,11 +47,11 @@ Diagramma di collaborazione per nibble\+\_\+adder\+:\nopagebreak
 \hyperlink{group___nibble_adder_ga0a46d5193cb73eb993bc5d4f69741d0a}{genin}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
 \begin{DoxyCompactList}\small\item\em funzione \char`\"{}generazione\char`\"{}, prodotta da una eventuale \hyperlink{classnibble__adder}{nibble\+\_\+adder} a monte \end{DoxyCompactList}\item 
 \hyperlink{group___nibble_adder_ga5957c9cdd706cafd2da8855133a002c9}{propout}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em funzione \char`\"{}propagazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classnibble__adder}{nibble\+\_\+adder} a valle \end{DoxyCompactList}\item 
+\item 
 \hyperlink{group___nibble_adder_ga068cd5c4d23e284cb942702252ed1491}{genout}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em funzione \char`\"{}generazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classnibble__adder}{nibble\+\_\+adder} a valle \end{DoxyCompactList}\item 
+\item 
 \hyperlink{group___nibble_adder_gadfe538323c3296159dd3b383325a996b}{sum}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em funzione \char`\"{}somma\char`\"{}, rappresenta la somma tra gli addendi ed il carry in ingresso \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
 
 \subsection{Descrizione dettagliata}

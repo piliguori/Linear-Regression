@@ -3,22 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.8"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
 <title>Linear Regression: structural Architecture  Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
   $(window).load(resizeHeight);
 </script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
+  $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -28,7 +30,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Linear Regression
    </div>
    <div id="projectbrief">Linear Regression IP-core in VHDL</div>
@@ -38,14 +40,13 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generato da Doxygen 1.8.8 -->
+<!-- Generato da Doxygen 1.8.11 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
-      <li><a href="pages.html"><span>Pagine&#160;collegate</span></a></li>
       <li><a href="modules.html"><span>Moduli</span></a></li>
       <li class="current"><a href="annotated.html"><span>Design&#160;Unit&#160;List</span></a></li>
       <li><a href="files.html"><span>File</span></a></li>
@@ -95,7 +96,7 @@ $(document).ready(function(){initNavTree('classadder_1_1structural.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Gruppi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pagine</a></div>
+</div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,7 +115,11 @@ $(document).ready(function(){initNavTree('classadder_1_1structural.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Implementazione mistra structural per l'entity adder.  
+<p>Implementazione mista structural per l'entity adder.A seconda del valore del parametro use_custom, verrà istanziato</p><ul>
+<li>un sommatore full-custom <a class="el" href="classgeneric__cla__adder.html" title="Adder custom con carry-lookaheadgeneric_cla_adder somma tra loro due addendi ed un carry in ingresso;...">generic_cla_adder</a>, se use_custom = true;</li>
+<li>un sommatore la cui implementazione è stabilita dal sintetizzatore, se use_custom = false; Nel caso in cui venga istanziato il sommatore custom, è richiesto che il numero di bit con il quale sono espressi gli addendi, e di conseguenza quello in vui verrà espressa la loro somma, sia multiplo di quattro. </li>
+</ul>
+ 
  <a href="classadder_1_1structural.html#details">Continua...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Components"></a>
@@ -124,18 +129,18 @@ Components</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Signals"></a>
 Signals</h2></td></tr>
  <tr class="memitem:ga590914af948ec283f1371002f2f76720"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___adder.html#ga590914af948ec283f1371002f2f76720">sum_tmp</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="group___adder.html#gae1435c07d0cd54b521535e2f8de6f94e">nbits</a></b> <span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
-<tr class="memdesc:ga590914af948ec283f1371002f2f76720"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale temporaneo nel quale viene posto il risultato della somma per effettuare il calcolo della condizione di overflow  <a href="group___adder.html#ga590914af948ec283f1371002f2f76720"></a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Instantiations"></a>
 Instantiations</h2></td></tr>
  <tr class="memitem:a94015e32a32cd4c5be09b1ddde822259"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadder_1_1structural.html#a94015e32a32cd4c5be09b1ddde822259">cla_adder</a>&#160;</td><td class="memItemRight" valign="bottom">  <b>generic_cla_adder</b>  <em><a class="el" href="classgeneric__cla__adder.html">&lt;Entity generic_cla_adder&gt;</a></em></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
-<div class="textblock"><p>Implementazione mistra structural per l'entity adder. </p>
+<div class="textblock"><p>Implementazione mista structural per l'entity adder.</p>
 <p>A seconda del valore del parametro use_custom, verrà istanziato</p><ul>
 <li>un sommatore full-custom <a class="el" href="classgeneric__cla__adder.html" title="Adder custom con carry-lookaheadgeneric_cla_adder somma tra loro due addendi ed un carry in ingresso;...">generic_cla_adder</a>, se use_custom = true;</li>
 <li>un sommatore la cui implementazione è stabilita dal sintetizzatore, se use_custom = false; Nel caso in cui venga istanziato il sommatore custom, è richiesto che il numero di bit con il quale sono espressi gli addendi, e di conseguenza quello in vui verrà espressa la loro somma, sia multiplo di quattro. </li>
 </ul>
+<p>flag di overflow; è '1' quando il risultato prodotto dalla somma degli addendi non è rappresentabile su 4*nibbles bit: si verifica overflow se, sommando due numeri dello stesso segno, si ottiene un numero di segno opposto. </p>
 </div><h2 class="groupheader">Documentazione dei membri dato</h2>
 <a class="anchor" id="a94015e32a32cd4c5be09b1ddde822259"></a>
 <div class="memitem">
@@ -154,6 +159,7 @@ Instantiations</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>segnale temporaneo nel quale viene posto il risultato della somma per effettuare il calcolo della condizione di overflow </p>
 
 </div>
 </div>
@@ -166,9 +172,9 @@ Instantiations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classadder.html">adder</a></li><li class="navelem"><a class="el" href="classadder_1_1structural.html">structural</a></li>
-    <li class="footer">Generato Lun 3 Lug 2017 09:40:43 per Linear Regression da
+    <li class="footer">Generato Lun 3 Lug 2017 15:04:09 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>
 </div>
 </body>

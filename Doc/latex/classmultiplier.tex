@@ -1,0 +1,44 @@
+\hypertarget{classmultiplier}{}\section{multiplier Entity Reference}
+\label{classmultiplier}\index{multiplier@{multiplier}}
+
+
+Diagramma delle classi per multiplier
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classmultiplier__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmultiplier_1_1_structural}{Structural} architecture
+\begin{DoxyCompactList}\small\item\em Per il prodotto viene utilizzato l\textquotesingle{}operatore $\ast$. La sintesi viene lasciata al particolare sintetizzatore. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Generics}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___multiplier_ga4ede473cdc13e75fe66fbd548b62e432}{nbits1} {\bfseries {\bfseries \textcolor{vhdlchar}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{8} \textcolor{vhdlchar}{ }}}
+\begin{DoxyCompactList}\small\item\em dimensione del primo fattore \end{DoxyCompactList}\item 
+\hyperlink{group___multiplier_ga8b5bdaff4c3669528aaec95a07e17c2a}{nbits2} {\bfseries {\bfseries \textcolor{vhdlchar}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{\+:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{8} \textcolor{vhdlchar}{ }}}
+\begin{DoxyCompactList}\small\item\em dimensione del secondo fattore \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___multiplier_gac728adecdbfe10213256c17c1b5c5128}{factor1}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+OR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___multiplier_ga4ede473cdc13e75fe66fbd548b62e432}{nbits1}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em fattore 1 \end{DoxyCompactList}\item 
+\hyperlink{group___multiplier_gac140852334303b430bbd49689cc689dd}{factor2}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+OR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___multiplier_ga8b5bdaff4c3669528aaec95a07e17c2a}{nbits2}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em fattore 2 \end{DoxyCompactList}\item 
+\hyperlink{group___multiplier_gaf168dc69ad77dc5791b5e0f99dcfb0a9}{prod}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+OR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___multiplier_ga4ede473cdc13e75fe66fbd548b62e432}{nbits1}} \textcolor{vhdlchar}{+}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___multiplier_ga8b5bdaff4c3669528aaec95a07e17c2a}{nbits2}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em prodotto dei due fattori \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Moltiplicatore a due fattori.
+
+Il moltiplicatore permette di effettuare un prodotto di due fattori espressi su un certo numero di bit. I due fattori possono essere espressi anche su un numero di bit e rappresentazioni differenti tra loro. Se nbit1 è il numero di bit su cui viene espresso il fattore 1, e nbit2 è il numero di bit su cui viene espresso il fattore 2, allora l\textquotesingle{}uscita prod risulta essere espressa su nbit1+nbit2. ~\newline
+ Ad esempio, se il fattore 1 è rappresentato con mx.\+nx (con mx il peso del bit più significativo della parte intera ed nx il peso del bit meno significativo della parte decimale) e il fattore 2 è rappresentato con my.\+ny, allora l\textquotesingle{}uscita sarà rappresentata in mx+my+1.nx+ny 
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+Src/multiplier/\hyperlink{multiplier_8vhd}{multiplier.\+vhd}\end{DoxyCompactItemize}

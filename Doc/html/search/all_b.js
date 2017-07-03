@@ -1,16 +1,12 @@
 var searchData=
 [
-  ['s_5fin',['s_in',['../classtruncate.html#a6d6bd3ddfff26c223f1752f25545e304',1,'truncate']]],
-  ['s_5fin_5fdim',['s_in_dim',['../classtruncate.html#ad3d18243ad6fe53a2277e2aa9b94ca45',1,'truncate']]],
-  ['s_5fin_5fint',['s_in_int',['../classtruncate.html#abe72b503b8140ab0d84911165e959b53',1,'truncate']]],
-  ['s_5fout',['s_out',['../classtruncate.html#a7c0b5e84820296cfa624ce710d19debd',1,'truncate']]],
-  ['s_5fout_5fdim',['s_out_dim',['../classtruncate.html#a8b62f8bfecb0fab845995b8b051101bc',1,'truncate']]],
-  ['s_5fout_5fint',['s_out_int',['../classtruncate.html#a4ca792ca981e2f9d82bf36d9c82c08af',1,'truncate']]],
-  ['std_5flogic_5f1164',['STD_LOGIC_1164',['../classprova.html#aa4b2b25246a821511120e3149b003563',1,'prova.STD_LOGIC_1164()'],['../classtb__prova.html#aa4b2b25246a821511120e3149b003563',1,'tb_prova.STD_LOGIC_1164()']]],
-  ['stim_5fproc',['stim_proc',['../classtb__adder_1_1behavior.html#ad2efa6785cff833c341e27596b21aeb5',1,'tb_adder.behavior::stim_proc()'],['../classtb__generic__cla__adder_1_1behavior.html#ad2efa6785cff833c341e27596b21aeb5',1,'tb_generic_cla_adder.behavior::stim_proc()']]],
-  ['structural',['structural',['../classgeneric__cla__adder_1_1structural.html',1,'generic_cla_adder']]],
-  ['structural',['structural',['../classadder_1_1structural.html',1,'adder']]],
-  ['structural',['structural',['../classnibble__adder_1_1structural.html',1,'nibble_adder']]],
-  ['sum',['sum',['../group___adder.html#ga01f6ea3ddb4d1519676217bcb5959de8',1,'adder.sum()'],['../group___base_cell.html#ga0d9fc1b21b42422b12d68ad73ca8ef13',1,'cla_adder_cell.sum()'],['../group___carry_loockahead.html#ga1b4798a9e96bb32e9c08ce68e24e7871',1,'generic_cla_adder.sum()'],['../group___nibble_adder.html#gadfe538323c3296159dd3b383325a996b',1,'nibble_adder.sum()'],['../classtb__adder_1_1behavior.html#a5db139547621616405be3e820278d444',1,'tb_adder.behavior.sum()'],['../classtb__generic__cla__adder_1_1behavior.html#a2f702f7ff5535941ec77a2859f9686b7',1,'tb_generic_cla_adder.behavior.sum()']]],
-  ['sum_5ftmp',['sum_tmp',['../group___adder.html#ga590914af948ec283f1371002f2f76720',1,'adder.structural.sum_tmp()'],['../group___carry_loockahead.html#ga99974841945a5f91b014f0149e173356',1,'generic_cla_adder.structural.sum_tmp()']]]
+  ['p1',['P1',['../group___linear_regression.html#ga6628650c9428eb89bdfa36a2efa1cb37',1,'LinearRegression::Structural']]],
+  ['p2',['P2',['../group___linear_regression.html#gab0bf0189296a8c52f6e36c853c8d3a77',1,'LinearRegression::Structural']]],
+  ['p3',['P3',['../group___linear_regression.html#gaa427886ed37e5d29753362483ce7fae2',1,'LinearRegression::Structural']]],
+  ['p4',['P4',['../group___linear_regression.html#ga4fb44e5594257c32300225a509c90dd7',1,'LinearRegression::Structural']]],
+  ['prim',['prim',['../group___linear_regression.html#ga6b9afe9c48db695b7336519281c099a8',1,'LinearRegression']]],
+  ['prod',['prod',['../group___multiplier.html#gaf168dc69ad77dc5791b5e0f99dcfb0a9',1,'multiplier']]],
+  ['prop',['prop',['../group___base_cell.html#gac94466f3a0e3e34f0231abcf4b667ade',1,'cla_adder_cell.prop()'],['../group___carry_network.html#gac1f84cd3374a5a4d2ee2669ebdadafe8',1,'cla_carry_net.prop()'],['../group___carry_loockahead.html#ga19afe0b89973d7fc29362431f2e828b7',1,'generic_cla_adder.structural.prop()'],['../group___nibble_adder.html#ga3abd8d433ff039baabc0c6fc2126578b',1,'nibble_adder.structural.prop()']]],
+  ['propin',['propin',['../group___carry_network.html#ga422e8e7ee01fc7ac7b7390cd2ad8c87b',1,'cla_carry_net.propin()'],['../group___nibble_adder.html#ga422e8e7ee01fc7ac7b7390cd2ad8c87b',1,'nibble_adder.propin()']]],
+  ['propout',['propout',['../group___carry_network.html#ga5957c9cdd706cafd2da8855133a002c9',1,'cla_carry_net.propout()'],['../group___nibble_adder.html#ga5957c9cdd706cafd2da8855133a002c9',1,'nibble_adder.propout()']]]
 ];

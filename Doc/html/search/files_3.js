@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nibble_5fadder_2evhd',['nibble_adder.vhd',['../nibble__adder_8vhd.html',1,'']]]
+  ['linearregression_2evhd',['LinearRegression.vhd',['../_linear_regression_8vhd.html',1,'']]]
 ];

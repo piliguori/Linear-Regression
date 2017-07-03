@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ieee',['IEEE',['../classprova.html#ae4f03c286607f3181e16b9aa12d0c6d4',1,'prova.IEEE()'],['../classtb__prova.html#ae4f03c286607f3181e16b9aa12d0c6d4',1,'tb_prova.IEEE()']]]
+  ['factor1',['factor1',['../group___multiplier.html#gac728adecdbfe10213256c17c1b5c5128',1,'multiplier']]],
+  ['factor2',['factor2',['../group___multiplier.html#gac140852334303b430bbd49689cc689dd',1,'multiplier']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nibble_5fadder',['nibble_adder',['../classnibble__adder.html',1,'']]]
+  ['linearregression',['LinearRegression',['../class_linear_regression.html',1,'']]]
 ];

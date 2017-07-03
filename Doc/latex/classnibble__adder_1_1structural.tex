@@ -1,9 +1,10 @@
-\hypertarget{classnibble__adder_1_1structural}{\section{structural Architecture Reference}
+\hypertarget{classnibble__adder_1_1structural}{}\section{structural Architecture Reference}
 \label{classnibble__adder_1_1structural}\index{structural@{structural}}
-}
 
 
-Implementazione structural dell'entità \hyperlink{classnibble__adder}{nibble\+\_\+adder}.  
+Implementazione structural dell\textquotesingle{}entità \hyperlink{classnibble__adder}{nibble\+\_\+adder}.
+
+Questa architettura istanzia una entità \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} ed una entità \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} per ogni bit su cui sono espressi gli addendi, connettendoli tra loro secondo lo schema riportato di seguito\+: .  
 
 
 \subsection*{Components}
@@ -17,11 +18,11 @@ Implementazione structural dell'entità \hyperlink{classnibble__adder}{nibble\+\
  \begin{DoxyCompactItemize}
 \item 
 \hyperlink{group___nibble_adder_ga3abd8d433ff039baabc0c6fc2126578b}{prop} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em funzione “propagazione” prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; prop(i) = add(i) O\+R add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi \end{DoxyCompactList}\item 
+\item 
 \hyperlink{group___nibble_adder_gac6c069fe4ec1c0a42272d3de4be6f45f}{gen} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em funzione \char`\"{}generazione\char`\"{} prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder generera' un carry in uscita; gen(i) = add(i) A\+N\+D add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi \end{DoxyCompactList}\item 
+\item 
 \hyperlink{group___nibble_adder_ga8f5524d80e551d479327a16bb32abcaa}{carry} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em carry calcolati sulla base delle funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti dai blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, e sulla base delle funzioni \char`\"{}carry-\/in\char`\"{}, \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti da eventuali blocchi a monte; ciascuno dei bit dovra' essere posto in ingresso ad un blocco \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} differente, affinche' possa essere calcolata la somma degli addendi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \subsection*{Instantiations}
  \begin{DoxyCompactItemize}
 \item 
@@ -32,18 +33,20 @@ Implementazione structural dell'entità \hyperlink{classnibble__adder}{nibble\+\
 
 
 \subsection{Descrizione dettagliata}
-Implementazione structural dell'entità \hyperlink{classnibble__adder}{nibble\+\_\+adder}. 
+Implementazione structural dell\textquotesingle{}entità \hyperlink{classnibble__adder}{nibble\+\_\+adder}.
 
-Questa architettura istanzia una entità \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} ed una entità \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} per ogni bit su cui sono espressi gli addendi, connettendoli tra loro secondo lo schema riportato di seguito\+:  
+Questa architettura istanzia una entità \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} ed una entità \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} per ogni bit su cui sono espressi gli addendi, connettendoli tra loro secondo lo schema riportato di seguito\+: . 
+
+funzione \char`\"{}somma\char`\"{}, rappresenta la somma tra gli addendi ed il carry in ingresso 
 
 \subsection{Documentazione dei membri dato}
-\hypertarget{classnibble__adder_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}{\index{nibble\+\_\+adder\+::structural@{nibble\+\_\+adder\+::structural}!adder@{adder}}
+\index{nibble\+\_\+adder\+::structural@{nibble\+\_\+adder\+::structural}!adder@{adder}}
 \index{adder@{adder}!nibble\+\_\+adder\+::structural@{nibble\+\_\+adder\+::structural}}
-\subsubsection[{adder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf adder} {\bfseries \textcolor{vhdlchar}{cla\+\_\+adder\+\_\+cell}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{classnibble__adder_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}
-\hypertarget{classnibble__adder_1_1structural_abbf8fdf15c2d70392ab929c8ebe57439}{\index{nibble\+\_\+adder\+::structural@{nibble\+\_\+adder\+::structural}!cla\+\_\+net@{cla\+\_\+net}}
+\subsubsection[{\texorpdfstring{adder}{adder}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf adder} {\bfseries \textcolor{vhdlchar}{cla\+\_\+adder\+\_\+cell}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}\hypertarget{classnibble__adder_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}{}\label{classnibble__adder_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}
+\index{nibble\+\_\+adder\+::structural@{nibble\+\_\+adder\+::structural}!cla\+\_\+net@{cla\+\_\+net}}
 \index{cla\+\_\+net@{cla\+\_\+net}!nibble\+\_\+adder\+::structural@{nibble\+\_\+adder\+::structural}}
-\subsubsection[{cla\+\_\+net}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cla\+\_\+net} {\bfseries \textcolor{vhdlchar}{cla\+\_\+carry\+\_\+net}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{classnibble__adder_1_1structural_abbf8fdf15c2d70392ab929c8ebe57439}
-
+\subsubsection[{\texorpdfstring{cla\+\_\+net}{cla_net}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cla\+\_\+net} {\bfseries \textcolor{vhdlchar}{cla\+\_\+carry\+\_\+net}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}\hypertarget{classnibble__adder_1_1structural_abbf8fdf15c2d70392ab929c8ebe57439}{}\label{classnibble__adder_1_1structural_abbf8fdf15c2d70392ab929c8ebe57439}
+carry calcolati sulla base delle funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti dai blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, e sulla base delle funzioni \char`\"{}carry-\/in\char`\"{}, \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti da eventuali blocchi a monte; ciascuno dei bit dovra\textquotesingle{} essere posto in ingresso ad un blocco \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} differente, affinche\textquotesingle{} possa essere calcolata la somma degli addendi 
 
 La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
 \item 

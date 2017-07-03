@@ -3,22 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.8"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
 <title>Linear Regression: Riferimenti per il file Src/adder/nibble_adder.vhd</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
   $(window).load(resizeHeight);
 </script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
+  $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -28,7 +30,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Linear Regression
    </div>
    <div id="projectbrief">Linear Regression IP-core in VHDL</div>
@@ -38,14 +40,13 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generato da Doxygen 1.8.8 -->
+<!-- Generato da Doxygen 1.8.11 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
-      <li><a href="pages.html"><span>Pagine&#160;collegate</span></a></li>
       <li><a href="modules.html"><span>Moduli</span></a></li>
       <li><a href="annotated.html"><span>Design&#160;Unit&#160;List</span></a></li>
       <li class="current"><a href="files.html"><span>File</span></a></li>
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('nibble__adder_8vhd.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Gruppi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pagine</a></div>
+</div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,7 +116,11 @@ Entities</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in ingresso; gli addendi sono espressi su quattro bit. Oltre a generare la somma, genera le funzioni "propagazione" e "generazione" del carry per eventuali blocchi <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a> posti a valle.  <a href="classnibble__adder.html#details">Continua...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnibble__adder_1_1structural.html">structural</a> &#160;</td><td class="memItemRight" valign="bottom">architecture</td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementazione structural dell'entità <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a>.  <a href="classnibble__adder_1_1structural.html#details">Continua...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementazione structural dell'entità <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a>.Questa architettura istanzia una entità <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   &lt;div align=&#39;center&#39;&gt;  &lt;img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/&gt;  &lt;/div&gt;  . ">cla_carry_net</a> ed una entità <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a> per ogni bit su cui sono espressi gli addendi, connettendoli tra loro secondo lo schema riportato di seguito: 
+ <div align='center'>
+ <img src="../../Doc/schemes/nibble_adder.jpg"/>
+ </div>
+ .  <a href="classnibble__adder_1_1structural.html#details">Continua...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
@@ -140,9 +145,9 @@ Entities</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_3e03d70f150726d20a788ad8e0b283e2.html">adder</a></li><li class="navelem"><a class="el" href="nibble__adder_8vhd.html">nibble_adder.vhd</a></li>
-    <li class="footer">Generato Lun 3 Lug 2017 09:40:43 per Linear Regression da
+    <li class="footer">Generato Lun 3 Lug 2017 15:04:09 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>
 </div>
 </body>

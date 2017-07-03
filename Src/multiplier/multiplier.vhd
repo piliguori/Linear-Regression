@@ -65,3 +65,5 @@ prod <= std_logic_vector(signed(factor1)*signed(factor2));
 
 
 end Structural;
+
+--! @} 

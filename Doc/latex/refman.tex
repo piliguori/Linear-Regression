@@ -4,6 +4,7 @@
 \usepackage{fixltx2e}
 \usepackage{calc}
 \usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{makeidx}
@@ -19,7 +20,6 @@
 
 % Font selection
 \usepackage[T1]{fontenc}
-\usepackage{mathptmx}
 \usepackage[scaled=.90]{helvet}
 \usepackage{courier}
 \usepackage{amssymb}
@@ -49,7 +49,7 @@
 \hbadness=750
 \setlength{\emergencystretch}{15pt}
 \setlength{\parindent}{0cm}
-\setlength{\parskip}{0.2cm}
+\setlength{\parskip}{3ex plus 2ex minus 2ex}
 \makeatletter
 \renewcommand{\paragraph}{%
   \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
@@ -74,8 +74,8 @@
 \fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
 \fancyfoot[LE]{\fancyplain{}{}}
 \fancyfoot[CE]{\fancyplain{}{}}
-\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generato Lun 3 Lug 2017 09\+:40\+:43 per Linear Regression da Doxygen }}
-\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generato Lun 3 Lug 2017 09\+:40\+:43 per Linear Regression da Doxygen }}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generato da Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generato da Doxygen }}
 \fancyfoot[CO]{\fancyplain{}{}}
 \fancyfoot[RO]{\fancyplain{}{}}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -112,6 +112,8 @@
   \newpage{\pagestyle{empty}\cleardoublepage}%
 }
 
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
 
 %===== C O N T E N T S =====
 
@@ -119,7 +121,6 @@
 
 % Titlepage & ToC
 \hypersetup{pageanchor=false,
-             bookmarks=true,
              bookmarksnumbered=true,
              pdfencoding=unicode
             }
@@ -129,9 +130,7 @@
 \begin{center}%
 {\Large Linear Regression }\\
 \vspace*{1cm}
-{\large Generato da Doxygen 1.8.8}\\
-\vspace*{0.5cm}
-{\small Lun 3 Lug 2017 09:40:43}\\
+{\large Generato da Doxygen 1.8.11}\\
 \end{center}
 \end{titlepage}
 \clearemptydoublepage
@@ -141,10 +140,8 @@
 \hypersetup{pageanchor=true}
 
 %--- Begin generated contents ---
-\chapter{Elenco delle cose da fare}
-\label{todo}
-\hypertarget{todo}{}
-\input{todo}
+\chapter{Pagina Principale}
+\label{index}\hypertarget{index}{}\input{index}
 \chapter{Indice dei moduli}
 \input{modules}
 \chapter{Design Unit Index}
@@ -159,27 +156,27 @@
 \include{group___base_cell}
 \include{group___carry_network}
 \include{group___nibble_adder}
+\include{group___linear_regression}
+\include{group___multiplier}
 \chapter{Documentazione delle classi}
 \input{classadder}
 \input{classtb__adder_1_1behavior}
 \input{classtb__generic__cla__adder_1_1behavior}
-\input{classprova_1_1_behavioral}
-\input{classtb__prova_1_1_behavioral}
 \input{classcla__adder__cell}
 \input{classcla__carry__net}
 \input{classcla__adder__cell_1_1dataflow}
-\input{classtruncate_1_1dataflow}
 \input{classcla__carry__net_1_1dataflow}
 \input{classgeneric__cla__adder}
+\input{class_linear_regression}
+\input{classmultiplier}
 \input{classnibble__adder}
-\input{classprova}
 \input{classadder_1_1structural}
-\input{classgeneric__cla__adder_1_1structural}
 \input{classnibble__adder_1_1structural}
+\input{class_linear_regression_1_1_structural}
+\input{classmultiplier_1_1_structural}
+\input{classgeneric__cla__adder_1_1structural}
 \input{classtb__adder}
 \input{classtb__generic__cla__adder}
-\input{classtb__prova}
-\input{classtruncate}
 \chapter{Documentazione dei file}
 \input{adder_8vhd}
 \input{cla__adder__cell_8vhd}
@@ -188,14 +185,15 @@
 \input{nibble__adder_8vhd}
 \input{tb__adder_8vhd}
 \input{tb__generic__cla__adder_8vhd}
-\input{prova_8vhd}
-\input{tb__prova_8vhd}
-\input{truncate_8vhd}
+\input{_linear_regression_8vhd}
+\input{multiplier_8vhd}
 %--- End generated contents ---
 
 % Index
+\backmatter
 \newpage
 \phantomsection
+\clearemptydoublepage
 \addcontentsline{toc}{chapter}{Indice}
 \printindex
 

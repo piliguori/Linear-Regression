@@ -28,18 +28,17 @@
 --! USA.
 --!
 
---! @addtogroup Multiplier
+--! @addtogroup LinearRegression
 --! @{
---! @brief Multiplier per il prodotto di due fattori con numero di bit variabile.
---! @cond
+--! @brief Regressione Lineare in VHDL.
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
---! @endcond
-
---! Regressione Lineare.
---!
+--! @mainpage
+--! @brief Regressione Lineare.
+--! @details
 --! Il componente permette di effettuare la regressione lineare.
 --! Prende 5 segnali in ingresso, e attraverso l'utilizzo di moltiplicatori e addizionatori / sottrattori, oltre 
 --! all'opportuno troncamento dei valori intermedi calcolati, restituisce i parametri di uscita m ed q per la regressione.
@@ -52,8 +51,8 @@ entity LinearRegression is
 		   Sum1 : in STD_LOGIC_VECTOR (23 downto 0);	--! segnale in input, 8 bit di parte intera e 16 decimale (m.n = 7.16)
 		   C 	: in STD_LOGIC_VECTOR (23 downto 0);	--! segnale in input, msb di peso -10  (m.n = -10.33)
 		   A 	: in STD_LOGIC_VECTOR (23 downto 0);	--! segnale in input, 16 bit di parte intera e 8 decimale (m.n = 15.8)
-		   m 	: out STD_LOGIC_VECTOR (23 downto 0);	--! segnali in output, 16 bit di parte intera e 8 decimale (m.n = 15.8)
-		   q 	: out STD_LOGIC_VECTOR (23 downto 0));	--! segnali in output, 8 bit di parte intera e 16 decimale (m.n = 7.16)
+		   m 	: out STD_LOGIC_VECTOR (23 downto 0);	--! segnale in output, 16 bit di parte intera e 8 decimale (m.n = 15.8)
+		   q 	: out STD_LOGIC_VECTOR (23 downto 0));	--! segnaes in output, 8 bit di parte intera e 16 decimale (m.n = 7.16)
 
 end LinearRegression;
 
@@ -61,6 +60,11 @@ end LinearRegression;
 --! Per il calcolo dei parametri della regressione vengono utilizzati opportunamente dei moltiplicatori
 --! e addizionatori/sottrattori. Per effettuare i calcoli in fixed point vengono adoperati opportuni troncamenti/
 --! espansioni dei segnali. 
+--! @htmlonly
+--! <div align='center'>
+--! <img src="../schemes/LinearRegression.jpg"/>
+--! </div>
+--! @endhtmlonly
 architecture Structural of LinearRegression is
 
 component multiplier is
@@ -211,3 +215,4 @@ q <= mult6_out(40 downto 17);	--! L'uscita di  MULT6 deve essere portata da una 
 
 end Structural;
 
+--! @} 

@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['gen',['gen',['../group___base_cell.html#gaad65a9c9ebd4dd83c2835249a1ba2dff',1,'cla_adder_cell.gen()'],['../group___carry_network.html#ga1ff97daaf4e03defc21748593cacfaa7',1,'cla_carry_net.gen()'],['../group___carry_loockahead.html#ga7a68948b7b96c7b51036939fad8e71b3',1,'generic_cla_adder.structural.gen()'],['../group___nibble_adder.html#gac6c069fe4ec1c0a42272d3de4be6f45f',1,'nibble_adder.structural.gen()']]],
-  ['generic_5fcla_5fadder',['generic_cla_adder',['../group___adder.html#gae7148956d4ef1d1cd14f35060634b9c3',1,'adder.structural.generic_cla_adder()'],['../classtb__generic__cla__adder_1_1behavior.html#ae7148956d4ef1d1cd14f35060634b9c3',1,'tb_generic_cla_adder.behavior.generic_cla_adder()']]],
-  ['genin',['genin',['../group___carry_network.html#ga0a46d5193cb73eb993bc5d4f69741d0a',1,'cla_carry_net.genin()'],['../group___nibble_adder.html#ga0a46d5193cb73eb993bc5d4f69741d0a',1,'nibble_adder.genin()']]],
-  ['genout',['genout',['../group___carry_network.html#ga068cd5c4d23e284cb942702252ed1491',1,'cla_carry_net.genout()'],['../group___nibble_adder.html#ga068cd5c4d23e284cb942702252ed1491',1,'nibble_adder.genout()']]]
+  ['c',['C',['../group___linear_regression.html#ga17058a6bcb609074c49be51d09202870',1,'LinearRegression']]],
+  ['carry',['carry',['../group___nibble_adder.html#ga8f5524d80e551d479327a16bb32abcaa',1,'nibble_adder::structural']]],
+  ['carry_5fin',['carry_in',['../group___carry_loockahead.html#ga1c211cdf2d4cf97e869c442832c53439',1,'generic_cla_adder.carry_in()'],['../classtb__generic__cla__adder_1_1behavior.html#a674dc264b83bd397c51160bed4eaede8',1,'tb_generic_cla_adder.behavior.carry_in()']]],
+  ['carry_5fout',['carry_out',['../group___carry_loockahead.html#ga851aaea297bdc862fba5478c4bf0e214',1,'generic_cla_adder.carry_out()'],['../classtb__generic__cla__adder_1_1behavior.html#a0599dd129c582752ab70084bd7bd6305',1,'tb_generic_cla_adder.behavior.carry_out()']]],
+  ['carryin',['carryin',['../group___base_cell.html#gaa556a73dc4a4de1a0d662b25adbcbe33',1,'cla_adder_cell.carryin()'],['../group___carry_network.html#gaa556a73dc4a4de1a0d662b25adbcbe33',1,'cla_carry_net.carryin()'],['../group___nibble_adder.html#gaa556a73dc4a4de1a0d662b25adbcbe33',1,'nibble_adder.carryin()']]],
+  ['carryout',['carryout',['../group___carry_network.html#ga6b265f3fe41195485dfedd9824c3598f',1,'cla_carry_net']]],
+  ['cla_5fadder_5fcell',['cla_adder_cell',['../group___nibble_adder.html#ga4f13eb52457f650b1d2cd352d9cacca9',1,'nibble_adder::structural']]],
+  ['cla_5fcarry_5fnet',['cla_carry_net',['../group___nibble_adder.html#ga12bdc5892f526938e1447d663d152df8',1,'nibble_adder::structural']]]
 ];

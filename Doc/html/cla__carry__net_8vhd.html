@@ -3,22 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.8"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
 <title>Linear Regression: Riferimenti per il file Src/adder/cla_carry_net.vhd</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
   $(window).load(resizeHeight);
 </script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { searchBox.OnSelectItem(0); });
+  $(document).ready(function() { init_search(); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -28,7 +30,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td style="padding-left: 0.5em;">
+  <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Linear Regression
    </div>
    <div id="projectbrief">Linear Regression IP-core in VHDL</div>
@@ -38,14 +40,13 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generato da Doxygen 1.8.8 -->
+<!-- Generato da Doxygen 1.8.11 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
-      <li><a href="pages.html"><span>Pagine&#160;collegate</span></a></li>
       <li><a href="modules.html"><span>Moduli</span></a></li>
       <li><a href="annotated.html"><span>Design&#160;Unit&#160;List</span></a></li>
       <li class="current"><a href="files.html"><span>File</span></a></li>
@@ -92,7 +93,7 @@ $(document).ready(function(){initNavTree('cla__carry__net_8vhd.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Gruppi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pagine</a></div>
+</div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -119,7 +120,7 @@ Entities</h2></td></tr>
  .  <a href="classcla__carry__net.html#details">Continua...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcla__carry__net_1_1dataflow.html">dataflow</a> &#160;</td><td class="memItemRight" valign="bottom">architecture</td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementazione dataflow dell'entita' <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/>  </div>  . ">cla_carry_net</a>.  <a href="classcla__carry__net_1_1dataflow.html#details">Continua...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementazione dataflow dell'entita' <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   &lt;div align=&#39;center&#39;&gt;  &lt;img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/&gt;  &lt;/div&gt;  . ">cla_carry_net</a>.L'implementazione si basa sul seguente ragionamento: Proviamo ad esprimere, adesso, il carry carryout(i+1) in base alle funzioni gen(i) e prop(i), partendo, ad esempio, da carryout(1). Il carry carryout(0) varra' 1 se al passo precedente è stato generato riporto oppure se verra' propagato il carry carryin. In formule: </p><center>carryout(0)=genin+(propin*carryin);</center><p> Possiamo estendere lo stesso ragionamento a carryout(2): </p><center>carryout(1)=gen(1)+prop(1)*carryout(1)=gen(1)+prop(1)*gen(0)+prop(1)*prop(0)*carryin</center><p> Cio' significa che il riporto carryout(1) lo si può esprimere sulla base di soli dati di ingresso con reti combinatorie a due livelli, senza utilizzare valori calcolati da nodi precedenti. Tutto ciò si traduce in un minor tempo necessario ad effettuare il calcolo di tutti i carry, quindi un minor tempo necessario a completare la somma. Purtroppo non si può procedere in questo modo ad oltranza per cui si tende a spezzare" la rete per il calcolo dei carry in blocchi più piccoli, ad esempio reti per il calcolo di carry per quattro bit. Considerando che </p><center>carryout(4)=gen(3)+prop(3)*carryout(3)=...=genout+propout*carryin</center><p> con </p><center>genout=gen(3)+(prop(3)*gen(2))+(prop(3)*prop(2)*gen(1))+(prop(3)*prop(2)*prop(1)*gen(0))+(prop(3)*prop(2)*prop(1)*prop(0)*genin)</center> <center>propout=prop(3)*prop(2)*prop(1)*prop(0)*propin</center><p> Si può costruire dei blocchi che presentino in uscita i segnali genout e propout, in modo da permettere ad eventuali blocchi successivi il calcolo veloce dei carry sulla base di questi segnali e del segnale carryin.  <a href="classcla__carry__net_1_1dataflow.html#details">Continua...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
@@ -144,9 +145,9 @@ Entities</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_3e03d70f150726d20a788ad8e0b283e2.html">adder</a></li><li class="navelem"><a class="el" href="cla__carry__net_8vhd.html">cla_carry_net.vhd</a></li>
-    <li class="footer">Generato Lun 3 Lug 2017 09:40:43 per Linear Regression da
+    <li class="footer">Generato Lun 3 Lug 2017 15:04:09 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
   </ul>
 </div>
 </body>
