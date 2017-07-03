@@ -106,16 +106,57 @@ $(document).ready(function(){initNavTree('classadder_1_1structural.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#Components">Components</a>  </div>
+<a href="#Components">Components</a> &#124;
+<a href="#Signals">Signals</a> &#124;
+<a href="#Instantiations">Instantiations</a>  </div>
   <div class="headertitle">
 <div class="title">structural Architecture Reference<div class="ingroups"><a class="el" href="group___adder.html">Adder</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Implementazione mistra structural per l'entity adder.  
+ <a href="classadder_1_1structural.html#details">Continua...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Components"></a>
 Components</h2></td></tr>
  <tr class="memitem:gae7148956d4ef1d1cd14f35060634b9c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___adder.html#gae7148956d4ef1d1cd14f35060634b9c3">generic_cla_adder</a>&#160;</td><td class="memItemRight" valign="bottom">  <b></b>  <em><a class="el" href="classgeneric__cla__adder.html">&lt;Entity generic_cla_adder&gt; </a></em></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Signals"></a>
+Signals</h2></td></tr>
+ <tr class="memitem:ga590914af948ec283f1371002f2f76720"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___adder.html#ga590914af948ec283f1371002f2f76720">sum_tmp</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="group___adder.html#gae1435c07d0cd54b521535e2f8de6f94e">nbits</a></b> <span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ga590914af948ec283f1371002f2f76720"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale temporaneo nel quale viene posto il risultato della somma per effettuare il calcolo della condizione di overflow  <a href="group___adder.html#ga590914af948ec283f1371002f2f76720"></a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Instantiations"></a>
+Instantiations</h2></td></tr>
+ <tr class="memitem:a94015e32a32cd4c5be09b1ddde822259"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classadder_1_1structural.html#a94015e32a32cd4c5be09b1ddde822259">cla_adder</a>&#160;</td><td class="memItemRight" valign="bottom">  <b>generic_cla_adder</b>  <em><a class="el" href="classgeneric__cla__adder.html">&lt;Entity generic_cla_adder&gt;</a></em></td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
+<div class="textblock"><p>Implementazione mistra structural per l'entity adder. </p>
+<p>A seconda del valore del parametro use_custom, verrà istanziato</p><ul>
+<li>un sommatore full-custom <a class="el" href="classgeneric__cla__adder.html" title="Adder custom con carry-lookaheadgeneric_cla_adder somma tra loro due addendi ed un carry in ingresso;...">generic_cla_adder</a>, se use_custom = true;</li>
+<li>un sommatore la cui implementazione è stabilita dal sintetizzatore, se use_custom = false; Nel caso in cui venga istanziato il sommatore custom, è richiesto che il numero di bit con il quale sono espressi gli addendi, e di conseguenza quello in vui verrà espressa la loro somma, sia multiplo di quattro. </li>
+</ul>
+</div><h2 class="groupheader">Documentazione dei membri dato</h2>
+<a class="anchor" id="a94015e32a32cd4c5be09b1ddde822259"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classadder_1_1structural.html#a94015e32a32cd4c5be09b1ddde822259">cla_adder</a> <b><span class="vhdlchar">generic_cla_adder</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Instantiation</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>La documentazione per questa classe è stata generata a partire dal seguente file:<ul>
 <li>Src/adder/<a class="el" href="adder_8vhd.html">adder.vhd</a></li>
 </ul>
@@ -125,7 +166,7 @@ Components</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classadder.html">adder</a></li><li class="navelem"><a class="el" href="classadder_1_1structural.html">structural</a></li>
-    <li class="footer">Generato Dom 2 Lug 2017 17:52:31 per Linear Regression da
+    <li class="footer">Generato Lun 3 Lug 2017 09:40:43 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

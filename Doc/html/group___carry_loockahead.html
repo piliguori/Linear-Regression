@@ -166,6 +166,10 @@ Ports</h2></td></tr>
 Signals</h2></td></tr>
  <tr class="memitem:ga19afe0b89973d7fc29362431f2e828b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_loockahead.html#ga19afe0b89973d7fc29362431f2e828b7">prop</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">to</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="group___carry_loockahead.html#ga0b63b586531492d0fa882246cca071c1">nibbles</a></b> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
 <tr class="memdesc:ga19afe0b89973d7fc29362431f2e828b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">funzione "propagazione" del carry, prodotta dai diversi blocchi <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a>; prop(i) vale 1 quando, sulla base degli ingressi, l'i-esimo <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a> propaghera' un eventuale carry in ingresso; prop(0) = '1';  <a href="group___carry_loockahead.html#ga19afe0b89973d7fc29362431f2e828b7"></a><br /></td></tr>
+<tr class="memitem:ga7a68948b7b96c7b51036939fad8e71b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_loockahead.html#ga7a68948b7b96c7b51036939fad8e71b3">gen</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">to</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="group___carry_loockahead.html#ga0b63b586531492d0fa882246cca071c1">nibbles</a></b> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ga7a68948b7b96c7b51036939fad8e71b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">funzione "generazione" del carry, prodotta dai diversi blocchi <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a>; gen(i) vale 1 quando, sulla base degli ingressi, l'i-esimo <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a> genera carry in uscita; gen(0) = '0';  <a href="group___carry_loockahead.html#ga7a68948b7b96c7b51036939fad8e71b3"></a><br /></td></tr>
+<tr class="memitem:ga99974841945a5f91b014f0149e173356"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_loockahead.html#ga99974841945a5f91b014f0149e173356">sum_tmp</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="group___carry_loockahead.html#ga0b63b586531492d0fa882246cca071c1">nibbles</a></b> <span class="vhdlchar">*</span><span class="vhdlchar"> </span> <span class="vhdldigit">4</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span><span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ga99974841945a5f91b014f0149e173356"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale temporaneo nel quale viene posto il risultato della somma per effettuare il calcolo della condizione di overflow  <a href="group___carry_loockahead.html#ga99974841945a5f91b014f0149e173356"></a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
 <p>Addizionatore con carry-lookahead. </p>
@@ -255,6 +259,28 @@ Signals</h2></td></tr>
 </div><div class="memdoc">
 
 <p>carry in uscita; viene calcolato come carry_out=gen(nibbles)+(prop(nibbles)*carry_in), dove gen(nibbles) e prop(nibbles) sono, rispettivamente, la funzione "generazione" e "propagazione" del carry prodotta dall'ultimo blocco <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a>, cioè quello che somma i nibble di peso massimo, e carry_in e' il carry in ingresso al sommatore. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga7a68948b7b96c7b51036939fad8e71b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___carry_loockahead.html#ga7a68948b7b96c7b51036939fad8e71b3">gen</a> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">to</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="group___carry_loockahead.html#ga0b63b586531492d0fa882246cca071c1">nibbles</a></b> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>funzione "generazione" del carry, prodotta dai diversi blocchi <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a>; gen(i) vale 1 quando, sulla base degli ingressi, l'i-esimo <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a> genera carry in uscita; gen(0) = '0'; </p>
 
 </div>
 </div>
@@ -366,12 +392,34 @@ Signals</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ga99974841945a5f91b014f0149e173356"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___carry_loockahead.html#ga99974841945a5f91b014f0149e173356">sum_tmp</a> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="group___carry_loockahead.html#ga0b63b586531492d0fa882246cca071c1">nibbles</a></b> <span class="vhdlchar">*</span><span class="vhdlchar"> </span> <span class="vhdldigit">4</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span><span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>segnale temporaneo nel quale viene posto il risultato della somma per effettuare il calcolo della condizione di overflow </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generato Dom 2 Lug 2017 17:52:31 per Linear Regression da
+    <li class="footer">Generato Lun 3 Lug 2017 09:40:43 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -6,6 +6,9 @@ var annotated =
     [ "generic_cla_adder", "classgeneric__cla__adder.html", "classgeneric__cla__adder" ],
     [ "nibble_adder", "classnibble__adder.html", "classnibble__adder" ],
     [ "prova", "classprova.html", "classprova" ],
+    [ "tb_adder", "classtb__adder.html", [
+      [ "tb_adder.behavior", "classtb__adder_1_1behavior.html", "classtb__adder_1_1behavior" ]
+    ] ],
     [ "tb_generic_cla_adder", "classtb__generic__cla__adder.html", [
       [ "tb_generic_cla_adder.behavior", "classtb__generic__cla__adder_1_1behavior.html", "classtb__generic__cla__adder_1_1behavior" ]
     ] ],

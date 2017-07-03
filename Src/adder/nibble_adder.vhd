@@ -89,7 +89,7 @@ architecture structural of nibble_adder is
 				prop	: out	std_logic;
 				gen		: out	std_logic;
 				sum		: out	std_logic);
-	component cla_adder_cell;
+	end component;
 	
 	signal prop : std_logic_vector(3 downto 0);		--! funzione “propagazione” prodotta da cla_adder_cell;
 	--! vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; 

@@ -48,6 +48,15 @@ La cella somma tra loro due addendi ed un carry in ingresso; gli addendi sono es
 \begin{DoxyCompactList}\small\item\em funzione \char`\"{}generazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classnibble__adder}{nibble\+\_\+adder} a valle \end{DoxyCompactList}\item 
 \hyperlink{group___nibble_adder_gadfe538323c3296159dd3b383325a996b}{sum}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
 \begin{DoxyCompactList}\small\item\em funzione \char`\"{}somma\char`\"{}, rappresenta la somma tra gli addendi ed il carry in ingresso \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___nibble_adder_ga3abd8d433ff039baabc0c6fc2126578b}{prop} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione “propagazione” prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; prop(i) = add(i) O\+R add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi \end{DoxyCompactList}\item 
+\hyperlink{group___nibble_adder_gac6c069fe4ec1c0a42272d3de4be6f45f}{gen} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione \char`\"{}generazione\char`\"{} prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder generera' un carry in uscita; gen(i) = add(i) A\+N\+D add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi \end{DoxyCompactList}\item 
+\hyperlink{group___nibble_adder_ga8f5524d80e551d479327a16bb32abcaa}{carry} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em carry calcolati sulla base delle funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti dai blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, e sulla base delle funzioni \char`\"{}carry-\/in\char`\"{}, \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti da eventuali blocchi a monte; ciascuno dei bit dovra' essere posto in ingresso ad un blocco \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} differente, affinche' possa essere calcolata la somma degli addendi \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Descrizione dettagliata}
@@ -70,6 +79,13 @@ addendo 1
 
 addendo 2 
 
+\hypertarget{group___nibble_adder_ga8f5524d80e551d479327a16bb32abcaa}{\index{Nibble\+Adder@{Nibble\+Adder}!carry@{carry}}
+\index{carry@{carry}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{carry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carry} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}}\label{group___nibble_adder_ga8f5524d80e551d479327a16bb32abcaa}
+
+
+carry calcolati sulla base delle funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti dai blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, e sulla base delle funzioni \char`\"{}carry-\/in\char`\"{}, \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti da eventuali blocchi a monte; ciascuno dei bit dovra' essere posto in ingresso ad un blocco \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} differente, affinche' possa essere calcolata la somma degli addendi 
+
 \hypertarget{group___nibble_adder_gaa556a73dc4a4de1a0d662b25adbcbe33}{\index{Nibble\+Adder@{Nibble\+Adder}!carryin@{carryin}}
 \index{carryin@{carryin}!Nibble\+Adder@{Nibble\+Adder}}
 \subsubsection[{carryin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carryin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___nibble_adder_gaa556a73dc4a4de1a0d662b25adbcbe33}
@@ -83,6 +99,13 @@ segnale di \char`\"{}carry-\/in\char`\"{}, prodotto da un eventuale \hyperlink{c
 \hypertarget{group___nibble_adder_ga12bdc5892f526938e1447d663d152df8}{\index{Nibble\+Adder@{Nibble\+Adder}!cla\+\_\+carry\+\_\+net@{cla\+\_\+carry\+\_\+net}}
 \index{cla\+\_\+carry\+\_\+net@{cla\+\_\+carry\+\_\+net}!Nibble\+Adder@{Nibble\+Adder}}
 \subsubsection[{cla\+\_\+carry\+\_\+net}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cla\+\_\+carry\+\_\+net} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}}\label{group___nibble_adder_ga12bdc5892f526938e1447d663d152df8}
+\hypertarget{group___nibble_adder_gac6c069fe4ec1c0a42272d3de4be6f45f}{\index{Nibble\+Adder@{Nibble\+Adder}!gen@{gen}}
+\index{gen@{gen}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{gen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gen} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}}\label{group___nibble_adder_gac6c069fe4ec1c0a42272d3de4be6f45f}
+
+
+funzione \char`\"{}generazione\char`\"{} prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder generera' un carry in uscita; gen(i) = add(i) A\+N\+D add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi 
+
 \hypertarget{group___nibble_adder_ga0a46d5193cb73eb993bc5d4f69741d0a}{\index{Nibble\+Adder@{Nibble\+Adder}!genin@{genin}}
 \index{genin@{genin}!Nibble\+Adder@{Nibble\+Adder}}
 \subsubsection[{genin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf genin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___nibble_adder_ga0a46d5193cb73eb993bc5d4f69741d0a}
@@ -96,6 +119,13 @@ funzione \char`\"{}generazione\char`\"{}, prodotta da una eventuale \hyperlink{c
 
 
 funzione \char`\"{}generazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classnibble__adder}{nibble\+\_\+adder} a valle 
+
+\hypertarget{group___nibble_adder_ga3abd8d433ff039baabc0c6fc2126578b}{\index{Nibble\+Adder@{Nibble\+Adder}!prop@{prop}}
+\index{prop@{prop}!Nibble\+Adder@{Nibble\+Adder}}
+\subsubsection[{prop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf prop} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}}\label{group___nibble_adder_ga3abd8d433ff039baabc0c6fc2126578b}
+
+
+funzione “propagazione” prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; prop(i) = add(i) O\+R add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi 
 
 \hypertarget{group___nibble_adder_ga422e8e7ee01fc7ac7b7390cd2ad8c87b}{\index{Nibble\+Adder@{Nibble\+Adder}!propin@{propin}}
 \index{propin@{propin}!Nibble\+Adder@{Nibble\+Adder}}

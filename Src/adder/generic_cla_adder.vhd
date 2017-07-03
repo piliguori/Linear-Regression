@@ -75,43 +75,44 @@ end generic_cla_adder;
 architecture structural of generic_cla_adder is
 	
 	component nibble_adder
-		port ( addera 	: in	std_logic_vector (3 downto 0);
-			   adderb 	: in	std_logic_vector (3 downto 0);
-			   carryin 	: in	std_logic;
-			   propin 	: in	std_logic;
-			   genin 	: in	std_logic;
-			   propout 	: out	std_logic;
-			   genout 	: out	std_logic;
-			   sum 		: out	std_logic_vector (3 downto 0));
+		port ( addendum1	: in	std_logic_vector (3 downto 0);
+			   addendum2	: in	std_logic_vector (3 downto 0);
+			   carryin		: in	std_logic;
+			   propin		: in	std_logic;
+			   genin		: in	std_logic;
+			   propout		: out	std_logic;
+			   genout		: out	std_logic;
+			   sum			: out	std_logic_vector (3 downto 0));
 	end component;
 	
 	-- segnali "propagate" e "generate" scambiati tra i diversi nibble adder.
 	signal prop : std_logic_vector (0 to nibbles); --! funzione "propagazione" del carry, prodotta dai diversi blocchi 
 	--! nibble_adder; prop(i) vale 1 quando, sulla base degli ingressi, l'i-esimo nibble_adder propaghera' un eventuale
 	--! carry in ingresso; prop(0) = '1';
-	signal gen : std_logic_vector (0 1to nibbles); --! funzione "generazione" del carry, prodotta dai diversi blocchi 
+	signal gen : std_logic_vector (0 to nibbles); --! funzione "generazione" del carry, prodotta dai diversi blocchi 
 	--! nibble_adder; gen(i) vale 1 quando, sulla base degli ingressi, l'i-esimo nibble_adder genera carry in uscita;
 	--! gen(0) = '0';
+	signal sum_tmp : std_logic_vector ((nibbles * 4)-1 downto 0); --! segnale temporaneo nel quale viene posto il
+	--! risultato della somma per effettuare il calcolo della condizione di overflow
 	
 begin
-	
+	sum <= sum_tmp;
 	prop(0) <= '1';
 	gen(0) <= '0';
-	carry_out <= gen(nibbles) or (prop(nibbles) and carry_in);
-	overflow <= 	(addendum1(nibbles*4-1) and addendum2(nibbles*4-1) and (not sum(nibbles*4-1))) or 
-					((not addendum1(nibbles*4-1)) and (not addendum2(nibbles*4-1)) and sum(nibbles*4-1));
+	carry_out <= 	gen(nibbles) or (prop(nibbles) and carry_in);
+	overflow <= 	(addendum1(nibbles*4-1) and addendum2(nibbles*4-1) and (not sum_tmp(nibbles*4-1))) or 
+					((not addendum1(nibbles*4-1)) and (not addendum2(nibbles*4-1)) and sum_tmp(nibbles*4-1));
 	
 	adder_chain : for i in 0 to nibbles-1 generate
 		adder : nibble_adder
-				port map (
-					adderA => addendum1((i+1)*4-1 downto i*4),
-					adderB => addendum2((i+1)*4-1 downto i*4),
-					carryIn => carry_in,
-					propIn => prop(i),
-					genIn => gen(i),
-					propOut => prop(i+1),
-					genOut => gen(i+1),
-					sum => sum((i+1)*4-1 downto i*4));
+			port map (	addendum1	=> addendum1((i+1)*4-1 downto i*4),
+						addendum2	=> addendum2((i+1)*4-1 downto i*4),
+						carryIn		=> carry_in,
+						propIn		=> prop(i),
+						genIn		=> gen(i),
+						propOut		=> prop(i+1),
+						genOut		=> gen(i+1),
+						sum			=> sum_tmp((i+1)*4-1 downto i*4));
 	end generate;
 	
 end structural;
