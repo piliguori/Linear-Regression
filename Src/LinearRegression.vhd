@@ -77,7 +77,7 @@ end LinearRegression;
 --! <tr>
 --!	<th>Test Case #</th>
 --! 	<th>Componente interessato</th>
---! 	<th>Obbiettivo</th>
+--! 	<th>Obiettivo</th>
 --! 	<th>Input</th>
 --! 	<th>Output ottenuto</th>
 --! 	<th>Output atteso</th>
