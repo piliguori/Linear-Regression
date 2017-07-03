@@ -1,0 +1,18 @@
+\hypertarget{classcla__carry__net_1_1dataflow}{\section{dataflow Architecture Reference}
+\label{classcla__carry__net_1_1dataflow}\index{dataflow@{dataflow}}
+}
+
+
+Implementazione dataflow dell'entita' \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net}.  
+
+
+
+
+\subsection{Descrizione dettagliata}
+Implementazione dataflow dell'entita' \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net}. 
+
+L'implementazione si basa sul seguente ragionamento\+: Proviamo ad esprimere, adesso, il carry carryout(i+1) in base alle funzioni gen(i) e prop(i), partendo, ad esempio, da carryout(1). Il carry carryout(0) varra' 1 se al passo precedente è stato generato riporto oppure se verra' propagato il carry carryin. In formule\+: \begin{center}carryout(0)=genin+(propin$\ast$carryin);\end{center}  Possiamo estendere lo stesso ragionamento a carryout(2)\+: \begin{center}carryout(1)=gen(1)+prop(1)$\ast$carryout(1)=gen(1)+prop(1)$\ast$gen(0)+prop(1)$\ast$prop(0)$\ast$carryin\end{center}  Cio' significa che il riporto carryout(1) lo si può esprimere sulla base di soli dati di ingresso con reti combinatorie a due livelli, senza utilizzare valori calcolati da nodi precedenti. Tutto ciò si traduce in un minor tempo necessario ad effettuare il calcolo di tutti i carry, quindi un minor tempo necessario a completare la somma. Purtroppo non si può procedere in questo modo ad oltranza per cui si tende a spezzare" la rete per il calcolo dei carry in blocchi più piccoli, ad esempio reti per il calcolo di carry per quattro bit. Considerando che \begin{center}carryout(4)=gen(3)+prop(3)$\ast$carryout(3)=...=genout+propout$\ast$carryin\end{center}  con \begin{center}genout=gen(3)+(prop(3)$\ast$gen(2))+(prop(3)$\ast$prop(2)$\ast$gen(1))+(prop(3)$\ast$prop(2)$\ast$prop(1)$\ast$gen(0))+(prop(3)$\ast$prop(2)$\ast$prop(1)$\ast$prop(0)$\ast$genin)\end{center}  \begin{center}propout=prop(3)$\ast$prop(2)$\ast$prop(1)$\ast$prop(0)$\ast$propin\end{center}  Si può costruire dei blocchi che presentino in uscita i segnali genout e propout, in modo da permettere ad eventuali blocchi successivi il calcolo veloce dei carry sulla base di questi segnali e del segnale carryin. 
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+Src/adder/\hyperlink{cla__carry__net_8vhd}{cla\+\_\+carry\+\_\+net.\+vhd}\end{DoxyCompactItemize}

@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
     <ul class="tablist">
       <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
       <li><a href="pages.html"><span>Pagine&#160;collegate</span></a></li>
+      <li><a href="modules.html"><span>Moduli</span></a></li>
       <li class="current"><a href="annotated.html"><span>Design&#160;Unit&#160;List</span></a></li>
       <li><a href="files.html"><span>File</span></a></li>
       <li>
@@ -70,6 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Design&#160;Unit&#160;List</span></a></li>
       <li class="current"><a href="classes.html"><span>Design&#160;Units</span></a></li>
+      <li><a href="inherits.html"><span>Design&#160;Unit&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Design&#160;Unit&#160;Members</span></a></li>
     </ul>
   </div>
@@ -93,7 +95,7 @@ $(document).ready(function(){initNavTree('classes.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pagine</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Gruppi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pagine</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,21 +109,32 @@ $(document).ready(function(){initNavTree('classes.html','');});
 <div class="title">Design Units</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="qindex"><a class="qindex" href="#letter_T">T</a></div>
+<div class="qindex"><a class="qindex" href="#letter_A">A</a>&#160;|&#160;<a class="qindex" href="#letter_C">C</a>&#160;|&#160;<a class="qindex" href="#letter_G">G</a>&#160;|&#160;<a class="qindex" href="#letter_N">N</a>&#160;|&#160;<a class="qindex" href="#letter_P">P</a>&#160;|&#160;<a class="qindex" href="#letter_T">T</a></div>
 <table style="margin: 10px; white-space: nowrap;" align="center" width="95%" border="0" cellspacing="0" cellpadding="0">
-<tr><td rowspan="2" valign="bottom"><a name="letter_t"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;t&#160;&#160;</div></td></tr></table>
+<tr><td rowspan="2" valign="bottom"><a name="letter_a"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;a&#160;&#160;</div></td></tr></table>
+</td><td rowspan="2" valign="bottom"><a name="letter_g"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;g&#160;&#160;</div></td></tr></table>
+</td><td rowspan="2" valign="bottom"><a name="letter_t"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;t&#160;&#160;</div></td></tr></table>
+</td></tr>
+<tr></tr>
+<tr><td valign="top"><a class="el" href="classadder.html">adder</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classgeneric__cla__adder.html">generic_cla_adder</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classtb__adder.html">tb_adder</a>&#160;&#160;&#160;</td></tr>
+<tr><td rowspan="2" valign="bottom"><a name="letter_c"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;c&#160;&#160;</div></td></tr></table>
+</td><td rowspan="2" valign="bottom"><a name="letter_n"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;n&#160;&#160;</div></td></tr></table>
+</td><td valign="top"><a class="el" href="classtb__generic__cla__adder.html">tb_generic_cla_adder</a>&#160;&#160;&#160;</td></tr>
+<tr><td valign="top"><a class="el" href="classtb__prova.html">tb_prova</a>&#160;&#160;&#160;</td></tr>
+<tr><td valign="top"><a class="el" href="classcla__adder__cell.html">cla_adder_cell</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classnibble__adder.html">nibble_adder</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="classtruncate.html">truncate</a>&#160;&#160;&#160;</td></tr>
+<tr><td valign="top"><a class="el" href="classcla__carry__net.html">cla_carry_net</a>&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_p"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;p&#160;&#160;</div></td></tr></table>
 </td><td></td></tr>
-<tr><td></td></tr>
-<tr><td valign="top"><a class="el" href="classtruncate.html">truncate</a>&#160;&#160;&#160;</td><td></td></tr>
 <tr><td></td><td></td></tr>
+<tr><td></td><td valign="top"><a class="el" href="classprova.html">prova</a>&#160;&#160;&#160;</td><td></td></tr>
+<tr><td></td><td></td><td></td></tr>
 </table>
-<div class="qindex"><a class="qindex" href="#letter_T">T</a></div>
+<div class="qindex"><a class="qindex" href="#letter_A">A</a>&#160;|&#160;<a class="qindex" href="#letter_C">C</a>&#160;|&#160;<a class="qindex" href="#letter_G">G</a>&#160;|&#160;<a class="qindex" href="#letter_N">N</a>&#160;|&#160;<a class="qindex" href="#letter_P">P</a>&#160;|&#160;<a class="qindex" href="#letter_T">T</a></div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generato Sab 1 Lug 2017 16:52:40 per Linear Regression da
+    <li class="footer">Generato Lun 3 Lug 2017 09:40:43 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

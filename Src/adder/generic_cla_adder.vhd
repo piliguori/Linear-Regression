@@ -28,63 +28,95 @@
 --! USA.
 --! 
 
+--! @addtogroup Adder
+--! @{
+--! @addtogroup CarryLoockahead
+--! @{
+--! @brief Addizionatore con carry-lookahead
+
 --! @cond
 library ieee;
 use ieee.std_logic_1164.all;
--- use ieee.numeric_std.all;
--- use ieee.std_logic_misc.all;
 --! @endcond
 
--- adder con carry-lookahead generico
+--! Adder custom con carry-lookahead
+--!
+--! generic_cla_adder somma tra loro due addendi ed un carry in ingresso; gli addendi sono espressi su multipli interi di
+--! quattro bit. Oltre a generare la somma, genera il flag di carry ed il flag di overflow.
 entity generic_cla_adder is
-	generic (nibbles : natural := 2);	-- l'adder va instanzializzato in nibble (4 bit)
-										-- es. un adder cla a 16 bit va instanzializzato usado
-										-- nibbles = 4
-	port (	carry_in : in  STD_LOGIC;								-- carry in ingresso
-			X : in  STD_LOGIC_VECTOR ((nibbles * 4)-1 downto 0);	-- primo addendo
-			Y : in  STD_LOGIC_VECTOR ((nibbles * 4)-1 downto 0);	-- secondo addendo
-			sum : out  STD_LOGIC_VECTOR ((nibbles * 4)-1 downto 0);	-- risultato della somma
-			carry_out : out std_logic								-- carry in uscita
-		);
+	generic (	nibbles 	: 		natural := 2);	--! numero di nibble in cui sono rappresentati gli addendi e nel quale
+													--! sarà espressa la somma degli stessi
+	port (		carry_in 	: in  	std_logic;	--! segnale di "carry-in", prodotto da un eventuale nibble_adder a monte;
+												--! Può essere posto a '0' nel caso in cui non vi siano adder a monte.
+				addendum1 	: in 	std_logic_vector ((nibbles * 4)-1 downto 0); --! addendo 1, espresso in complemento a due
+				addendum2 	: in 	std_logic_vector ((nibbles * 4)-1 downto 0); --! addendo 2, espresso in complemento a due
+				sum 		: out	std_logic_vector ((nibbles * 4)-1 downto 0); --! somma degli addendi, espressa in complemento a due
+				carry_out 	: out	std_logic;	--! carry in uscita; viene calcolato come carry_out=gen(nibbles)+(prop(nibbles)*carry_in),
+												--! dove gen(nibbles) e prop(nibbles) sono, rispettivamente, la funzione
+												--! "generazione" e "propagazione" del carry prodotta dall'ultimo blocco
+												--! nibble_adder, cioè quello che somma i nibble di peso massimo, e carry_in
+												--! e' il carry in ingresso al sommatore.
+				overflow	: out	std_logic);	--! flag di overflow; è '1' quando il risultato prodotto dalla somma degli
+												--! addendi non è rappresentabile su 4*nibbles bit: si verifica overflow se,
+												--! sommando due numeri dello stesso segno, si ottiene un numero di segno
+												--! opposto.
 end generic_cla_adder;
 
+--! Implementazione structural di generic_cla_adder.
+--!
+--! Questa implementazione istanzia tanti blocchi nibble_adder quanti siano i nibble in cui sono rappresentati gli addendi.
+--! La somma è espressa sullo stesso numero di bit. I diversi blocchi sono connessi tra loro come indicato nello schema
+--! ricordato di seguito:
+--! @htmlonly
+--! <div align='center'>
+--! <img src="../../Doc/schemes/cla_adder.jpg"/>
+--! </div>
+--! @endhtmlonly
 architecture structural of generic_cla_adder is
 	
 	component nibble_adder
-		port ( adderA : in  STD_LOGIC_VECTOR (3 downto 0);
-			   adderB : in  STD_LOGIC_VECTOR (3 downto 0);
-			   carryIn : in  STD_LOGIC;
-			   propIn : in  STD_LOGIC;
-			   genIn : in  STD_LOGIC;
-			   propOut : out  STD_LOGIC;
-			   genOut : out  STD_LOGIC;
-			   sum : out  STD_LOGIC_VECTOR (3 downto 0));
+		port ( addendum1	: in	std_logic_vector (3 downto 0);
+			   addendum2	: in	std_logic_vector (3 downto 0);
+			   carryin		: in	std_logic;
+			   propin		: in	std_logic;
+			   genin		: in	std_logic;
+			   propout		: out	std_logic;
+			   genout		: out	std_logic;
+			   sum			: out	std_logic_vector (3 downto 0));
 	end component;
 	
 	-- segnali "propagate" e "generate" scambiati tra i diversi nibble adder.
-	signal prop, gen : std_logic_vector (0 to nibbles);
+	signal prop : std_logic_vector (0 to nibbles); --! funzione "propagazione" del carry, prodotta dai diversi blocchi 
+	--! nibble_adder; prop(i) vale 1 quando, sulla base degli ingressi, l'i-esimo nibble_adder propaghera' un eventuale
+	--! carry in ingresso; prop(0) = '1';
+	signal gen : std_logic_vector (0 to nibbles); --! funzione "generazione" del carry, prodotta dai diversi blocchi 
+	--! nibble_adder; gen(i) vale 1 quando, sulla base degli ingressi, l'i-esimo nibble_adder genera carry in uscita;
+	--! gen(0) = '0';
+	signal sum_tmp : std_logic_vector ((nibbles * 4)-1 downto 0); --! segnale temporaneo nel quale viene posto il
+	--! risultato della somma per effettuare il calcolo della condizione di overflow
 	
 begin
-	
-	prop(0) <= '1';						
+	sum <= sum_tmp;
+	prop(0) <= '1';
 	gen(0) <= '0';
-									
-	carry_out <= gen(nibbles) or ( prop(nibbles) and carry_in);
+	carry_out <= 	gen(nibbles) or (prop(nibbles) and carry_in);
+	overflow <= 	(addendum1(nibbles*4-1) and addendum2(nibbles*4-1) and (not sum_tmp(nibbles*4-1))) or 
+					((not addendum1(nibbles*4-1)) and (not addendum2(nibbles*4-1)) and sum_tmp(nibbles*4-1));
 	
-	-- generazione della "catena di addizionatori"
 	adder_chain : for i in 0 to nibbles-1 generate
 		adder : nibble_adder
-				port map (
-					adderA => X((i+1)*4-1 downto i*4),	-- nibble dell'addendo A di pertinenza al nibble adder i-esimo
-					adderB => Y((i+1)*4-1 downto i*4),	-- nibble dell'addendo B di pertinenza al nibble adder i-esimo
-					carryIn => carry_in,				-- il segnale di carry_in e' preso in ingresso da tutti i nibble-adder
-					propIn => prop(i),					-- segnale propIn in ingresso al nibble-adder i-esimo, generato dal nibble-adder (i-1)-esimo
-					genIn => gen(i),					-- segnale genIn in ingresso al nibble-adder i-esimo, generato dal nibble-adder (i-1)-esimo
-					propOut => prop(i+1),				-- segnale propOut in uscita al nibble-adder i-esimo
-					genOut => gen(i+1),					-- segnale genOut in uscita al nibble-adder i-esimo
-					sum => sum((i+1)*4-1 downto i*4)	-- nibble della somma di pertinenza al nibble adder i-esimo
-				);
+			port map (	addendum1	=> addendum1((i+1)*4-1 downto i*4),
+						addendum2	=> addendum2((i+1)*4-1 downto i*4),
+						carryIn		=> carry_in,
+						propIn		=> prop(i),
+						genIn		=> gen(i),
+						propOut		=> prop(i+1),
+						genOut		=> gen(i+1),
+						sum			=> sum_tmp((i+1)*4-1 downto i*4));
 	end generate;
 	
 end structural;
+
+--! @}
+--! @}
 

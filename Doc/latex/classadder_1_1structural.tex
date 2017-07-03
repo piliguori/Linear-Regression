@@ -1,0 +1,43 @@
+\hypertarget{classadder_1_1structural}{\section{structural Architecture Reference}
+\label{classadder_1_1structural}\index{structural@{structural}}
+}
+
+
+Implementazione mistra structural per l'entity adder.  
+
+
+\subsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___adder_gae7148956d4ef1d1cd14f35060634b9c3}{generic\+\_\+cla\+\_\+adder}  {\bfseries }  
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___adder_ga590914af948ec283f1371002f2f76720}{sum\+\_\+tmp} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \hyperlink{group___adder_gae1435c07d0cd54b521535e2f8de6f94e}{nbits}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em segnale temporaneo nel quale viene posto il risultato della somma per effettuare il calcolo della condizione di overflow \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{classadder_1_1structural_a94015e32a32cd4c5be09b1ddde822259}{cla\+\_\+adder}  {\bfseries generic\+\_\+cla\+\_\+adder}   
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Implementazione mistra structural per l'entity adder. 
+
+A seconda del valore del parametro use\+\_\+custom, verrà istanziato
+\begin{DoxyItemize}
+\item un sommatore full-\/custom \hyperlink{classgeneric__cla__adder}{generic\+\_\+cla\+\_\+adder}, se use\+\_\+custom = true;
+\item un sommatore la cui implementazione è stabilita dal sintetizzatore, se use\+\_\+custom = false; Nel caso in cui venga istanziato il sommatore custom, è richiesto che il numero di bit con il quale sono espressi gli addendi, e di conseguenza quello in vui verrà espressa la loro somma, sia multiplo di quattro. 
+\end{DoxyItemize}
+
+\subsection{Documentazione dei membri dato}
+\hypertarget{classadder_1_1structural_a94015e32a32cd4c5be09b1ddde822259}{\index{adder\+::structural@{adder\+::structural}!cla\+\_\+adder@{cla\+\_\+adder}}
+\index{cla\+\_\+adder@{cla\+\_\+adder}!adder\+::structural@{adder\+::structural}}
+\subsubsection[{cla\+\_\+adder}]{\setlength{\rightskip}{0pt plus 5cm}{\bf cla\+\_\+adder} {\bfseries \textcolor{vhdlchar}{generic\+\_\+cla\+\_\+adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{classadder_1_1structural_a94015e32a32cd4c5be09b1ddde822259}
+
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+Src/adder/\hyperlink{adder_8vhd}{adder.\+vhd}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="cla_carry_net" name="cla_carry_net">
+<area shape="rect" id="node2" href="$classnibble__adder.html" title="Addizionatore con carry&#45;lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in..." alt="" coords="55,80,150,107"/>
+<area shape="rect" id="node3" href="$classgeneric__cla__adder.html" title="Adder custom con carry&#45;lookaheadgeneric_cla_adder somma tra loro due addendi ed un carry in ingresso;..." alt="" coords="39,155,166,181"/>
+<area shape="rect" id="node4" href="$classadder.html" title="Sommatore a due addendi. " alt="" coords="14,229,69,256"/>
+<area shape="rect" id="node6" href="$classtb__generic__cla__adder.html" title="tb_generic_cla_adder" alt="" coords="93,229,238,256"/>
+<area shape="rect" id="node5" href="$classtb__adder.html" title="tb_adder" alt="" coords="5,304,77,331"/>
+</map>

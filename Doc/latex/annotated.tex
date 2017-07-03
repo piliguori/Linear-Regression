@@ -1,6 +1,32 @@
 \section{Design Unit List}
 Here is a list of all design unit members with links to the Entities they belong to\+:\begin{DoxyCompactList}
+\item\contentsline{section}{entity \hyperlink{classadder}{adder} \\*Sommatore a due addendi }{\pageref{classadder}}{}
+\item\contentsline{section}{architecture \hyperlink{classtb__adder_1_1behavior}{behavior} }{\pageref{classtb__adder_1_1behavior}}{}
+\item\contentsline{section}{architecture \hyperlink{classtb__generic__cla__adder_1_1behavior}{behavior} }{\pageref{classtb__generic__cla__adder_1_1behavior}}{}
+\item\contentsline{section}{architecture \hyperlink{classprova_1_1_behavioral}{Behavioral} }{\pageref{classprova_1_1_behavioral}}{}
+\item\contentsline{section}{architecture \hyperlink{classtb__prova_1_1_behavioral}{Behavioral} }{\pageref{classtb__prova_1_1_behavioral}}{}
+\item\contentsline{section}{entity \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} \\*Cella base di un addizionatore con carry-\/lookahead.
+
+La cella somma tra loro due addendi ed un carry in ingresso, tutti espressi su un solo bit. Oltre a generare la somma, genera le funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} del carry }{\pageref{classcla__adder__cell}}{}
+\item\contentsline{section}{entity \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} \\*Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.
+
+Permette di anticipare il calcolo dei riporti usando le funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotte dai singoli blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit\+:  }{\pageref{classcla__carry__net}}{}
+\item\contentsline{section}{architecture \hyperlink{classcla__adder__cell_1_1dataflow}{dataflow} }{\pageref{classcla__adder__cell_1_1dataflow}}{}
 \item\contentsline{section}{architecture \hyperlink{classtruncate_1_1dataflow}{dataflow} \\*Implementazione dataflow dell'entity truncate }{\pageref{classtruncate_1_1dataflow}}{}
+\item\contentsline{section}{architecture \hyperlink{classcla__carry__net_1_1dataflow}{dataflow} \\*Implementazione dataflow dell'entita' \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} }{\pageref{classcla__carry__net_1_1dataflow}}{}
+\item\contentsline{section}{entity \hyperlink{classgeneric__cla__adder}{generic\+\_\+cla\+\_\+adder} \\*Adder custom con carry-\/lookahead
+
+\hyperlink{classgeneric__cla__adder}{generic\+\_\+cla\+\_\+adder} somma tra loro due addendi ed un carry in ingresso; gli addendi sono espressi su multipli interi di quattro bit. Oltre a generare la somma, genera il flag di carry ed il flag di overflow }{\pageref{classgeneric__cla__adder}}{}
+\item\contentsline{section}{entity \hyperlink{classnibble__adder}{nibble\+\_\+adder} \\*Addizionatore con carry-\/lookahead a quattro bit.
+
+La cella somma tra loro due addendi ed un carry in ingresso; gli addendi sono espressi su quattro bit. Oltre a generare la somma, genera le funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} del carry per eventuali blocchi \hyperlink{classnibble__adder}{nibble\+\_\+adder} posti a valle }{\pageref{classnibble__adder}}{}
+\item\contentsline{section}{entity \hyperlink{classprova}{prova} }{\pageref{classprova}}{}
+\item\contentsline{section}{architecture \hyperlink{classadder_1_1structural}{structural} \\*Implementazione mistra structural per l'entity adder }{\pageref{classadder_1_1structural}}{}
+\item\contentsline{section}{architecture \hyperlink{classgeneric__cla__adder_1_1structural}{structural} \\*Implementazione structural di \hyperlink{classgeneric__cla__adder}{generic\+\_\+cla\+\_\+adder} }{\pageref{classgeneric__cla__adder_1_1structural}}{}
+\item\contentsline{section}{architecture \hyperlink{classnibble__adder_1_1structural}{structural} \\*Implementazione structural dell'entità \hyperlink{classnibble__adder}{nibble\+\_\+adder} }{\pageref{classnibble__adder_1_1structural}}{}
+\item\contentsline{section}{entity \hyperlink{classtb__adder}{tb\+\_\+adder} }{\pageref{classtb__adder}}{}
+\item\contentsline{section}{entity \hyperlink{classtb__generic__cla__adder}{tb\+\_\+generic\+\_\+cla\+\_\+adder} }{\pageref{classtb__generic__cla__adder}}{}
+\item\contentsline{section}{entity \hyperlink{classtb__prova}{tb\+\_\+prova} }{\pageref{classtb__prova}}{}
 \item\contentsline{section}{entity \hyperlink{classtruncate}{truncate} \\*Basic\+Fixed\+Point\+Operation @\{  Operazioni fixed-\/point basilari  Truncation @\{  Operazione di troncamento
 
 Tronca un numero signed fixed-\/point di ingresso, espresso in uno specifico formato, restituendone un'equivalente rappresentazione in uno specifico formato di uscita. Per eseguire il troncamento e' necessario conoscere a priori il numero totale di bit usati per la rappresentazione del numero in ingresso ed il numero di bit usati per rappresentare la sua parte intera }{\pageref{classtruncate}}{}

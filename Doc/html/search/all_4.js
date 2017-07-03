@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['truncate',['truncate',['../classtruncate.html',1,'']]],
-  ['truncate_2evhd',['truncate.vhd',['../truncate_8vhd.html',1,'']]]
+  ['elenco_20delle_20cose_20da_20fare',['Elenco delle cose da fare',['../todo.html',1,'']]]
 ];

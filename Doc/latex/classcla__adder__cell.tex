@@ -1,0 +1,50 @@
+\hypertarget{classcla__adder__cell}{\section{cla\+\_\+adder\+\_\+cell Entity Reference}
+\label{classcla__adder__cell}\index{cla\+\_\+adder\+\_\+cell@{cla\+\_\+adder\+\_\+cell}}
+}
+
+
+Cella base di un addizionatore con carry-\/lookahead.
+
+La cella somma tra loro due addendi ed un carry in ingresso, tutti espressi su un solo bit. Oltre a generare la somma, genera le funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} del carry.  
+
+
+
+
+Diagramma delle classi per cla\+\_\+adder\+\_\+cell
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{classcla__adder__cell__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcla__adder__cell_1_1dataflow}{dataflow} architecture
+\end{DoxyCompactItemize}
+\subsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___base_cell_ga2b16ee1ce0d8ffb8f85ccea13f8ba38d}{add1}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em addendo 1 \end{DoxyCompactList}\item 
+\hyperlink{group___base_cell_gac3ebb689e34fc5e7657726b18d8b5369}{add2}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em addendo 2 \end{DoxyCompactList}\item 
+\hyperlink{group___base_cell_gaa556a73dc4a4de1a0d662b25adbcbe33}{carryin}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em carry in ingresso \end{DoxyCompactList}\item 
+\hyperlink{group___base_cell_gac94466f3a0e3e34f0231abcf4b667ade}{prop}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione "propagazione”, vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; prop = add1 O\+R add2 \end{DoxyCompactList}\item 
+\hyperlink{group___base_cell_gaad65a9c9ebd4dd83c2835249a1ba2dff}{gen}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione "generazione”, vale 1 quando, sulla base degli ingressi, un adder generera' riporto; gen = add1 A\+N\+D add2; \end{DoxyCompactList}\item 
+\hyperlink{group___base_cell_ga0d9fc1b21b42422b12d68ad73ca8ef13}{sum}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione \char`\"{}somma\char`\"{}, rappresenta la somma tra gli addendi ed il carry in ingresso alla cella; sum = add1 X\+O\+R add2 X\+O\+R carryin; \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Cella base di un addizionatore con carry-\/lookahead.
+
+La cella somma tra loro due addendi ed un carry in ingresso, tutti espressi su un solo bit. Oltre a generare la somma, genera le funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} del carry. 
+
+La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+Src/adder/\hyperlink{cla__adder__cell_8vhd}{cla\+\_\+adder\+\_\+cell.\+vhd}\end{DoxyCompactItemize}

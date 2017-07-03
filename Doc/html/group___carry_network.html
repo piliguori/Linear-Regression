@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Linear Regression: CarryNetwork</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Linear Regression
+   </div>
+   <div id="projectbrief">Linear Regression IP-core in VHDL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="pages.html"><span>Pagine&#160;collegate</span></a></li>
+      <li><a href="modules.html"><span>Moduli</span></a></li>
+      <li><a href="annotated.html"><span>Design&#160;Unit&#160;List</span></a></li>
+      <li><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group___carry_network.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Gruppi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pagine</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Entities</a> &#124;
+<a href="#var-members">Variabili</a>  </div>
+  <div class="headertitle">
+<div class="title">CarryNetwork<div class="ingroups"><a class="el" href="group___adder.html">Adder</a> &raquo; <a class="el" href="group___carry_loockahead.html">CarryLoockahead</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Rete di generazione dei segnali di carry per un adder a quattro bit.  
+<a href="#details">Continua...</a></p>
+<div class="dynheader">
+Diagramma di collaborazione per CarryNetwork:</div>
+<div class="dyncontent">
+<center><table><tr><td><img src="group___carry_network.png" border="0" alt="" usemap="#group______carry__network"/>
+<map name="group______carry__network" id="group______carry__network">
+<area shape="rect" id="node1" href="group___carry_loockahead.html" title="Addizionatore con carry&#45;lookahead. " alt="" coords="5,5,129,32"/></map>
+</td></tr></table></center>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Entities</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcla__carry__net.html">cla_carry_net</a> &#160;</td><td class="memItemRight" valign="bottom">entity</td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni "propagazione" e "generazione" prodotte dai singoli blocchi <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a>, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a>, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit: 
+ <div align='center'>
+ <img src="../../Doc/schemes/nibble_adder.jpg"/>
+ </div>
+ .  <a href="classcla__carry__net.html#details">Continua...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcla__carry__net_1_1dataflow.html">dataflow</a> &#160;</td><td class="memItemRight" valign="bottom">architecture</td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementazione dataflow dell'entita' <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/>  </div>  . ">cla_carry_net</a>.  <a href="classcla__carry__net_1_1dataflow.html#details">Continua...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Ports"></a>
+Ports</h2></td></tr>
+ <tr class="memitem:gac1f84cd3374a5a4d2ee2669ebdadafe8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_network.html#gac1f84cd3374a5a4d2ee2669ebdadafe8">prop</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">3</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:gac1f84cd3374a5a4d2ee2669ebdadafe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">funzione “propagazione” prodotta da <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a>; vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; prop(i) = add(i) OR add(i); in questo caso viene prodotta da quattro blocchi <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a> sulla base dei loro ingressi  <a href="group___carry_network.html#gac1f84cd3374a5a4d2ee2669ebdadafe8"></a><br /></td></tr>
+<tr class="memitem:ga1ff97daaf4e03defc21748593cacfaa7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_network.html#ga1ff97daaf4e03defc21748593cacfaa7">gen</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">3</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ga1ff97daaf4e03defc21748593cacfaa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">funzione "generazione" prodotta da <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a>; vale 1 quando, sulla base degli ingressi, un adder generera' un carry in uscita; gen(i) = add(i) AND add(i); in questo caso viene prodotta da quattro blocchi <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a> sulla base dei loro ingressi  <a href="group___carry_network.html#ga1ff97daaf4e03defc21748593cacfaa7"></a><br /></td></tr>
+<tr class="memitem:gaa556a73dc4a4de1a0d662b25adbcbe33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_network.html#gaa556a73dc4a4de1a0d662b25adbcbe33">carryin</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:gaa556a73dc4a4de1a0d662b25adbcbe33"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale di "carry-in", prodotto da un eventuale <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/>  </div>  . ">cla_carry_net</a> a monte.  <a href="group___carry_network.html#gaa556a73dc4a4de1a0d662b25adbcbe33"></a><br /></td></tr>
+<tr class="memitem:ga422e8e7ee01fc7ac7b7390cd2ad8c87b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_network.html#ga422e8e7ee01fc7ac7b7390cd2ad8c87b">propin</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ga422e8e7ee01fc7ac7b7390cd2ad8c87b"><td class="mdescLeft">&#160;</td><td class="mdescRight">funzione "propagazione", prodotta da una eventuale <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/>  </div>  . ">cla_carry_net</a> a monte  <a href="group___carry_network.html#ga422e8e7ee01fc7ac7b7390cd2ad8c87b"></a><br /></td></tr>
+<tr class="memitem:ga0a46d5193cb73eb993bc5d4f69741d0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_network.html#ga0a46d5193cb73eb993bc5d4f69741d0a">genin</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ga0a46d5193cb73eb993bc5d4f69741d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">funzione "generazione", prodotta da una eventuale <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/>  </div>  . ">cla_carry_net</a> a monte  <a href="group___carry_network.html#ga0a46d5193cb73eb993bc5d4f69741d0a"></a><br /></td></tr>
+<tr class="memitem:ga6b265f3fe41195485dfedd9824c3598f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_network.html#ga6b265f3fe41195485dfedd9824c3598f">carryout</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">3</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ga6b265f3fe41195485dfedd9824c3598f"><td class="mdescLeft">&#160;</td><td class="mdescRight">carry calcolati sulla base delle funzioni "propagazione" e "generazione" prodotti dai blocchi <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a>, e sulla base delle funzioni "carry-in", "propagazione" e "generazione" prodotti da eventuali blocchi a monte; ciascuno dei bit dovra' essere posto in ingresso ad un blocco <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a> differente, affinche' possa essere calcolata la somma degli addendi  <a href="group___carry_network.html#ga6b265f3fe41195485dfedd9824c3598f"></a><br /></td></tr>
+<tr class="memitem:ga5957c9cdd706cafd2da8855133a002c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_network.html#ga5957c9cdd706cafd2da8855133a002c9">propout</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ga5957c9cdd706cafd2da8855133a002c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">funzione "propagazione" da porre in ingresso ad un eventuale blocco <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/>  </div>  . ">cla_carry_net</a> a valle  <a href="group___carry_network.html#ga5957c9cdd706cafd2da8855133a002c9"></a><br /></td></tr>
+<tr class="memitem:ga068cd5c4d23e284cb942702252ed1491"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_network.html#ga068cd5c4d23e284cb942702252ed1491">genout</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ga068cd5c4d23e284cb942702252ed1491"><td class="mdescLeft">&#160;</td><td class="mdescRight">funzione "generazione" da porre in ingresso ad un eventuale blocco <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/>  </div>  . ">cla_carry_net</a> a valle  <a href="group___carry_network.html#ga068cd5c4d23e284cb942702252ed1491"></a><br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
+<p>Rete di generazione dei segnali di carry per un adder a quattro bit. </p>
+<h2 class="groupheader">Documentazione delle variabili</h2>
+<a class="anchor" id="gaa556a73dc4a4de1a0d662b25adbcbe33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___carry_network.html#gaa556a73dc4a4de1a0d662b25adbcbe33">carryin</a> <b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">std_logic</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Port</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>segnale di "carry-in", prodotto da un eventuale <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/>  </div>  . ">cla_carry_net</a> a monte. </p>
+
+</div>
+</div>
+<a class="anchor" id="ga6b265f3fe41195485dfedd9824c3598f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___carry_network.html#ga6b265f3fe41195485dfedd9824c3598f">carryout</a> <b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">3</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Port</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>carry calcolati sulla base delle funzioni "propagazione" e "generazione" prodotti dai blocchi <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a>, e sulla base delle funzioni "carry-in", "propagazione" e "generazione" prodotti da eventuali blocchi a monte; ciascuno dei bit dovra' essere posto in ingresso ad un blocco <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a> differente, affinche' possa essere calcolata la somma degli addendi </p>
+
+</div>
+</div>
+<a class="anchor" id="ga1ff97daaf4e03defc21748593cacfaa7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___carry_network.html#ga1ff97daaf4e03defc21748593cacfaa7">gen</a> <b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">3</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Port</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>funzione "generazione" prodotta da <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a>; vale 1 quando, sulla base degli ingressi, un adder generera' un carry in uscita; gen(i) = add(i) AND add(i); in questo caso viene prodotta da quattro blocchi <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a> sulla base dei loro ingressi </p>
+
+</div>
+</div>
+<a class="anchor" id="ga0a46d5193cb73eb993bc5d4f69741d0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___carry_network.html#ga0a46d5193cb73eb993bc5d4f69741d0a">genin</a> <b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">std_logic</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Port</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>funzione "generazione", prodotta da una eventuale <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/>  </div>  . ">cla_carry_net</a> a monte </p>
+
+</div>
+</div>
+<a class="anchor" id="ga068cd5c4d23e284cb942702252ed1491"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___carry_network.html#ga068cd5c4d23e284cb942702252ed1491">genout</a> <b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">std_logic</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Port</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>funzione "generazione" da porre in ingresso ad un eventuale blocco <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/>  </div>  . ">cla_carry_net</a> a valle </p>
+
+</div>
+</div>
+<a class="anchor" id="gac1f84cd3374a5a4d2ee2669ebdadafe8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___carry_network.html#gac1f84cd3374a5a4d2ee2669ebdadafe8">prop</a> <b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">3</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Port</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>funzione “propagazione” prodotta da <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a>; vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; prop(i) = add(i) OR add(i); in questo caso viene prodotta da quattro blocchi <a class="el" href="classcla__adder__cell.html" title="Cella base di un addizionatore con carry-lookahead.La cella somma tra loro due addendi ed un carry in...">cla_adder_cell</a> sulla base dei loro ingressi </p>
+
+</div>
+</div>
+<a class="anchor" id="ga422e8e7ee01fc7ac7b7390cd2ad8c87b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___carry_network.html#ga422e8e7ee01fc7ac7b7390cd2ad8c87b">propin</a> <b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">std_logic</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Port</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>funzione "propagazione", prodotta da una eventuale <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/>  </div>  . ">cla_carry_net</a> a monte </p>
+
+</div>
+</div>
+<a class="anchor" id="ga5957c9cdd706cafd2da8855133a002c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___carry_network.html#ga5957c9cdd706cafd2da8855133a002c9">propout</a> <b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b> <b><span class="vhdlchar">std_logic</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Port</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>funzione "propagazione" da porre in ingresso ad un eventuale blocco <a class="el" href="classcla__carry__net.html" title="Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.Permette di anticipare il calcolo dei riporti usando le funzioni &quot;propagazione&quot; e &quot;generazione&quot; prodotte dai singoli blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:   <div align=&#39;center&#39;>  <img src=&quot;../../Doc/schemes/nibble_adder.jpg&quot;/>  </div>  . ">cla_carry_net</a> a valle </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generato Lun 3 Lug 2017 09:40:43 per Linear Regression da
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -30,29 +30,72 @@
 
 --! @addtogroup Adder
 --! @{
---! @brief Implementazione di un adder per la somma di due addendo con numero di bit variabile.
 --! @addtogroup CarryLoockahead
 --! @{
---! @brief Implementazione VHDL di un adder con carry-lookahead custom
 --! @addtogroup CarryNetwork
---! @brief Rete di generazione dei segnali di carry per l'adder
 --! @{
+--! @brief Rete di generazione dei segnali di carry per un adder a quattro bit
+
 --! @cond
 library ieee;
 use ieee.std_logic_1164.all;
--- use ieee.numeric_std.all;
--- use ieee.std_logic_misc.all;
 --! @endcond
 
+--! Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead. 
+--!
+--! Permette di anticipare il calcolo dei riporti usando le funzioni "propagazione" e "generazione" prodotte dai singoli
+--! blocchi cla_adder_cell, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il
+--! tempo necessario a completare la somma.
+--! Questo blocco calcola solo i carry, pertanto va connesso ai blocchi cla_adder_cell, per il calcolo materiale della somma,
+--! così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit:
+--! @htmlonly
+--! <div align='center'>
+--! <img src="../../Doc/schemes/nibble_adder.jpg"/>
+--! </div>
+--! @endhtmlonly 
 entity cla_carry_net is
-	port (	prop, gen : in std_logic_vector(3 downto 0);
-			carryin, propin, genin : in std_logic;
-			carryout : out std_logic_vector(3 downto 0);
-			propout, genout : out std_logic); 
+	port (	prop 		: in 	std_logic_vector(3 downto 0);	--! funzione “propagazione” prodotta da cla_adder_cell;
+			--! vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; 
+			--! prop(i) = add(i) OR add(i); in questo caso viene prodotta da quattro blocchi cla_adder_cell sulla base dei
+			--! loro ingressi
+			gen 		: in 	std_logic_vector(3 downto 0);	--! funzione "generazione" prodotta da cla_adder_cell;
+			--! vale 1 quando, sulla base degli ingressi, un adder generera' un carry in uscita; gen(i) = add(i) AND add(i);
+			--! in questo caso viene prodotta da quattro blocchi cla_adder_cell sulla base dei loro ingressi
+			carryin 	: in 	std_logic;	--! segnale di "carry-in", prodotto da un eventuale cla_carry_net a monte. 
+			propin 		: in 	std_logic;	--! funzione "propagazione", prodotta da una eventuale cla_carry_net a monte 
+			genin 		: in 	std_logic;	--! funzione "generazione", prodotta da una eventuale cla_carry_net a monte 
+			carryout	: out 	std_logic_vector(3 downto 0);	--! carry calcolati sulla base delle funzioni "propagazione"
+			--! e "generazione" prodotti dai blocchi cla_adder_cell, e sulla base delle funzioni "carry-in", "propagazione"
+			--! e "generazione" prodotti da eventuali blocchi a monte; ciascuno dei bit dovra' essere posto in ingresso ad
+			--! un blocco cla_adder_cell differente, affinche' possa essere calcolata la somma degli addendi
+			propout 	: out 	std_logic; 	--! funzione "propagazione" da porre in ingresso ad un eventuale blocco
+			--! cla_carry_net a valle
+			genout 		: out 	std_logic); --! funzione "generazione" da porre in ingresso ad un eventuale blocco
+			--! cla_carry_net a valle
 end cla_carry_net;
 
+--! Implementazione dataflow dell'entita' cla_carry_net. 
+--!
+--! L'implementazione si basa sul seguente ragionamento:
+--! Proviamo ad esprimere, adesso, il carry carryout(i+1) in base alle funzioni gen(i) e prop(i),
+--! partendo, ad esempio, da carryout(1).
+--! Il carry carryout(0) varra' 1 se al passo precedente è stato generato riporto oppure se verra' propagato il carry
+--! carryin. In formule:
+--! <center>carryout(0)=genin+(propin*carryin);</center>
+--! Possiamo estendere lo stesso ragionamento a carryout(2):
+--! <center>carryout(1)=gen(1)+prop(1)*carryout(1)=gen(1)+prop(1)*gen(0)+prop(1)*prop(0)*carryin</center>
+--! Cio' significa che il riporto carryout(1) lo si può esprimere sulla base di soli dati di ingresso con reti
+--! combinatorie a due livelli, senza utilizzare valori calcolati da nodi precedenti. Tutto ciò si traduce in un minor 
+--! tempo necessario ad effettuare il calcolo di tutti i carry, quindi un minor tempo necessario a completare la somma.
+--! Purtroppo non si può procedere in questo modo ad oltranza per cui si tende a spezzare" la rete per il calcolo dei
+--! carry in blocchi più piccoli, ad esempio reti per il calcolo di carry per quattro bit. Considerando che
+--! <center>carryout(4)=gen(3)+prop(3)*carryout(3)=...=genout+propout*carryin</center>
+--! con
+--! <center>genout=gen(3)+(prop(3)*gen(2))+(prop(3)*prop(2)*gen(1))+(prop(3)*prop(2)*prop(1)*gen(0))+(prop(3)*prop(2)*prop(1)*prop(0)*genin)</center>
+--! <center>propout=prop(3)*prop(2)*prop(1)*prop(0)*propin</center>
+--! Si può costruire dei blocchi che presentino in uscita i segnali genout e propout, in modo da permettere ad eventuali
+--! blocchi successivi il calcolo veloce dei carry sulla base di questi segnali e del segnale carryin.
 architecture dataflow of cla_carry_net is
-
 begin
 	carryout(0) <= genin or (propin and carryin);
 	
@@ -80,4 +123,9 @@ begin
 	propout <=	prop(3) and prop(2) and prop(1) and prop(0) and propin;
 	
 end dataflow;
+
+--! @}
+--! @}
+--! @}
+
 

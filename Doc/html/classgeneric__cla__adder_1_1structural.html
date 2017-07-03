@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Linear Regression: structural Architecture  Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Linear Regression
+   </div>
+   <div id="projectbrief">Linear Regression IP-core in VHDL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="pages.html"><span>Pagine&#160;collegate</span></a></li>
+      <li><a href="modules.html"><span>Moduli</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Design&#160;Unit&#160;List</span></a></li>
+      <li><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Design&#160;Unit&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Design&#160;Units</span></a></li>
+      <li><a href="inherits.html"><span>Design&#160;Unit&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Design&#160;Unit&#160;Members</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classgeneric__cla__adder_1_1structural.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Gruppi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pagine</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#Components">Components</a> &#124;
+<a href="#Signals">Signals</a> &#124;
+<a href="#Instantiations">Instantiations</a>  </div>
+  <div class="headertitle">
+<div class="title">structural Architecture Reference<div class="ingroups"><a class="el" href="group___adder.html">Adder</a> &raquo; <a class="el" href="group___carry_loockahead.html">CarryLoockahead</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementazione structural di <a class="el" href="classgeneric__cla__adder.html" title="Adder custom con carry-lookaheadgeneric_cla_adder somma tra loro due addendi ed un carry in ingresso;...">generic_cla_adder</a>.  
+ <a href="classgeneric__cla__adder_1_1structural.html#details">Continua...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Components"></a>
+Components</h2></td></tr>
+ <tr class="memitem:ga98a3a5b152caf0f2de1e31ac60088369"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_loockahead.html#ga98a3a5b152caf0f2de1e31ac60088369">nibble_adder</a>&#160;</td><td class="memItemRight" valign="bottom">  <b></b>  <em><a class="el" href="classnibble__adder.html">&lt;Entity nibble_adder&gt; </a></em></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Signals"></a>
+Signals</h2></td></tr>
+ <tr class="memitem:ga19afe0b89973d7fc29362431f2e828b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_loockahead.html#ga19afe0b89973d7fc29362431f2e828b7">prop</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">to</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="group___carry_loockahead.html#ga0b63b586531492d0fa882246cca071c1">nibbles</a></b> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ga19afe0b89973d7fc29362431f2e828b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">funzione "propagazione" del carry, prodotta dai diversi blocchi <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a>; prop(i) vale 1 quando, sulla base degli ingressi, l'i-esimo <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a> propaghera' un eventuale carry in ingresso; prop(0) = '1';  <a href="group___carry_loockahead.html#ga19afe0b89973d7fc29362431f2e828b7"></a><br /></td></tr>
+<tr class="memitem:ga7a68948b7b96c7b51036939fad8e71b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_loockahead.html#ga7a68948b7b96c7b51036939fad8e71b3">gen</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">to</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="group___carry_loockahead.html#ga0b63b586531492d0fa882246cca071c1">nibbles</a></b> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ga7a68948b7b96c7b51036939fad8e71b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">funzione "generazione" del carry, prodotta dai diversi blocchi <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a>; gen(i) vale 1 quando, sulla base degli ingressi, l'i-esimo <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a> genera carry in uscita; gen(0) = '0';  <a href="group___carry_loockahead.html#ga7a68948b7b96c7b51036939fad8e71b3"></a><br /></td></tr>
+<tr class="memitem:ga99974841945a5f91b014f0149e173356"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___carry_loockahead.html#ga99974841945a5f91b014f0149e173356">sum_tmp</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="vhdlchar">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="group___carry_loockahead.html#ga0b63b586531492d0fa882246cca071c1">nibbles</a></b> <span class="vhdlchar">*</span><span class="vhdlchar"> </span> <span class="vhdldigit">4</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span><span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
+<tr class="memdesc:ga99974841945a5f91b014f0149e173356"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale temporaneo nel quale viene posto il risultato della somma per effettuare il calcolo della condizione di overflow  <a href="group___carry_loockahead.html#ga99974841945a5f91b014f0149e173356"></a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Instantiations"></a>
+Instantiations</h2></td></tr>
+ <tr class="memitem:a9d7a8a381439c61aea549e7a47ec7a6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeneric__cla__adder_1_1structural.html#a9d7a8a381439c61aea549e7a47ec7a6f">adder</a>&#160;</td><td class="memItemRight" valign="bottom">  <b>nibble_adder</b>  <em><a class="el" href="classnibble__adder.html">&lt;Entity nibble_adder&gt;</a></em></td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
+<div class="textblock"><p>Implementazione structural di <a class="el" href="classgeneric__cla__adder.html" title="Adder custom con carry-lookaheadgeneric_cla_adder somma tra loro due addendi ed un carry in ingresso;...">generic_cla_adder</a>. </p>
+<p>Questa implementazione istanzia tanti blocchi <a class="el" href="classnibble__adder.html" title="Addizionatore con carry-lookahead a quattro bit.La cella somma tra loro due addendi ed un carry in in...">nibble_adder</a> quanti siano i nibble in cui sono rappresentati gli addendi. La somma è espressa sullo stesso numero di bit. I diversi blocchi sono connessi tra loro come indicato nello schema ricordato di seguito:  
+ <div align='center'>
+ <img src="../../Doc/schemes/cla_adder.jpg"/>
+ </div>
+  </p>
+</div><h2 class="groupheader">Documentazione dei membri dato</h2>
+<a class="anchor" id="a9d7a8a381439c61aea549e7a47ec7a6f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgeneric__cla__adder_1_1structural.html#a9d7a8a381439c61aea549e7a47ec7a6f">adder</a> <b><span class="vhdlchar">nibble_adder</span><span class="vhdlchar"> </span></b> </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">Instantiation</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentazione per questa classe è stata generata a partire dal seguente file:<ul>
+<li>Src/adder/<a class="el" href="generic__cla__adder_8vhd.html">generic_cla_adder.vhd</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classgeneric__cla__adder.html">generic_cla_adder</a></li><li class="navelem"><a class="el" href="classgeneric__cla__adder_1_1structural.html">structural</a></li>
+    <li class="footer">Generato Lun 3 Lug 2017 09:40:43 per Linear Regression da
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -30,35 +30,33 @@
 
 --! @addtogroup Adder
 --! @{
---! @brief Implementazione di un adder per la somma di due addendo con numero di bit variabile.
 --! @addtogroup CarryLoockahead
 --! @{
---! @brief Implementazione VHDL di un adder con carry-lookahead custom.
 --! @addtogroup BaseCell
 --! @{
 --! @brief Implementazione della cella base di un adder.
+
 --! @cond
 library ieee;
 use ieee.std_logic_1164.all;
--- use ieee.numeric_std.all;
--- use ieee.std_logic_misc.all;
 --! @endcond
 
---! Cella base di un addizionatore con carry-lookahead. La cella somma tra loro due addendi ed un carry in ingresso, tutti
---! espressi su un solo bit. Oltre a generare la somma, genera le funzioni "propagazione" e "generazione" del carry.
+--! Cella base di un addizionatore con carry-lookahead.
+--!
+--! La cella somma tra loro due addendi ed un carry in ingresso, tutti espressi su un solo bit. Oltre a generare la somma,
+--! genera le funzioni "propagazione" e "generazione" del carry.
 entity cla_adder_cell is
-	port (	add1	: in std_logic;		--! addendo 1
-			add2	: in std_logic;		--! addendo 2
-			carryin	: in std_logic;		--! carry in ingresso
-			prop	: out std_logic;	--! funzione “propagazione”, vale 1 quando, sulla base degli ingressi, un adder
+	port (	add1	: in	std_logic;	--! addendo 1
+			add2	: in	std_logic;	--! addendo 2
+			carryin	: in	std_logic;	--! carry in ingresso
+			prop	: out	std_logic;	--! funzione "propagazione”, vale 1 quando, sulla base degli ingressi, un adder
 										--! propaghera' un eventuale carry in ingresso; prop = add1 OR add2
-			gen		: out std_logic;	--! funzione “generazione”, vale 1 quando, sulla base degli ingressi, un adder
+			gen		: out	std_logic;	--! funzione "generazione”, vale 1 quando, sulla base degli ingressi, un adder
 										--! generera' riporto; gen = add1 AND add2;
-			sum		: out std_logic);	--! funzione "somma", rappresenta la somma tra gli addendi ed il carry in ingresso
+			sum		: out	std_logic);	--! funzione "somma", rappresenta la somma tra gli addendi ed il carry in ingresso
 										--! alla cella; sum = add1 XOR add2 XOR carryin;
 end cla_adder_cell;
 
---! 
 architecture dataflow of cla_adder_cell is
 begin
 	prop <= add1 or add2;

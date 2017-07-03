@@ -1,0 +1,39 @@
+\hypertarget{cla__carry__net_8vhd}{\section{Riferimenti per il file Src/adder/cla\+\_\+carry\+\_\+net.vhd}
+\label{cla__carry__net_8vhd}\index{Src/adder/cla\+\_\+carry\+\_\+net.\+vhd@{Src/adder/cla\+\_\+carry\+\_\+net.\+vhd}}
+}
+\subsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} entity
+\begin{DoxyCompactList}\small\item\em Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.
+
+Permette di anticipare il calcolo dei riporti usando le funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotte dai singoli blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit\+: . \end{DoxyCompactList}\item 
+\hyperlink{classcla__carry__net_1_1dataflow}{dataflow} architecture
+\begin{DoxyCompactList}\small\item\em Implementazione dataflow dell'entita' \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+\begin{DoxyAuthor}{Autori}
+Salvatore Barone \href{mailto:salvator.barone@gmail.com}{\tt salvator.\+barone@gmail.\+com} ~\newline
+ Alfonso Di Martino \href{mailto:alfonsodimartino160989@gmail.com}{\tt alfonsodimartino160989@gmail.\+com} ~\newline
+ Sossio Fiorillo \href{mailto:fsossio@gmail.com}{\tt fsossio@gmail.\+com} ~\newline
+ Pietro Liguori \href{mailto:pie.liguori@gmail.com}{\tt pie.\+liguori@gmail.\+com} ~\newline
+
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+01 07 2017
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright 2017 Salvatore Barone \href{mailto:salvator.barone@gmail.com}{\tt salvator.\+barone@gmail.\+com} ~\newline
+ Alfonso Di Martino \href{mailto:alfonsodimartino160989@gmail.com}{\tt alfonsodimartino160989@gmail.\+com} ~\newline
+ Sossio Fiorillo \href{mailto:fsossio@gmail.com}{\tt fsossio@gmail.\+com} ~\newline
+ Pietro Liguori \href{mailto:pie.liguori@gmail.com}{\tt pie.\+liguori@gmail.\+com} ~\newline
+
+\end{DoxyCopyright}
+This file is part of Linear-\/\+Regression.
+
+Linear-\/\+Regression is free software; you can redistribute it and/or modify it under the terms of the G\+N\+U General Public License as published by the Free Software Foundation; either version 3 of the License, or any later version.
+
+Linear-\/\+Regression is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U General Public License for more details.
+
+You should have received a copy of the G\+N\+U General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, M\+A 02110-\/1301, U\+S\+A. 

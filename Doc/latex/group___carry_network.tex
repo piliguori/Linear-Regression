@@ -1,0 +1,107 @@
+\hypertarget{group___carry_network}{\section{Carry\+Network}
+\label{group___carry_network}\index{Carry\+Network@{Carry\+Network}}
+}
+
+
+Rete di generazione dei segnali di carry per un adder a quattro bit.  
+
+
+Diagramma di collaborazione per Carry\+Network\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{group___carry_network}
+\end{center}
+\end{figure}
+\subsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} entity
+\begin{DoxyCompactList}\small\item\em Rete logica di calcolo dei riporti per un addizionatore a quattro bit con carry lookahead.
+
+Permette di anticipare il calcolo dei riporti usando le funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotte dai singoli blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, in modo da ridurre tempo necessario ad effettuare il calcolo di tutti i carry, quindi il tempo necessario a completare la somma. Questo blocco calcola solo i carry, pertanto va connesso ai blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, per il calcolo materiale della somma, così come indicato dallo schema seguente, il quale rappresenta lo schema completo di un addizionatore a quattro bit\+: . \end{DoxyCompactList}\item 
+\hyperlink{classcla__carry__net_1_1dataflow}{dataflow} architecture
+\begin{DoxyCompactList}\small\item\em Implementazione dataflow dell'entita' \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___carry_network_gac1f84cd3374a5a4d2ee2669ebdadafe8}{prop}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione “propagazione” prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; prop(i) = add(i) O\+R add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi \end{DoxyCompactList}\item 
+\hyperlink{group___carry_network_ga1ff97daaf4e03defc21748593cacfaa7}{gen}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione \char`\"{}generazione\char`\"{} prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder generera' un carry in uscita; gen(i) = add(i) A\+N\+D add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi \end{DoxyCompactList}\item 
+\hyperlink{group___carry_network_gaa556a73dc4a4de1a0d662b25adbcbe33}{carryin}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em segnale di \char`\"{}carry-\/in\char`\"{}, prodotto da un eventuale \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a monte. \end{DoxyCompactList}\item 
+\hyperlink{group___carry_network_ga422e8e7ee01fc7ac7b7390cd2ad8c87b}{propin}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione \char`\"{}propagazione\char`\"{}, prodotta da una eventuale \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a monte \end{DoxyCompactList}\item 
+\hyperlink{group___carry_network_ga0a46d5193cb73eb993bc5d4f69741d0a}{genin}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione \char`\"{}generazione\char`\"{}, prodotta da una eventuale \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a monte \end{DoxyCompactList}\item 
+\hyperlink{group___carry_network_ga6b265f3fe41195485dfedd9824c3598f}{carryout}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em carry calcolati sulla base delle funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti dai blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, e sulla base delle funzioni \char`\"{}carry-\/in\char`\"{}, \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti da eventuali blocchi a monte; ciascuno dei bit dovra' essere posto in ingresso ad un blocco \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} differente, affinche' possa essere calcolata la somma degli addendi \end{DoxyCompactList}\item 
+\hyperlink{group___carry_network_ga5957c9cdd706cafd2da8855133a002c9}{propout}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione \char`\"{}propagazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a valle \end{DoxyCompactList}\item 
+\hyperlink{group___carry_network_ga068cd5c4d23e284cb942702252ed1491}{genout}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em funzione \char`\"{}generazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a valle \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Rete di generazione dei segnali di carry per un adder a quattro bit. 
+
+
+
+\subsection{Documentazione delle variabili}
+\hypertarget{group___carry_network_gaa556a73dc4a4de1a0d662b25adbcbe33}{\index{Carry\+Network@{Carry\+Network}!carryin@{carryin}}
+\index{carryin@{carryin}!Carry\+Network@{Carry\+Network}}
+\subsubsection[{carryin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carryin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___carry_network_gaa556a73dc4a4de1a0d662b25adbcbe33}
+
+
+segnale di \char`\"{}carry-\/in\char`\"{}, prodotto da un eventuale \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a monte. 
+
+\hypertarget{group___carry_network_ga6b265f3fe41195485dfedd9824c3598f}{\index{Carry\+Network@{Carry\+Network}!carryout@{carryout}}
+\index{carryout@{carryout}!Carry\+Network@{Carry\+Network}}
+\subsubsection[{carryout}]{\setlength{\rightskip}{0pt plus 5cm}{\bf carryout} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___carry_network_ga6b265f3fe41195485dfedd9824c3598f}
+
+
+carry calcolati sulla base delle funzioni \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti dai blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}, e sulla base delle funzioni \char`\"{}carry-\/in\char`\"{}, \char`\"{}propagazione\char`\"{} e \char`\"{}generazione\char`\"{} prodotti da eventuali blocchi a monte; ciascuno dei bit dovra' essere posto in ingresso ad un blocco \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} differente, affinche' possa essere calcolata la somma degli addendi 
+
+\hypertarget{group___carry_network_ga1ff97daaf4e03defc21748593cacfaa7}{\index{Carry\+Network@{Carry\+Network}!gen@{gen}}
+\index{gen@{gen}!Carry\+Network@{Carry\+Network}}
+\subsubsection[{gen}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gen} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___carry_network_ga1ff97daaf4e03defc21748593cacfaa7}
+
+
+funzione \char`\"{}generazione\char`\"{} prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder generera' un carry in uscita; gen(i) = add(i) A\+N\+D add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi 
+
+\hypertarget{group___carry_network_ga0a46d5193cb73eb993bc5d4f69741d0a}{\index{Carry\+Network@{Carry\+Network}!genin@{genin}}
+\index{genin@{genin}!Carry\+Network@{Carry\+Network}}
+\subsubsection[{genin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf genin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___carry_network_ga0a46d5193cb73eb993bc5d4f69741d0a}
+
+
+funzione \char`\"{}generazione\char`\"{}, prodotta da una eventuale \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a monte 
+
+\hypertarget{group___carry_network_ga068cd5c4d23e284cb942702252ed1491}{\index{Carry\+Network@{Carry\+Network}!genout@{genout}}
+\index{genout@{genout}!Carry\+Network@{Carry\+Network}}
+\subsubsection[{genout}]{\setlength{\rightskip}{0pt plus 5cm}{\bf genout} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___carry_network_ga068cd5c4d23e284cb942702252ed1491}
+
+
+funzione \char`\"{}generazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a valle 
+
+\hypertarget{group___carry_network_gac1f84cd3374a5a4d2ee2669ebdadafe8}{\index{Carry\+Network@{Carry\+Network}!prop@{prop}}
+\index{prop@{prop}!Carry\+Network@{Carry\+Network}}
+\subsubsection[{prop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf prop} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic\+\_\+vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___carry_network_gac1f84cd3374a5a4d2ee2669ebdadafe8}
+
+
+funzione “propagazione” prodotta da \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell}; vale 1 quando, sulla base degli ingressi, un adder propaghera' un eventuale carry in ingresso; prop(i) = add(i) O\+R add(i); in questo caso viene prodotta da quattro blocchi \hyperlink{classcla__adder__cell}{cla\+\_\+adder\+\_\+cell} sulla base dei loro ingressi 
+
+\hypertarget{group___carry_network_ga422e8e7ee01fc7ac7b7390cd2ad8c87b}{\index{Carry\+Network@{Carry\+Network}!propin@{propin}}
+\index{propin@{propin}!Carry\+Network@{Carry\+Network}}
+\subsubsection[{propin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf propin} {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___carry_network_ga422e8e7ee01fc7ac7b7390cd2ad8c87b}
+
+
+funzione \char`\"{}propagazione\char`\"{}, prodotta da una eventuale \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a monte 
+
+\hypertarget{group___carry_network_ga5957c9cdd706cafd2da8855133a002c9}{\index{Carry\+Network@{Carry\+Network}!propout@{propout}}
+\index{propout@{propout}!Carry\+Network@{Carry\+Network}}
+\subsubsection[{propout}]{\setlength{\rightskip}{0pt plus 5cm}{\bf propout} {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}}\label{group___carry_network_ga5957c9cdd706cafd2da8855133a002c9}
+
+
+funzione \char`\"{}propagazione\char`\"{} da porre in ingresso ad un eventuale blocco \hyperlink{classcla__carry__net}{cla\+\_\+carry\+\_\+net} a valle 
+
