@@ -107,6 +107,7 @@ begin
 			
 
 			write(wline, w_dm, right, 24);
+			write(wline, ' ', right, 1);
 			write(wline, w_dq, right, 24);
 			writeline(results, wline);
 		end loop;
