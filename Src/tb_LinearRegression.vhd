@@ -39,18 +39,18 @@ end tb_LinearRegression;
 
 architecture Behavioral of tb_LinearRegression is
 component LinearRegression 
-    Port ( prim : in STD_LOGIC_VECTOR (4 downto 0);		-- costante in input, 5 bit di parte intera e 0 decimale (m.n = 4.0)
-           Sum2 : in STD_LOGIC_VECTOR (23 downto 0);	-- segnale in input, 3 bit di parte intera e 21 decimale (m.n = 2.21)
-		   B 	: in STD_LOGIC_VECTOR (23 downto 0);	-- segnale in input, 3 bit di parte intera e 21 decimale (m.n = 2.21)
-		   Sum1 : in STD_LOGIC_VECTOR (23 downto 0);	-- segnale in input, 8 bit di parte intera e 16 decimale (m.n = 7.16)
-		   C 	: in STD_LOGIC_VECTOR (23 downto 0);	-- segnale in input, msb di peso -10  (m.n = -10.33)
-		   A 	: in STD_LOGIC_VECTOR (23 downto 0);	-- segnale in input, 16 bit di parte intera e 8 decimale (m.n = 15.8)
-		   m 	: out STD_LOGIC_VECTOR (23 downto 0);	-- segnale in output, 16 bit di parte intera e 8 decimale (m.n = 15.8)
-		   q 	: out STD_LOGIC_VECTOR (23 downto 0));	-- segnaes in output, 8 bit di parte intera e 16 decimale (m.n = 7.16)
+    Port ( prim : in STD_LOGIC_VECTOR (5 downto 0);		
+           Sum2 : in STD_LOGIC_VECTOR (23 downto 0);	
+		   B 	: in STD_LOGIC_VECTOR (23 downto 0);	
+		   Sum1 : in STD_LOGIC_VECTOR (23 downto 0);	
+		   C 	: in STD_LOGIC_VECTOR (23 downto 0);	
+		   A 	: in STD_LOGIC_VECTOR (23 downto 0);	
+		   m 	: out STD_LOGIC_VECTOR (23 downto 0);	
+		   q 	: out STD_LOGIC_VECTOR (23 downto 0));	
 
 end component;
 
-signal prim : STD_LOGIC_VECTOR (4 downto 0)	:= (others => '0');
+signal prim : STD_LOGIC_VECTOR (5 downto 0)	:= (others => '0');
 signal Sum2 : STD_LOGIC_VECTOR (23 downto 0):= (others => '0');
 signal B 	: STD_LOGIC_VECTOR (23 downto 0):= (others => '0');
 signal Sum1 : STD_LOGIC_VECTOR (23 downto 0):= (others => '0');
@@ -74,36 +74,9 @@ uut: LinearRegression
 		   		
 stim_proc: process
 begin
-	--Test MULT1
---	prim <= b"10110";
---	Sum2 <= x"8137AB";
-	
-	--Test MULT2
---	B <= x"300000";
---	Sum2 <= x"A00000";
-
-
-	--Test MULT3
---	B <= x"ACACCA";
---	Sum1 <= x"0CACCA";
-	
-	--Test MULT4
---	Sum1 <= x"D25A08";
---	C <= x"fff123";
-
-	--Test Add1 ed Add2
-	prim <= b"01010";
-	Sum2 <= x"2BCDEF";
-	
-	B <= x"234567";
-	Sum1<= x"34BD93";
-	
-	C <= x"61d15a";
-	
-	--Test m e q
-	A <=x"1ef1ca";
-	
-	 
+	-- Test 1
+	prim <= b"011001";
+	Sum2 <= x"3FFAF6"; 
 wait;
 end process;		   		
 

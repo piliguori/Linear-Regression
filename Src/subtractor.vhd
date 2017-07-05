@@ -1,4 +1,4 @@
---! @file cla_adder_cell.vhd
+--! @file subtractor.vhd
 --!
 --! @authors	Salvatore Barone <salvator.barone@gmail.com> <br>
 --!				Alfonso Di Martino <alfonsodimartino160989@gmail.com> <br>
@@ -26,46 +26,31 @@
 --! You should have received a copy of the GNU General Public License along with this program; if not,
 --! write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
 --! USA.
---! 
+--!
 
---! @addtogroup Adder
+--! @addtogroup Subtractor
 --! @{
---! @addtogroup CarryLoockahead
---! @{
---! @addtogroup BaseCell
---! @{
---! @brief Implementazione della cella base di un adder.
-
---! @cond
+--! @brief Subtractor per la sottrazione di due espressi con numero di bit variabile.
 library ieee;
 use ieee.std_logic_1164.all;
---! @endcond
+use ieee.numeric_std.all;
 
---! Cella base di un addizionatore con carry-lookahead.
+--! Sottrattore di due numeri.
 --!
---! La cella somma tra loro due addendi ed un carry in ingresso, tutti espressi su un solo bit. Oltre a generare la somma,
---! genera le funzioni "propagazione" e "generazione" del carry.
-entity cla_adder_cell is
-	port (	add1	: in	std_logic;	--! addendo 1
-			add2	: in	std_logic;	--! addendo 2
-			carryin	: in	std_logic;	--! carry in ingresso
-			prop	: out	std_logic;	--! funzione "propagazione”, vale 1 quando, sulla base degli ingressi, un adder
-										--! propaghera' un eventuale carry in ingresso; prop = add1 OR add2
-			gen		: out	std_logic;	--! funzione "generazione”, vale 1 quando, sulla base degli ingressi, un adder
-										--! generera' riporto; gen = add1 AND add2;
-			sum		: out	std_logic);	--! funzione "somma", rappresenta la somma tra gli addendi ed il carry in ingresso
-										--! alla cella; sum = add1 XOR add2 XOR carryin;
-end cla_adder_cell;
+--! Il sottrattore permette di effettuare una differenza di due numeri espressi su un certo numero di bit.
+--! La differenza dei due valori viene espressa sullo stesso numero di bit.
+entity subtractor is
+	generic (	nbits 		: 		natural := 32);	--! Numero di bit su cui sottraendo e minuendo sono espressi.  
+				--! La differenza sarà espressa sul medesimo numero di bit
+	port (		sub1 		: in	std_logic_vector(nbits-1 downto 0);		--! minuendo
+				sub2 		: in	std_logic_vector(nbits-1 downto 0);		--! sottraendo
+				diff		: out	std_logic_vector(nbits-1 downto 0));	--! differenza dei valori
+end subtractor;
 
-architecture dataflow of cla_adder_cell is
+architecture structural of subtractor is
+	
 begin
-	prop <= add1 or add2;
-	gen <= add1 and add2;
-	sum <= add1 xor add2 xor carryin;
-end dataflow;
-
+	diff <=	std_logic_vector(signed(sub1) - signed(sub2));
+end structural;
 --! @}
---! @}
---! @}
-
 
