@@ -44,7 +44,7 @@ entity subtractor is
 				--! La differenza sarà espressa sul medesimo numero di bit
 	port (		sub1 		: in	std_logic_vector(nbits-1 downto 0);		--! minuendo
 				sub2 		: in	std_logic_vector(nbits-1 downto 0);		--! sottraendo
-				diff		: out	std_logic_vector(nbits-1 downto 0));	--! differenza dei valori
+				diff		: out	std_logic_vector(nbits-1 downto 0));	--! differenza dei valori: diff = sub1-sub2
 end subtractor;
 
 architecture structural of subtractor is
