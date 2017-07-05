@@ -95,20 +95,14 @@ begin
 		while not endfile(dataset) loop
 			readline(dataset, rline);
 			read(rline, r_sum1); read(rline, space);
-			read(rline, r_sum2); read(rline, space);
-			read(rline, r_m); read(rline, space);
-			read(rline, r_q);
+			read(rline, r_sum2);
 			sum1 <= r_sum1;
 			sum2 <= r_sum2;
 			wait for 3*clock_period;
 			
-			w_dm := std_logic_vector(signed(m)-signed(r_m));
-			w_dq := std_logic_vector(signed(q)-signed(r_q));
-			
-
-			write(wline, w_dm, right, 24);
+			write(wline, m, right, 24);
 			write(wline, ' ', right, 1);
-			write(wline, w_dq, right, 24);
+			write(wline, q, right, 24);
 			writeline(results, wline);
 		end loop;
 
