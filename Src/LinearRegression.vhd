@@ -32,16 +32,9 @@
 --! @{
 --! @brief Regressione Lineare in VHDL.
 
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
-
--- Pipelining
---  1. aggiunta dei segnali clk e load reset all'interfaccia del componente [fatto]
---  2. aggiunta dei segnali di bufferizzazione dei segnali dato in ingresso (pipe stage 0) [fatto]
---  3. istanziare i buffer di pipe-stage 0 [fatto]
---  4. istanziare i buffer di pipe-stage 1, è necessario definire un segnale per A
---	5.
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 --! @mainpage
 --! @brief Regressione Lineare.

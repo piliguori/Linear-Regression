@@ -39,28 +39,33 @@ entity automatic_tb is
 end automatic_tb;
 
 architecture behavioral of automatic_tb is
-	component LinearRegression is
-		port ( prim : in std_logic_vector (5 downto 0);
-			   sum2 : in std_logic_vector (23 downto 0);
-			   b 	: in std_logic_vector (23 downto 0);
-			   sum1 : in std_logic_vector (23 downto 0);
-			   c 	: in std_logic_vector (23 downto 0);
-			   a 	: in std_logic_vector (23 downto 0);
-			   m 	: out std_logic_vector (23 downto 0);
-			   q 	: out std_logic_vector (23 downto 0));
+	component LinearRegression 
+		 Port (	clk 	: in std_logic;
+				load	: in std_logic;
+				reset_n : in std_logic;
+				prim	: in STD_LOGIC_VECTOR (5 downto 0);
+				Sum2	: in STD_LOGIC_VECTOR (23 downto 0);
+				B		: in STD_LOGIC_VECTOR (23 downto 0);
+				Sum1	: in STD_LOGIC_VECTOR (23 downto 0);
+				C		: in STD_LOGIC_VECTOR (23 downto 0);
+				A		: in STD_LOGIC_VECTOR (23 downto 0);
+				m		: out STD_LOGIC_VECTOR (23 downto 0);
+				q		: out STD_LOGIC_VECTOR (23 downto 0));
 	end component;
-	
+
 	constant clock_period : time := 10ns;
-	
-	-- segnali interni al testbench	
-	signal prim : std_logic_vector (5 downto 0)  := b"011001";
-	signal a 	: std_logic_vector (23 downto 0) := x"7B13B1";
-	signal b 	: std_logic_vector (23 downto 0) := x"4CCCCC";
-	signal c 	: std_logic_vector (23 downto 0) := x"504816";
-	signal sum1 : std_logic_vector (23 downto 0) := (others=>'0');
-	signal sum2 : std_logic_vector (23 downto 0) := (others=>'0');
-	signal m 	: std_logic_vector (23 downto 0) := (others=>'0');
-	signal q 	: std_logic_vector (23 downto 0) := (others=>'0');
+
+	signal clk 		: std_logic := '0';
+	signal load		: std_logic := '0';
+	signal reset_n	: std_logic := '0';
+	signal prim		: std_logic_vector (5 downto 0)  := b"011001";
+	signal a		: std_logic_vector (23 downto 0) := x"7B13B1";
+	signal b		: std_logic_vector (23 downto 0) := x"4CCCCC";
+	signal c		: std_logic_vector (23 downto 0) := x"504816";
+	signal sum1		: std_logic_vector (23 downto 0) := (others=>'0');
+	signal sum2		: std_logic_vector (23 downto 0) := (others=>'0');
+	signal m		: std_logic_vector (23 downto 0) := (others=>'0');
+	signal q		: std_logic_vector (23 downto 0) := (others=>'0');
 	
 	-- oggetti per lettura/scrittura su file
 	file dataset : text;
@@ -68,15 +73,24 @@ architecture behavioral of automatic_tb is
 
 begin
 
+	clock_process : process
+	begin
+		clk <= not clk;
+		wait for clock_period / 2;
+	end process clock_process;
+
 	UUT : LinearRegression
-		port map(	prim => prim,
-					sum2 => sum2,
-					b 	 => b,
-					sum1 => sum1,
-					c 	 => c,
-					a 	 => a,
-					m 	 => m,
-					q 	 => q);
+		port map(	clk 	=> clk,
+					load	=> load,
+					reset_n => reset_n,
+					prim	=> prim,
+					sum2	=> sum2,
+					b 		=> b,
+					sum1	=> sum1,
+					c 		=> c,
+					a 		=> a,
+					m 		=> m,
+					q 		=> q);
 					
 	stim_proc : process
 		variable rline  : line;
@@ -89,6 +103,10 @@ begin
 		variable w_dq 	: std_logic_vector (23 downto 0) := (others=>'0');
 		variable space  : character;
 	begin
+		wait for 10*clock_period;
+		reset_n <= '1';
+		load <= '1';
+	
 		file_open(dataset, "/home/ssaa/dataset.txt",  read_mode);
 		file_open(results, "/home/ssaa/output.txt", write_mode);
 
