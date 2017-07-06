@@ -18,3 +18,5 @@ error_m= abs(m_vivado - m_matlab);
 error_q=abs(q_vivado-q_matlab);
 
 
+T = table(m_matlab,  q_matlab,m_vivado,q_vivado, error_m, error_q);
+writetable(T,'error.csv','WriteRowNames',true);
