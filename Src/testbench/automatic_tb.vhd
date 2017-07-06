@@ -107,8 +107,8 @@ begin
 		reset_n <= '1';
 		load <= '1';
 	
-		file_open(dataset, "/home/ssaa/dataset.txt",  read_mode);
-		file_open(results, "/home/ssaa/output.txt", write_mode);
+		file_open(dataset, "~/dataset.txt",  read_mode);
+		file_open(results, "~/output.txt", write_mode);
 
 		while not endfile(dataset) loop
 			readline(dataset, rline);
