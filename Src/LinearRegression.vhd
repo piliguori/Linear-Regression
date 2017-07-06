@@ -47,13 +47,12 @@ use ieee.numeric_std.all;
 --! dell'interfaccia del componente è riportata di seguito.
 --! @htmlonly
 --! <div align='center'>
---! <img src="../schemes/LinearRegressionBlackBox.jpg"/>
+--! <img src="../schemes/LinearRegressionBlackBox.png"/>
 --! </div>
 --! @endhtmlonly
 entity LinearRegression is
     Port (	clk 	: in std_logic;							--! segnale di clock, fornisce il segnale di temporizzazione ai componenti interni
-    		load	: in std_logic;							--! segnale di load, agisce solo sui registri di bufferizzazione dei segnali dati in ingresso; si veda la
-    														--! documentazione dell'architettura implementativa
+    		load	: in std_logic;							--! segnale di load, agisce solo sui registri di bufferizzazione dei segnali dati in ingresso; si veda la documentazione dell'architettura implementativa		
     		reset_n : in std_logic;							--! segnale di reset asincrono (active-low) per i registri interni
     		prim	: in STD_LOGIC_VECTOR (5 downto 0);		--! costante in input, 6 bit di parte intera e 0 decimale (m.n = 5.0)
 			Sum2	: in STD_LOGIC_VECTOR (23 downto 0);	--! segnale in input, 3 bit di parte intera e 21 decimale (m.n = 2.21)
@@ -74,7 +73,7 @@ end LinearRegression;
 --! il segnale "load" agisce solo sul primo dei registri della pipe.
 --! @htmlonly
 --! <div align='center'>
---! <img src="../schemes/LinearRegression.jpg"/>
+--! <img src="../schemes/LinearRegression.png"/>
 --! </div>
 --! @endhtmlonly
 architecture Structural of LinearRegression is
@@ -115,48 +114,48 @@ architecture Structural of LinearRegression is
 	
 -----------------------------------------------------------------------------------------------------------------------------
 -- Segnali di uscita di MULT1, MULT2, MULT3 e MULT4
-	signal mult1_out : std_logic_vector (47 downto 0) := (others => '0'); --! Uscita di MULT1 espressa su 48 bit, di cui 9 per 
-	--! la parte intera e 39 per quella decimale (m.n = 8.39).
-	signal mult2_out : std_logic_vector (47 downto 0) := (others => '0'); --! Uscita di MULT2 espressa su 48 bit, di cui 3 per 
-	--! la parte intera e 45 per quella decimale (m.n = 2.45).
-	signal mult3_out : std_logic_vector (29 downto 0) := (others => '0'); --! Uscita di MULT3 espressa su 30 bit, di cui 9 per 
-	--! la parte intera e 21 per quella decimale (m.n = 8.21).
-	signal mult4_out : std_logic_vector (47 downto 0) := (others => '0'); --! Uscita di MULT4 espressa su 48 bit, di cui 3 per
-	--! la parte intera e 45 per quella decimale (m.n = 2.45).
+	--! Uscita di MULT1 espressa su 48 bit, di cui 9 per la parte intera e 39 per quella decimale (m.n = 8.39).
+	signal mult1_out : std_logic_vector (47 downto 0) := (others => '0'); 
+	--! Uscita di MULT2 espressa su 48 bit, di cui 3 per la parte intera e 45 per quella decimale (m.n = 2.45).
+	signal mult2_out : std_logic_vector (47 downto 0) := (others => '0'); 
+	--! Uscita di MULT3 espressa su 30 bit, di cui 9 per la parte intera e 21 per quella decimale (m.n = 8.21).
+	signal mult3_out : std_logic_vector (29 downto 0) := (others => '0'); 
+	--! Uscita di MULT4 espressa su 48 bit, di cui 3 per la parte intera e 45 per quella decimale (m.n = 2.45).
+	signal mult4_out : std_logic_vector (47 downto 0) := (others => '0'); 
 
 ----------------------------------------------------------------------------------------------------------------------------
 -- Segnali di uscita del pipe-stage 1, si faccia riferimento allo schema architetturale
-	signal P1_buff1 : std_logic_vector (23 downto 0) := (others => '0'); --! L'uscita di MULT1 deve essere espressa su 24 bit,
-	--! di cui 8 bit per la parte intera e 16 per quella decimale ( m.n = 7.16 ). 
-	signal P2_buff1 : std_logic_vector (23 downto 0) := (others => '0'); --!L'uscita di MULT2 deve essere espressa su 24 bit, di cui 
-	--! 1 per la parte intera e 23 per quella decimale (m.n = 0.23).		
-	signal P3_buff1 : std_logic_vector (23 downto 0) := (others => '0'); --! L'uscita di MULT3 deve essere espressa su 24 bit
-	--! di cui 8 sono per la parte intera, e 16 per quella decimale (m.n = 7.16).		
-	signal P4_buff1 : std_logic_vector (23 downto 0) := (others => '0'); --! L'uscita di MULT4 deve essere espressa su 24 bit, di cui 
-	--! 1 per la parte intera e 23 per quella decimale ( m.n = 0.23 ).
-	signal A_buff1	: std_logic_vector (23 downto 0) := (others => '0'); --! segnale A bufferizzato, uscita del pipe-stage 1
+	--! L'uscita di MULT1 deve essere espressa su 24 bit, di cui 8 bit per la parte intera e 16 per quella decimale ( m.n = 7.16 ). 
+	signal P1_buff1 : std_logic_vector (23 downto 0) := (others => '0'); 
+	--!L'uscita di MULT2 deve essere espressa su 24 bit, di cui 1 per la parte intera e 23 per quella decimale (m.n = 0.23).
+	signal P2_buff1 : std_logic_vector (23 downto 0) := (others => '0'); 
+	--! L'uscita di MULT3 deve essere espressa su 24 bit di cui 8 sono per la parte intera, e 16 per quella decimale (m.n = 7.16).				
+	signal P3_buff1 : std_logic_vector (23 downto 0) := (others => '0');
+	--! L'uscita di MULT4 deve essere espressa su 24 bit, di cui 1 per la parte intera e 23 per quella decimale ( m.n = 0.23 ).
+	signal P4_buff1 : std_logic_vector (23 downto 0) := (others => '0'); 
+	--! segnale A bufferizzato, uscita del pipe-stage 1
+	signal A_buff1	: std_logic_vector (23 downto 0) := (others => '0'); 
 	
 -----------------------------------------------------------------------------------------------------------------------------
 -- Segnali di uscita di SUB5 e SUB6
-	signal S5 : std_logic_vector (23 downto 0) := (others => '0'); --! L'uscita di SUB5 deve essere espressa su 24 bit, di cui 
-	--! 8 per la parte intera  e 16 per quella decimale ( m.n = 7.16 ).
-	signal S6 : std_logic_vector (23 downto 0) := (others => '0'); --! L'uscita di SUB6 deve essere espressa su 24 bit, di cui 
-	--! 1 per la parte intera e 23 per quella decimale ( m.n = 0.23 ).
+	--! L'uscita di SUB5 deve essere espressa su 24 bit, di cui 8 per la parte intera  e 16 per quella decimale ( m.n = 7.16 ).
+	signal S5 : std_logic_vector (23 downto 0) := (others => '0'); 
+	--! L'uscita di SUB6 deve essere espressa su 24 bit, di cui 1 per la parte intera e 23 per quella decimale ( m.n = 0.23 ).
+	signal S6 : std_logic_vector (23 downto 0) := (others => '0'); 
 
 ----------------------------------------------------------------------------------------------------------------------------
 -- Segnali di uscita del pipe-stage 2, si faccia riferimento allo schema architetturale
 	signal S5_buff2 : std_logic_vector (23 downto 0) := (others => '0');
 	signal S6_buff2 : std_logic_vector (23 downto 0) := (others => '0');
-	signal A_buff2	: std_logic_vector (23 downto 0) := (others => '0'); --! segnale A bufferizzato, uscita del pipe-stage 2
+	--! segnale A bufferizzato, uscita del pipe-stage 2
+	signal A_buff2	: std_logic_vector (23 downto 0) := (others => '0'); 
 
 -----------------------------------------------------------------------------------------------------------------------------
 -- Segnali di uscita di MULTM e MULTQ
--- MULTM					  
-	signal multM_out : std_logic_vector (47 downto 0) := (others => '0'); --! Uscita di MULTM espressa su 48 bit, di cui 14 per 
-	--! la parte intera e 34 per quella decimale (m.n = 13.34).
--- MULTQ
-	signal multQ_out : std_logic_vector (47 downto 0) := (others => '0'); --! Uscita di MULTQ espressa su 48 bit, di cui 7 per 
-	--! la parte intera e 41 per quella decimale (m.n = 6.41).
+    --! Uscita di MULTM espressa su 48 bit, di cui 14 per la parte intera e 34 per quella decimale (m.n = 13.34).
+	signal multM_out : std_logic_vector (47 downto 0) := (others => '0'); 
+	--! Uscita di MULTQ espressa su 48 bit, di cui 7 per la parte intera e 41 per quella decimale (m.n = 6.41).
+	signal multQ_out : std_logic_vector (47 downto 0) := (others => '0'); 
 
 begin
 
@@ -269,38 +268,38 @@ begin
 		Port map (		clock 		=> clk,
 						reset_n 	=> reset_n,
 						load 		=> '1',
-						data_in 	=> mult1_out(46 downto 23), --! Cambio di rappresentazione dell'uscita di MULT1 da 48 bit,
-						data_out	=> P1_buff1);				--! di cui 9 per la parte intera (m.n = 8.39) a 24 bit, di cui 8
-																--! per la parte intera (m.n = 7.16). Quindi tronchiamo 1 bit in
-																--! testa e 23 in coda.,
+						data_in 	=> mult1_out(46 downto 23), -- Cambio di rappresentazione dell'uscita di MULT1 da 48 bit,
+						data_out	=> P1_buff1);				-- di cui 9 per la parte intera (m.n = 8.39) a 24 bit, di cui 8
+																-- per la parte intera (m.n = 7.16). Quindi tronchiamo 1 bit in
+																-- testa e 23 in coda.,
 	pipestage1_buff_P2 : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
 		Port map (		clock 		=> clk,
 						reset_n 	=> reset_n,
 						load 		=> '1',
-						data_in 	=> mult2_out(45 downto 22),	--! Cambio di rappresentazione dell'uscita di MULT2 da 48 bit, di 
-						data_out	=> P2_buff1);				--! cui 3 per la parte intera (m.n = 2.45) a 24 bit, di cui 1 pe
-																--! la parte intera (m.n = 0.23). Quindi tronchiamo 2 bit in testa e
-																--! 22 in coda.
+						data_in 	=> mult2_out(45 downto 22),	-- Cambio di rappresentazione dell'uscita di MULT2 da 48 bit, di 
+						data_out	=> P2_buff1);				-- cui 3 per la parte intera (m.n = 2.45) a 24 bit, di cui 1 pe
+																-- la parte intera (m.n = 0.23). Quindi tronchiamo 2 bit in testa e
+																-- 22 in coda.
 	pipestage1_buff_P3 : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
 		Port map (		clock 		=> clk,
 						reset_n 	=> reset_n,
 						load 		=> '1',
-						data_in 	=> mult3_out(28 downto 5),	--! Cambio di rappresentazione dell'uscita di MULT3 da 30 bit, di cui
-						data_out	=> P3_buff1);				--!  9 per la parte intera (m.n = 8.21) a 24 bit, di cui 8 per la parte
-																--! intera (m.n = 7.16). Quindi tronchiamo 1 bit in testa e 5 in coda.
+						data_in 	=> mult3_out(28 downto 5),	-- Cambio di rappresentazione dell'uscita di MULT3 da 30 bit, di cui
+						data_out	=> P3_buff1);				--  9 per la parte intera (m.n = 8.21) a 24 bit, di cui 8 per la parte
+																-- intera (m.n = 7.16). Quindi tronchiamo 1 bit in testa e 5 in coda.
 	pipestage1_buff_P4 : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
 		Port map (		clock 		=> clk,
 						reset_n 	=> reset_n,
 						load 		=> '1',
-						data_in 	=> mult4_out(45 downto 22),	--! Cambio di rappresentazione dell'uscita di MULT4 da 48 bit, di cui 3
-						data_out	=> P4_buff1);				--! per la parte intera (m.n = 2.45) a 24 bit, di cui 1 per la parte
-																--! intera (m.n = 0.23). Quindi tronchiamo 2 bit in testa e 22 in coda.
+						data_in 	=> mult4_out(45 downto 22),	-- Cambio di rappresentazione dell'uscita di MULT4 da 48 bit, di cui 3
+						data_out	=> P4_buff1);				-- per la parte intera (m.n = 2.45) a 24 bit, di cui 1 per la parte
+																-- intera (m.n = 0.23). Quindi tronchiamo 2 bit in testa e 22 in coda.
 
 ----------------------------------------------------------------------------------------------------------------------------------
 -- Instanze SUB5 e SUB6
@@ -360,9 +359,9 @@ begin
 				   factor2 => A_buff2,
 				   prod => multM_out);
 				   
-	m <= multM_out (44 downto 21); --! L'uscita di  MULTM deve essere portata da una rappresentazione di 48 bit con
-	--! 14 bit di parte intera e 34 decimale (m.n = 13.34), ad una di 24 bit con 11 bit di parte intera e 13 decimale (m.n = 10.13). 
-	--! Quindi tronca 3 bit in testa e 21 in coda.		
+	m <= multM_out (44 downto 21); -- L'uscita di  MULTM deve essere portata da una rappresentazione di 48 bit con
+	-- 14 bit di parte intera e 34 decimale (m.n = 13.34), ad una di 24 bit con 11 bit di parte intera e 13 decimale (m.n = 10.13). 
+	-- Quindi tronca 3 bit in testa e 21 in coda.		
 				   
 	MULTQ: multiplier
 		Generic map( nbits1 => 24,
@@ -371,9 +370,9 @@ begin
 				   factor2 => S6_buff2,
 				   prod => multQ_out);	  			  
 				   				  
-	q <= multQ_out(43 downto 20);	--! L'uscita di  MULTQ deve essere portata da una rappresentazione di 48 bit con
-	--! 7 bit di parte intera e 41 decimale (m.n = 6.41), ad una di 24 bit con 3 bit di parte intera e 21 decimale (m.n = 2.21). 
-	--! Qindi tronca 4 bit in testa e 20 in coda.
+	q <= multQ_out(43 downto 20);	-- L'uscita di  MULTQ deve essere portata da una rappresentazione di 48 bit con
+	-- 7 bit di parte intera e 41 decimale (m.n = 6.41), ad una di 24 bit con 3 bit di parte intera e 21 decimale (m.n = 2.21). 
+	-- Qindi tronca 4 bit in testa e 20 in coda.
 
 end Structural;
 

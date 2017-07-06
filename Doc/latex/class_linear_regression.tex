@@ -6,7 +6,7 @@ Diagramma delle classi per Linear\+Regression\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=279pt]{class_linear_regression__inherit__graph}
+\includegraphics[width=347pt]{class_linear_regression__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -15,7 +15,7 @@ Diagramma di collaborazione per Linear\+Regression\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=279pt]{class_linear_regression__coll__graph}
+\includegraphics[width=347pt]{class_linear_regression__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Entities}
@@ -26,34 +26,40 @@ Diagramma di collaborazione per Linear\+Regression\+:\nopagebreak
 \subsection*{Libraries}
  \begin{DoxyCompactItemize}
 \item 
-\hyperlink{group___linear_regression_gae4f03c286607f3181e16b9aa12d0c6d4}{I\+E\+EE} 
+\hyperlink{group___linear_regression_ga0a6af6eef40212dbaf130d57ce711256}{ieee} 
 \end{DoxyCompactItemize}
 \subsection*{Use Clauses}
  \begin{DoxyCompactItemize}
 \item 
-\hyperlink{group___linear_regression_gaa4b2b25246a821511120e3149b003563}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+1164}   
+\hyperlink{group___linear_regression_gacd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}   
 \item 
-\hyperlink{group___linear_regression_gae00f3f04545af57582ff10609eee23e2}{N\+U\+M\+E\+R\+I\+C\+\_\+\+S\+TD}   
+\hyperlink{group___linear_regression_ga2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}   
 \end{DoxyCompactItemize}
 \subsection*{Ports}
  \begin{DoxyCompactItemize}
 \item 
-\hyperlink{group___linear_regression_ga6b9afe9c48db695b7336519281c099a8}{prim}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+OR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{4} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em costante in input, 5 bit di parte intera e 0 decimale (m.\+n = 4.\+0) \end{DoxyCompactList}\item 
+\hyperlink{group___linear_regression_ga4a4609c199d30b3adebbeb3a01276ec5}{clk}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em segnale di clock, fornisce il segnale di temporizzazione ai componenti interni \end{DoxyCompactList}\item 
+\hyperlink{group___linear_regression_gaba761f7740d0b6257a0e283b3734ddbf}{load}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em segnale di load, agisce solo sui registri di bufferizzazione dei segnali dati in ingresso; si veda la documentazione dell\textquotesingle{}architettura implementativa \end{DoxyCompactList}\item 
+\hyperlink{group___linear_regression_ga446ea52ed8c4a84181a47d9165ce41a5}{reset\+\_\+n}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{std\+\_\+logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em segnale di reset asincrono (active-\/low) per i registri interni \end{DoxyCompactList}\item 
+\hyperlink{group___linear_regression_ga334647776cbf92a6f58a9e709678a597}{prim}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+OR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{5} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em costante in input, 6 bit di parte intera e 0 decimale (m.\+n = 5.\+0) \end{DoxyCompactList}\item 
 \hyperlink{group___linear_regression_ga4c98819455589b84c5e250a97e9bdfa1}{Sum2}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+OR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
 \begin{DoxyCompactList}\small\item\em segnale in input, 3 bit di parte intera e 21 decimale (m.\+n = 2.\+21) \end{DoxyCompactList}\item 
 \hyperlink{group___linear_regression_gab6685be06ffd9f2425d01307287a4454}{B}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+OR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em segnale in input, 3 bit di parte intera e 21 decimale (m.\+n = 2.\+21) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em segnale in input, msb di peso -\/1 (m.\+n = -\/1.\+24) \end{DoxyCompactList}\item 
 \hyperlink{group___linear_regression_ga43a9a0da4f44006af5631ed5ee8ad924}{Sum1}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+OR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em segnale in input, 8 bit di parte intera e 16 decimale (m.\+n = 7.\+16) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em segnale in input, 9 bit di parte intera e 15 decimale (m.\+n = 8.\+15) \end{DoxyCompactList}\item 
 \hyperlink{group___linear_regression_ga17058a6bcb609074c49be51d09202870}{C}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+OR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em segnale in input, msb di peso -\/10 (m.\+n = -\/10.\+33) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em segnale in input, msb di peso -\/7 (m.\+n = -\/7.\+30) \end{DoxyCompactList}\item 
 \hyperlink{group___linear_regression_gae1ad6503d157f6c26abdce1131d31ec2}{A}  {\bfseries {\bfseries \textcolor{vhdlchar}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+OR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em segnale in input, 16 bit di parte intera e 8 decimale (m.\+n = 15.\+8) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em segnale in input, 6 bit di parte intera e 18 decimale (m.\+n = 5.\+18) \end{DoxyCompactList}\item 
 \hyperlink{group___linear_regression_gad943f01112876248a4734aa3c3d2e3f2}{m}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+OR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em segnale in output, 16 bit di parte intera e 8 decimale (m.\+n = 15.\+8) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em segnale in output, 11 bit di parte intera e 13 decimale (m.\+n = 10.\+13) \end{DoxyCompactList}\item 
 \hyperlink{group___linear_regression_gacec4f4b6d139d1ada088ca2d3d881418}{q}  {\bfseries {\bfseries \textcolor{vhdlchar}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{S\+T\+D\+\_\+\+L\+O\+G\+I\+C\+\_\+\+V\+E\+C\+T\+OR}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em segnaes in output, 8 bit di parte intera e 16 decimale (m.\+n = 7.\+16) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em segnaes in output, 3 bit di parte intera e 21 decimale (m.\+n = 2.\+21) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}

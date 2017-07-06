@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linearregression',['LinearRegression',['../group___linear_regression.html',1,'']]]
+  ['subtractor',['Subtractor',['../group___subtractor.html',1,'']]]
 ];

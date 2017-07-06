@@ -1,15 +1,10 @@
 var searchData=
 [
-  ['c',['C',['../group___linear_regression.html#ga17058a6bcb609074c49be51d09202870',1,'LinearRegression.C()'],['../classtb___linear_regression_1_1_behavioral.html#a70a44c14255b0f239e64481331464e77',1,'tb_LinearRegression.Behavioral.C()']]],
-  ['carry',['carry',['../group___nibble_adder.html#ga8f5524d80e551d479327a16bb32abcaa',1,'nibble_adder::structural']]],
-  ['carry_5fin',['carry_in',['../group___carry_loockahead.html#ga1c211cdf2d4cf97e869c442832c53439',1,'generic_cla_adder.carry_in()'],['../classtb__generic__cla__adder_1_1behavior.html#a674dc264b83bd397c51160bed4eaede8',1,'tb_generic_cla_adder.behavior.carry_in()']]],
-  ['carry_5fout',['carry_out',['../group___carry_loockahead.html#ga851aaea297bdc862fba5478c4bf0e214',1,'generic_cla_adder.carry_out()'],['../classtb__generic__cla__adder_1_1behavior.html#a0599dd129c582752ab70084bd7bd6305',1,'tb_generic_cla_adder.behavior.carry_out()']]],
-  ['carryin',['carryin',['../group___base_cell.html#gaa556a73dc4a4de1a0d662b25adbcbe33',1,'cla_adder_cell.carryin()'],['../group___carry_network.html#gaa556a73dc4a4de1a0d662b25adbcbe33',1,'cla_carry_net.carryin()'],['../group___nibble_adder.html#gaa556a73dc4a4de1a0d662b25adbcbe33',1,'nibble_adder.carryin()']]],
-  ['carryloockahead',['CarryLoockahead',['../group___carry_loockahead.html',1,'']]],
-  ['carrynetwork',['CarryNetwork',['../group___carry_network.html',1,'']]],
-  ['carryout',['carryout',['../group___carry_network.html#ga6b265f3fe41195485dfedd9824c3598f',1,'cla_carry_net']]],
-  ['cla_5fadder_5fcell',['cla_adder_cell',['../classcla__adder__cell.html',1,'cla_adder_cell'],['../group___nibble_adder.html#ga4f13eb52457f650b1d2cd352d9cacca9',1,'nibble_adder.structural.cla_adder_cell()']]],
-  ['cla_5fadder_5fcell_2evhd',['cla_adder_cell.vhd',['../cla__adder__cell_8vhd.html',1,'']]],
-  ['cla_5fcarry_5fnet',['cla_carry_net',['../classcla__carry__net.html',1,'cla_carry_net'],['../group___nibble_adder.html#ga12bdc5892f526938e1447d663d152df8',1,'nibble_adder.structural.cla_carry_net()']]],
-  ['cla_5fcarry_5fnet_2evhd',['cla_carry_net.vhd',['../cla__carry__net_8vhd.html',1,'']]]
+  ['c',['C',['../group___linear_regression.html#ga17058a6bcb609074c49be51d09202870',1,'LinearRegression']]],
+  ['c_5fbuff0',['c_buff0',['../group___linear_regression.html#ga41b9aecdd19c390ca6c709455261ebab',1,'LinearRegression::Structural']]],
+  ['calcoloerrore_2em',['CalcoloErrore.m',['../_calcolo_errore_8m.html',1,'']]],
+  ['clk',['clk',['../group___linear_regression.html#ga4a4609c199d30b3adebbeb3a01276ec5',1,'LinearRegression']]],
+  ['clock',['clock',['../group___generic_buffer.html#gadfc2d5e995e9c6876b2e55bf6a5c4071',1,'GenericBuffer']]],
+  ['clock_5fprocess',['clock_process',['../classautomatic__tb_1_1behavioral.html#ac0731c1f0a226305f2a590b4044cdccb',1,'automatic_tb.behavioral.clock_process()'],['../classtb___linear_regression_1_1_behavioral.html#ac0731c1f0a226305f2a590b4044cdccb',1,'tb_LinearRegression.Behavioral.clock_process()']]],
+  ['code',['code',['../_t_bgenerator_8m.html#a22dc5d063516961eac6a2b32173c1e9d',1,'TBgenerator.m']]]
 ];

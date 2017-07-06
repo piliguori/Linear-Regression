@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y',['Y',['../classtb__generic__cla__adder_1_1behavior.html#a90a36bc161877c328423b965fab6bd93',1,'tb_generic_cla_adder::behavior']]]
+  ['reset_5fn',['reset_n',['../group___generic_buffer.html#ga446ea52ed8c4a84181a47d9165ce41a5',1,'GenericBuffer.reset_n()'],['../group___linear_regression.html#ga446ea52ed8c4a84181a47d9165ce41a5',1,'LinearRegression.reset_n()']]]
 ];

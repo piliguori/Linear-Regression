@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['adder',['Adder',['../group___adder.html',1,'']]]
+  ['genericbuffer',['GenericBuffer',['../group___generic_buffer.html',1,'']]]
 ];

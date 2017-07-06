@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linearregression',['LinearRegression',['../classtb___linear_regression_1_1_behavioral.html#a899499ba78b32b936cd0914831a72c95',1,'tb_LinearRegression::Behavioral']]]
+  ['genericbuffer',['GenericBuffer',['../group___linear_regression.html#ga26754353fa942392a9799290b42c41c7',1,'LinearRegression::Structural']]]
 ];

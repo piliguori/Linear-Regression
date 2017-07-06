@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['basecell',['BaseCell',['../group___base_cell.html',1,'']]]
+  ['linearregression',['LinearRegression',['../group___linear_regression.html',1,'']]]
 ];

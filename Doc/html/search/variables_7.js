@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['m',['m',['../group___linear_regression.html#gad943f01112876248a4734aa3c3d2e3f2',1,'LinearRegression.m()'],['../classtb___linear_regression_1_1_behavioral.html#aca8d70a7c18dcae84a7d59556bf399c6',1,'tb_LinearRegression.Behavioral.m()']]],
-  ['mult1_5fout',['mult1_out',['../group___linear_regression.html#ga8e3ef6c468a1560f19de3430d956a75c',1,'LinearRegression::Structural']]],
-  ['mult2_5fout',['mult2_out',['../group___linear_regression.html#gac6c586bcd10a70e181cf575558678c99',1,'LinearRegression::Structural']]],
-  ['mult3_5fout',['mult3_out',['../group___linear_regression.html#gae87513d13999dbb668a8ca5becdf44e1',1,'LinearRegression::Structural']]],
-  ['mult4_5fout',['mult4_out',['../group___linear_regression.html#ga5a0832f93305c3e0a37293a00e17a538',1,'LinearRegression::Structural']]],
-  ['mult5_5fout',['mult5_out',['../group___linear_regression.html#ga308e89f3c1df2b63a7dad6d0efa94e66',1,'LinearRegression::Structural']]],
-  ['mult6_5fout',['mult6_out',['../group___linear_regression.html#ga207c875b3cd576e5064d6fd3b2a36759',1,'LinearRegression::Structural']]],
-  ['multiplier',['multiplier',['../group___linear_regression.html#ga3cf9cbfc3e637ae0660c32ceef50386f',1,'LinearRegression::Structural']]]
+  ['i',['i',['../_t_bgenerator_8m.html#aac0842b0a34028f5ea3b578a1e662414',1,'TBgenerator.m']]],
+  ['ieee',['ieee',['../group___generic_buffer.html#ga0a6af6eef40212dbaf130d57ce711256',1,'GenericBuffer.ieee()'],['../group___linear_regression.html#ga0a6af6eef40212dbaf130d57ce711256',1,'LinearRegression.ieee()'],['../group___subtractor.html#ga0a6af6eef40212dbaf130d57ce711256',1,'subtractor.ieee()'],['../classautomatic__tb.html#a0a6af6eef40212dbaf130d57ce711256',1,'automatic_tb.ieee()'],['../classtb___linear_regression.html#ae4f03c286607f3181e16b9aa12d0c6d4',1,'tb_LinearRegression.IEEE()']]]
 ];

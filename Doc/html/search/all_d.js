@@ -1,16 +1,12 @@
 var searchData=
 [
-  ['s5',['S5',['../group___linear_regression.html#gaf847f35901bdae7b10eff5f0576735ec',1,'LinearRegression::Structural']]],
-  ['s6',['S6',['../group___linear_regression.html#gaad1e5951d0d38888c5deafab1b89df1a',1,'LinearRegression::Structural']]],
-  ['std_5flogic_5f1164',['STD_LOGIC_1164',['../group___linear_regression.html#gaa4b2b25246a821511120e3149b003563',1,'LinearRegression.STD_LOGIC_1164()'],['../classtb___linear_regression.html#aa4b2b25246a821511120e3149b003563',1,'tb_LinearRegression.STD_LOGIC_1164()']]],
-  ['stim_5fproc',['stim_proc',['../classtb__adder_1_1behavior.html#ad2efa6785cff833c341e27596b21aeb5',1,'tb_adder.behavior::stim_proc()'],['../classtb__generic__cla__adder_1_1behavior.html#ad2efa6785cff833c341e27596b21aeb5',1,'tb_generic_cla_adder.behavior::stim_proc()'],['../classtb___linear_regression_1_1_behavioral.html#ad2efa6785cff833c341e27596b21aeb5',1,'tb_LinearRegression.Behavioral::stim_proc()']]],
-  ['structural',['Structural',['../class_linear_regression_1_1_structural.html',1,'LinearRegression']]],
-  ['structural',['structural',['../classadder_1_1structural.html',1,'adder']]],
-  ['structural',['structural',['../classgeneric__cla__adder_1_1structural.html',1,'generic_cla_adder']]],
-  ['structural',['Structural',['../classmultiplier_1_1_structural.html',1,'multiplier']]],
-  ['structural',['structural',['../classnibble__adder_1_1structural.html',1,'nibble_adder']]],
-  ['sum',['sum',['../group___adder.html#ga01f6ea3ddb4d1519676217bcb5959de8',1,'adder.sum()'],['../group___base_cell.html#ga0d9fc1b21b42422b12d68ad73ca8ef13',1,'cla_adder_cell.sum()'],['../group___carry_loockahead.html#ga1b4798a9e96bb32e9c08ce68e24e7871',1,'generic_cla_adder.sum()'],['../group___nibble_adder.html#gadfe538323c3296159dd3b383325a996b',1,'nibble_adder.sum()'],['../classtb__adder_1_1behavior.html#a5db139547621616405be3e820278d444',1,'tb_adder.behavior.sum()'],['../classtb__generic__cla__adder_1_1behavior.html#a2f702f7ff5535941ec77a2859f9686b7',1,'tb_generic_cla_adder.behavior.sum()']]],
-  ['sum1',['Sum1',['../group___linear_regression.html#ga43a9a0da4f44006af5631ed5ee8ad924',1,'LinearRegression.Sum1()'],['../classtb___linear_regression_1_1_behavioral.html#a1e155282aaba0338ea8b2b92cb8759c5',1,'tb_LinearRegression.Behavioral.Sum1()']]],
-  ['sum2',['Sum2',['../group___linear_regression.html#ga4c98819455589b84c5e250a97e9bdfa1',1,'LinearRegression.Sum2()'],['../classtb___linear_regression_1_1_behavioral.html#a514cae7de30407ec394ac5533abcaac9',1,'tb_LinearRegression.Behavioral.Sum2()']]],
-  ['sum_5ftmp',['sum_tmp',['../group___adder.html#ga590914af948ec283f1371002f2f76720',1,'adder.structural.sum_tmp()'],['../group___carry_loockahead.html#ga3c7f619aa6449e06bf0dd48a7db92b84',1,'generic_cla_adder.structural.sum_tmp()']]]
+  ['p1_5fbuff1',['P1_buff1',['../group___linear_regression.html#gaa62b4451249556c1f9acb08b9bb1ba81',1,'LinearRegression::Structural']]],
+  ['p2_5fbuff1',['P2_buff1',['../group___linear_regression.html#ga8f8c92d3996ed1be653d65bfa9a063da',1,'LinearRegression::Structural']]],
+  ['p3_5fbuff1',['P3_buff1',['../group___linear_regression.html#ga70180d04f093d439774c11c332debaab',1,'LinearRegression::Structural']]],
+  ['p4_5fbuff1',['P4_buff1',['../group___linear_regression.html#ga585547e50aaeb76d801f21626a57c3d2',1,'LinearRegression::Structural']]],
+  ['points',['points',['../_t_bgenerator_8m.html#af6238d69bf69bc1ac7e32e239eab32c2',1,'TBgenerator.m']]],
+  ['prim',['prim',['../group___linear_regression.html#ga334647776cbf92a6f58a9e709678a597',1,'LinearRegression']]],
+  ['prim_5fbuff0',['prim_buff0',['../group___linear_regression.html#ga2f2ba1395426f682c5257c7549946eba',1,'LinearRegression::Structural']]],
+  ['process_5f0',['PROCESS_0',['../group___generic_buffer.html#ga2ee480e118ca2b3fccf26139a66e84ad',1,'GenericBuffer::Behavioral']]],
+  ['prod',['prod',['../group___multiplier.html#gaf168dc69ad77dc5791b5e0f99dcfb0a9',1,'multiplier']]]
 ];

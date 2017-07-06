@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nibble_5fadder_2evhd',['nibble_adder.vhd',['../nibble__adder_8vhd.html',1,'']]]
+  ['subtractor_2evhd',['subtractor.vhd',['../subtractor_8vhd.html',1,'']]]
 ];

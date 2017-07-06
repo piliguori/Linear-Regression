@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['adder',['adder',['../classadder.html',1,'']]]
+  ['automatic_5ftb',['automatic_tb',['../classautomatic__tb.html',1,'']]]
 ];

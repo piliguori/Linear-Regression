@@ -1,7 +1,6 @@
 var NAVTREE =
 [
   [ "Linear Regression", "index.html", [
-    [ "Lista dei test", "test.html", null ],
     [ "Moduli", "modules.html", "modules" ],
     [ "Design Unit List", "annotated.html", [
       [ "Design Unit List", "annotated.html", "annotated_dup" ],
@@ -14,14 +13,19 @@ var NAVTREE =
       ] ]
     ] ],
     [ "File", null, [
-      [ "Elenco dei file", "files.html", "files" ]
+      [ "Elenco dei file", "files.html", "files" ],
+      [ "Elementi dei file", "globals.html", [
+        [ "Tutto", "globals.html", null ],
+        [ "Functions/Procedures/Processes", "globals_func.html", null ],
+        [ "Variabili", "globals_vars.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_linear_regression_8vhd.html"
+"_calcolo_errore_8m.html"
 ];
 
 var SYNCONMSG = 'cliccare per disabilitare la sincronizzazione del pannello';
