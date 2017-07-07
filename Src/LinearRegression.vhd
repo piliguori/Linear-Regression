@@ -50,6 +50,8 @@ use ieee.numeric_std.all;
 --! <img src="../schemes/LinearRegressionBlackBox.png"/>
 --! </div>
 --! @endhtmlonly
+--! <h3>Ingressi:</h3>
+--! <h3>Uscite:</h3>
 entity LinearRegression is
     Port (	clk 	: in std_logic;							--! segnale di clock, fornisce il segnale di temporizzazione ai componenti interni
     		load	: in std_logic;							--! segnale di load, agisce solo sui registri di bufferizzazione dei segnali dati in ingresso; si veda la documentazione dell'architettura implementativa		
@@ -271,7 +273,7 @@ begin
 						data_in 	=> mult1_out(46 downto 23), -- Cambio di rappresentazione dell'uscita di MULT1 da 48 bit,
 						data_out	=> P1_buff1);				-- di cui 9 per la parte intera (m.n = 8.39) a 24 bit, di cui 8
 																-- per la parte intera (m.n = 7.16). Quindi tronchiamo 1 bit in
-																-- testa e 23 in coda.,
+																-- testa e 23 in coda.
 	pipestage1_buff_P2 : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
