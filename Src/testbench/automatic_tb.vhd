@@ -108,7 +108,7 @@ begin
 		load <= '1';
 	
 		file_open(dataset, "/home/ssaa/dataset.txt",  read_mode);
-		file_open(results, "/home/ssaa/output.txt", write_mode);
+		file_open(results, "/home/ssaa/outputPostSynth.txt", write_mode);
 
 		while not endfile(dataset) loop
 			readline(dataset, rline);
@@ -116,7 +116,7 @@ begin
 			read(rline, r_sum2);
 			sum1 <= r_sum1;
 			sum2 <= r_sum2;
-			wait for 3*clock_period;
+			wait for 4*clock_period;
 			
 			write(wline, m, right, 24);
 			write(wline, ' ', right, 1);
