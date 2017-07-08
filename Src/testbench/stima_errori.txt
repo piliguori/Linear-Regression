@@ -1,0 +1,20 @@
+POST IMPLEMENTATION /SYNTH
+
+MASSIMI
+
+m abs = 8.5449e-04
+q_abs = 7.6294e-06
+
+m_rel = 4.2637e-06
+q_rel = 0.0117
+
+
+MEDI
+
+m abs =  2.0195e-04
+q_abs =  1.9271e-06
+
+m_rel = 7.0579e-07 
+q_rel = 1.4026e-06
+   
+
