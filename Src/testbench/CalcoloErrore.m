@@ -18,9 +18,11 @@ q_vivado=bin2num(quantizer([24 21]),q_vivado_bin);
 m_vivado=cell2mat(m_vivado);
 q_vivado=cell2mat(q_vivado);
 
-error_m= abs(m_vivado - m_matlab);
-error_q=abs(q_vivado-q_matlab);
+error_abs_m= abs(m_vivado - m_matlab);
+error_abs_q=abs(q_vivado-q_matlab);
+error_rel_m=abs(m_vivado-m_matlab)./m_matlab;
+error_rel_q=abs(q_vivado-q_matlab)./q_matlab;
 
 
-T = table(m_matlab,  q_matlab,m_vivado,q_vivado, error_m, error_q);
+T = table(m_matlab,  q_matlab,m_vivado,q_vivado, error_abs_m, error_abs_q, error_rel_m, error_rel_q);
 writetable(T, error_file,'WriteRowNames',true);
