@@ -3,24 +3,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Linear Regression: LinearRegression</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
   $(window).load(resizeHeight);
 </script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -30,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">Linear Regression
-   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Linear Regression IP-core in VHDL</div>
   </td>
@@ -41,14 +38,14 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generato da Doxygen 1.8.11 -->
+<!-- Generato da Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
-      <li class="current"><a href="modules.html"><span>Moduli</span></a></li>
+      <li><a href="modules.html"><span>Moduli</span></a></li>
       <li><a href="annotated.html"><span>Design&#160;Unit&#160;List</span></a></li>
       <li><a href="files.html"><span>File</span></a></li>
       <li>
@@ -89,7 +86,7 @@ $(document).ready(function(){initNavTree('group___linear_regression.html','');})
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Gruppi</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,6 +112,11 @@ Entities</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_linear_regression.html">LinearRegression</a> &#160;</td><td class="memItemRight" valign="bottom">entity</td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_linear_regression_1_1_structural.html">Structural</a> &#160;</td><td class="memItemRight" valign="bottom">architecture</td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per il calcolo dei parametri della regressione vengono utilizzati opportunamente dei moltiplicatori e addizionatori/sottrattori. Per effettuare i calcoli in fixed point vengono adoperati opportuni troncamenti/ espansioni dei segnali. Il componente ha un'architettura pipelined, così come mostrato nello schema di seguito, nel quale sono indicati, usando la notazione standard, le rappresentazioni binarie dei segnali dato in signed fixed-point. Si noti che il segnale "load" agisce solo sul primo dei registri della pipe.  
+ <div align='center'>
+ <img src="../schemes/LinearRegression.png"/>
+ </div>
+ .  <a href="class_linear_regression_1_1_structural.html#details">Continua...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Libraries"></a>
@@ -153,9 +155,9 @@ Ports</h2></td></tr>
 <tr class="memitem:gae1ad6503d157f6c26abdce1131d31ec2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___linear_regression.html#gae1ad6503d157f6c26abdce1131d31ec2">A</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">in</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">STD_LOGIC_VECTOR</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">23</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
 <tr class="memdesc:gae1ad6503d157f6c26abdce1131d31ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale in input, 6 bit di parte intera e 18 decimale (m.n = 5.18)  <a href="group___linear_regression.html#gae1ad6503d157f6c26abdce1131d31ec2"></a><br /></td></tr>
 <tr class="memitem:gad943f01112876248a4734aa3c3d2e3f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___linear_regression.html#gad943f01112876248a4734aa3c3d2e3f2">m</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">STD_LOGIC_VECTOR</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">23</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
-<tr class="memdesc:gad943f01112876248a4734aa3c3d2e3f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnale in output, 11 bit di parte intera e 13 decimale (m.n = 10.13)  <a href="group___linear_regression.html#gad943f01112876248a4734aa3c3d2e3f2"></a><br /></td></tr>
+<tr class="memdesc:gad943f01112876248a4734aa3c3d2e3f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">coefficiente angolare della retta di regressione, 11 bit di parte intera e 13 decimale (m.n = 10.13)  <a href="group___linear_regression.html#gad943f01112876248a4734aa3c3d2e3f2"></a><br /></td></tr>
 <tr class="memitem:gacec4f4b6d139d1ada088ca2d3d881418"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___linear_regression.html#gacec4f4b6d139d1ada088ca2d3d881418">q</a> &#160;</td><td class="memItemRight" valign="bottom"> <b><b><span class="vhdlchar">out</span><span class="vhdlchar"> </span></b></b> <b><span class="vhdlchar">STD_LOGIC_VECTOR</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">23</span> <span class="vhdlchar"> </span><span class="vhdlchar">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
-<tr class="memdesc:gacec4f4b6d139d1ada088ca2d3d881418"><td class="mdescLeft">&#160;</td><td class="mdescRight">segnaes in output, 3 bit di parte intera e 21 decimale (m.n = 2.21)  <a href="group___linear_regression.html#gacec4f4b6d139d1ada088ca2d3d881418"></a><br /></td></tr>
+<tr class="memdesc:gacec4f4b6d139d1ada088ca2d3d881418"><td class="mdescLeft">&#160;</td><td class="mdescRight">intercetta della retta di regressione, 3 bit di parte intera e 21 decimale (m.n = 2.21)  <a href="group___linear_regression.html#gacec4f4b6d139d1ada088ca2d3d881418"></a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Signals"></a>
 Signals</h2></td></tr>
@@ -483,7 +485,7 @@ Signals</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>segnale in output, 11 bit di parte intera e 13 decimale (m.n = 10.13) </p>
+<p>coefficiente angolare della retta di regressione, 11 bit di parte intera e 13 decimale (m.n = 10.13) </p>
 
 </div>
 </div>
@@ -809,7 +811,7 @@ Signals</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>segnaes in output, 3 bit di parte intera e 21 decimale (m.n = 2.21) </p>
+<p>intercetta della retta di regressione, 3 bit di parte intera e 21 decimale (m.n = 2.21) </p>
 
 </div>
 </div>
@@ -1052,9 +1054,9 @@ Signals</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generato Gio 6 Lug 2017 18:16:50 per Linear Regression da
+    <li class="footer">Generato Mar 11 Lug 2017 13:53:04 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

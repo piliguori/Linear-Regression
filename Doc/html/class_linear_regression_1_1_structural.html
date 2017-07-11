@@ -3,24 +3,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Linear Regression: Structural Architecture  Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
   $(window).load(resizeHeight);
 </script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -30,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">Linear Regression
-   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Linear Regression IP-core in VHDL</div>
   </td>
@@ -41,7 +38,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generato da Doxygen 1.8.11 -->
+<!-- Generato da Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
@@ -97,7 +94,7 @@ $(document).ready(function(){initNavTree('class_linear_regression_1_1_structural
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Gruppi</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,6 +112,13 @@ $(document).ready(function(){initNavTree('class_linear_regression_1_1_structural
 <div class="title">Structural Architecture Reference<div class="ingroups"><a class="el" href="group___linear_regression.html">LinearRegression</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Per il calcolo dei parametri della regressione vengono utilizzati opportunamente dei moltiplicatori e addizionatori/sottrattori. Per effettuare i calcoli in fixed point vengono adoperati opportuni troncamenti/ espansioni dei segnali. Il componente ha un'architettura pipelined, così come mostrato nello schema di seguito, nel quale sono indicati, usando la notazione standard, le rappresentazioni binarie dei segnali dato in signed fixed-point. Si noti che il segnale "load" agisce solo sul primo dei registri della pipe.  
+ <div align='center'>
+ <img src="../schemes/LinearRegression.png"/>
+ </div>
+ .  
+ <a href="class_linear_regression_1_1_structural.html#details">Continua...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="Components"></a>
 Components</h2></td></tr>
@@ -197,7 +201,38 @@ Instantiations</h2></td></tr>
  <div align='center'>
  <img src="../schemes/LinearRegression.png"/>
  </div>
-  </p>
+ . </p>
+<h3>Rappresentazione dei segnali intermedi</h3>
+<p>La rappresentazione ottimale per i segnali intermedi è stata scelta in base a valori trovati empiricamente con 10M test preliminari, in modo da minimizzare il numero di bit usati per la loro rappresentazione ed, al contempo, minimizzare l' errore commesso nella loro rappresentazione. </p><table class="doxtable">
+<tr>
+<th>Componente </th><th>Ingressi </th><th>Uscita </th><th>Intervallo </th><th>Rappresentazione<br />
+Ottimale  </th></tr>
+<tr>
+<td>MULT1 </td><td>B (Q<sub>-1.24</sub>)<br />
+Sum1 (Q<sub>8.15</sub>) </td><td>mult1_out (Q<sub>8.39</sub>) </td><td>[-0.3; 56] </td><td>P1 (Q<sub>7.16</sub>)  </td></tr>
+<tr>
+<td>MULT2 </td><td>Sum2 (Q<sub>2.21</sub>)<br />
+B (Q<sub>-1.24</sub>) </td><td>mult2_out (Q<sub>2.45</sub>) </td><td>[-0.02; 0.9090] </td><td>P2 (Q<sub>0.23</sub>)  </td></tr>
+<tr>
+<td>MULT3 </td><td>Sum2 (Q<sub>2.21</sub>)<br />
+Prim (Q<sub>5.0</sub>) </td><td>mult3_out (Q<sub>8.21</sub>) </td><td>[-2.37; 80] </td><td>P3 (Q<sub>7.16</sub>)  </td></tr>
+<tr>
+<td>MULT4 </td><td>Sum1 (Q<sub>8.15</sub>)<br />
+C(Q<sub>-7.30</sub>) </td><td>mult4_out (Q<sub>2.45</sub>) </td><td>[-0.0049; 0.95] </td><td>P4 (Q<sub>0.23</sub>)  </td></tr>
+<tr>
+<td>SUB5 </td><td>P3(Q<sub>7.16</sub>)<br />
+P1(Q<sub>7.16</sub>) </td><td>S5 (Q<sub>7.16</sub>) </td><td>[-0.13; 19.21] </td><td>Q<sub>7.16</sub>  </td></tr>
+<tr>
+<td>SUB6 </td><td>P4(Q<sub>0.23</sub>)<br />
+P2(Q<sub>0.23</sub>) </td><td>S6 (Q<sub>0.23</sub>) </td><td>[-0.08; 0.08] </td><td>Q<sub>0.23</sub>  </td></tr>
+<tr>
+<td>MULTM </td><td>A(Q<sub>5.18</sub>)<br />
+S5(Q<sub>7.16</sub>) </td><td>multM_out (Q<sub>13.34</sub>) </td><td>[-27; 606] </td><td>m (Q<sub>10.13</sub>)  </td></tr>
+<tr>
+<td>MULTQ </td><td>A(Q<sub>5.18</sub>)<br />
+S6(Q<sub>0.23</sub>) </td><td>multQ_out (Q<sub>6.41</sub>) </td><td>[-2.62; 2.59] </td><td>q (Q<sub>2.21</sub>)  </td></tr>
+</table>
+<p>*N.B. La rappresentazione ottimale sarebbe Q<sub>6.17</sub>, ma il segnale va sommato con P3, la cui rappresentazione è Q<sub>7.16</sub>, per cui si è adottata quest'ultima. </p>
 </div><h2 class="groupheader">Documentazione dei membri dato</h2>
 <a class="anchor" id="abe2dbada52541335e367815bffe06c28"></a>
 <div class="memitem">
@@ -648,9 +683,9 @@ Instantiations</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_linear_regression.html">LinearRegression</a></li><li class="navelem"><a class="el" href="class_linear_regression_1_1_structural.html">Structural</a></li>
-    <li class="footer">Generato Gio 6 Lug 2017 18:16:50 per Linear Regression da
+    <li class="footer">Generato Mar 11 Lug 2017 13:53:04 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

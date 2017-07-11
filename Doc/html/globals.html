@@ -3,24 +3,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Linear Regression: Elementi dei file</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
   $(window).load(resizeHeight);
 </script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -30,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">Linear Regression
-   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Linear Regression IP-core in VHDL</div>
   </td>
@@ -41,7 +38,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generato da Doxygen 1.8.11 -->
+<!-- Generato da Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
@@ -97,6 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
       <li><a href="#index_q"><span>q</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_v"><span>v</span></a></li>
       <li class="current"><a href="#index_w"><span>w</span></a></li>
     </ul>
   </div>
@@ -120,7 +118,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Gruppi</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -143,6 +141,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>dataset
 : <a class="el" href="_calcolo_errore_8m.html#a17a813ff016f566e53dfb54c93ba2913">CalcoloErrore.m</a>
 </li>
+<li>dataset_file
+: <a class="el" href="_calcolo_errore_8m.html#ab6dd4899c2c315660992279d8d20d0bb">CalcoloErrore.m</a>
+</li>
 <li>div1
 : <a class="el" href="_t_bgenerator_8m.html#a6242f4aca888b19ebb89fb0389ecdaa2">TBgenerator.m</a>
 </li>
@@ -150,11 +151,20 @@ $(document).ready(function(){initNavTree('globals.html','');});
 
 
 <h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
-<li>error_m
-: <a class="el" href="_calcolo_errore_8m.html#a27b96081eb8686462fb27b99c9fba619">CalcoloErrore.m</a>
+<li>error_abs_m
+: <a class="el" href="_calcolo_errore_8m.html#aebac6c9afbb1c2fa4efd5a3026e59860">CalcoloErrore.m</a>
 </li>
-<li>error_q
-: <a class="el" href="_calcolo_errore_8m.html#a601784e46ab9ea91a638e6ed95b74c0a">CalcoloErrore.m</a>
+<li>error_abs_q
+: <a class="el" href="_calcolo_errore_8m.html#a1d6ab9cc0bea9cdef77ede925bd29cfe">CalcoloErrore.m</a>
+</li>
+<li>error_file
+: <a class="el" href="_calcolo_errore_8m.html#a4e101179605aba551caa2576fd83a1dd">CalcoloErrore.m</a>
+</li>
+<li>error_rel_m
+: <a class="el" href="_calcolo_errore_8m.html#a22ab2adb81549dec89cf31702ac51df0">CalcoloErrore.m</a>
+</li>
+<li>error_rel_q
+: <a class="el" href="_calcolo_errore_8m.html#ad2984e86333b530866db72d826aacb2c">CalcoloErrore.m</a>
 </li>
 </ul>
 
@@ -319,9 +329,16 @@ $(document).ready(function(){initNavTree('globals.html','');});
 </ul>
 
 
+<h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
+<li>vivado_output_file
+: <a class="el" href="_calcolo_errore_8m.html#a54143698f3805191fec1486e478ec51a">CalcoloErrore.m</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
 <li>writetable()
-: <a class="el" href="_calcolo_errore_8m.html#af1c2eb3956d5eceaae8ae64526d80e59">CalcoloErrore.m</a>
+: <a class="el" href="_calcolo_errore_8m.html#a88c557addef59ab6fd84f25b44aaea3f">CalcoloErrore.m</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -329,9 +346,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generato Gio 6 Lug 2017 18:16:51 per Linear Regression da
+    <li class="footer">Generato Mar 11 Lug 2017 13:53:04 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

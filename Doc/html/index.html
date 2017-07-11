@@ -3,24 +3,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Linear Regression: Pagina Principale</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
   $(window).load(resizeHeight);
 </script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -30,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">Linear Regression
-   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Linear Regression IP-core in VHDL</div>
   </td>
@@ -41,7 +38,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generato da Doxygen 1.8.11 -->
+<!-- Generato da Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
@@ -89,7 +86,7 @@ $(document).ready(function(){initNavTree('index.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Gruppi</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,15 +105,60 @@ $(document).ready(function(){initNavTree('index.html','');});
  <div align='center'>
  <img src="../schemes/LinearRegressionBlackBox.png"/>
  </div>
-  </p>
+  </p><h3>Ingressi</h3>
+<ul>
+<li>clock: segnale di clock, fornisce il segnale di temporizzazione ai componenti interni</li>
+<li>load: segnale di load, agisce solo sui registri di bufferizzazione dei segnali dati in ingresso; si veda la documentazione dell'architettura implementativa</li>
+<li>reset_n: segnale di reset asincrono (active-low) per i registri interni</li>
+<li>prim: costante in input, 6 bit di parte intera e 0 decimale (m.n = 5.0)</li>
+<li>A: 6 bit di parte intera e 18 decimale (m.n = 5.18)</li>
+<li>B: msb di peso -1 (m.n = -1.24)</li>
+<li>C: msb di peso -7 (m.n = -7.30)</li>
+<li>Sum1: 9 bit di parte intera e 15 decimale (m.n = 8.15)</li>
+<li>Sum2: 3 bit di parte intera e 21 decimale (m.n = 2.21)</li>
+</ul>
+<h3>Uscite</h3>
+<ul>
+<li>m: coefficiente angolare della retta di regressione, 11 bit di parte intera e 13 decimale (m.n = 10.13)</li>
+<li>q: intercetta della retta di regressione, 3 bit di parte intera e 21 decimale (m.n = 2.21)</li>
+</ul>
+<h3>Rappresentazione dei segnali</h3>
+<p>La rappresentazione dei segnali A, B, C e prim è calzante con i valori costanti degli stessi, forniti per effettuare il test del componente. </p><table class="doxtable">
+<tr>
+<th>Segnale</th><th>Valore</th><th>Rappresentazione </th></tr>
+<tr>
+<td>A</td><td>30.769230769230795</td><td>Q<sub>5,18</sub> </td></tr>
+<tr>
+<td>B</td><td>0.3</td><td>Q<sub>-1,24</sub> </td></tr>
+<tr>
+<td>C</td><td>0.0049</td><td>Q<sub>-7,30</sub> </td></tr>
+<tr>
+<td>prim</td><td>25</td><td>Q<sub>5,0</sub> </td></tr>
+</table>
+<p>La rappresentazione ottimale per i segnali Sum1 e Sum2 è stata scelta in base a valori trovati empiricamente con 10M test preliminari. </p><table class="doxtable">
+<tr>
+<th>Segnale</th><th>Valore</th><th>Rappresentazione </th></tr>
+<tr>
+<td>Sum1</td><td>[-3; 189]</td><td>Q<sub>5,18</sub> </td></tr>
+<tr>
+<td>Sum2</td><td>[-0.09; 3]</td><td>Q<sub>2,21</sub> </td></tr>
+</table>
+<p>Come per i segnali precedenti, la rappresentazione per m e per q è stata scelta in base a valori trovati empiricamente con 10M test preliminari. </p><table class="doxtable">
+<tr>
+<th>Segnale</th><th>Valore</th><th>Rappresentazione </th></tr>
+<tr>
+<td>m</td><td>[-27; 606]</td><td>Q<sub>10,13</sub> </td></tr>
+<tr>
+<td>q</td><td>[-2.62; 2.59]</td><td>Q<sub>2,21</sub> </td></tr>
+</table>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generato Gio 6 Lug 2017 18:16:50 per Linear Regression da
+    <li class="footer">Generato Mar 11 Lug 2017 13:53:04 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

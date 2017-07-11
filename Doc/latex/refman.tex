@@ -4,7 +4,6 @@
 \usepackage{fixltx2e}
 \usepackage{calc}
 \usepackage{doxygen}
-\usepackage[export]{adjustbox} % also loads graphicx
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{makeidx}
@@ -20,6 +19,7 @@
 
 % Font selection
 \usepackage[T1]{fontenc}
+\usepackage{mathptmx}
 \usepackage[scaled=.90]{helvet}
 \usepackage{courier}
 \usepackage{amssymb}
@@ -49,7 +49,7 @@
 \hbadness=750
 \setlength{\emergencystretch}{15pt}
 \setlength{\parindent}{0cm}
-\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\setlength{\parskip}{0.2cm}
 \makeatletter
 \renewcommand{\paragraph}{%
   \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
@@ -74,8 +74,8 @@
 \fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
 \fancyfoot[LE]{\fancyplain{}{}}
 \fancyfoot[CE]{\fancyplain{}{}}
-\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generato da Doxygen }}
-\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generato da Doxygen }}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generato Mar 11 Lug 2017 13\+:53\+:04 per Linear Regression da Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generato Mar 11 Lug 2017 13\+:53\+:04 per Linear Regression da Doxygen }}
 \fancyfoot[CO]{\fancyplain{}{}}
 \fancyfoot[RO]{\fancyplain{}{}}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -112,8 +112,6 @@
   \newpage{\pagestyle{empty}\cleardoublepage}%
 }
 
-\usepackage{caption}
-\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
 
 %===== C O N T E N T S =====
 
@@ -121,6 +119,7 @@
 
 % Titlepage & ToC
 \hypersetup{pageanchor=false,
+             bookmarks=true,
              bookmarksnumbered=true,
              pdfencoding=unicode
             }
@@ -128,9 +127,11 @@
 \begin{titlepage}
 \vspace*{7cm}
 \begin{center}%
-{\Large Linear Regression \\[1ex]\large 1.\+0 }\\
+{\Large Linear Regression }\\
 \vspace*{1cm}
-{\large Generato da Doxygen 1.8.11}\\
+{\large Generato da Doxygen 1.8.8}\\
+\vspace*{0.5cm}
+{\small Mar 11 Lug 2017 13:53:04}\\
 \end{center}
 \end{titlepage}
 \clearemptydoublepage
@@ -180,10 +181,8 @@
 %--- End generated contents ---
 
 % Index
-\backmatter
 \newpage
 \phantomsection
-\clearemptydoublepage
 \addcontentsline{toc}{chapter}{Indice}
 \printindex
 

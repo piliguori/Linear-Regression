@@ -1,5 +1,5 @@
 <map id="LinearRegression" name="LinearRegression">
 <area shape="rect" id="node2" href="$class_generic_buffer.html" title="Registro di dimensione generica. " alt="" coords="5,5,129,32"/>
-<area shape="rect" id="node3" href="$classmultiplier.html" title="multiplier(6)" alt="" coords="153,5,243,32"/>
-<area shape="rect" id="node4" href="$classsubtractor.html" title="subtractor(2)" alt="" coords="267,5,361,32"/>
+<area shape="rect" id="node3" href="$classmultiplier.html" title="Moltiplicatore a due fattori. " alt="" coords="153,5,243,32"/>
+<area shape="rect" id="node4" href="$classsubtractor.html" title="Sottrattore di due numeri. " alt="" coords="267,5,361,32"/>
 </map>

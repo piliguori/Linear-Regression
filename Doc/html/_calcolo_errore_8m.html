@@ -3,24 +3,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Linear Regression: Riferimenti per il file Src/testbench/CalcoloErrore.m</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
   $(window).load(resizeHeight);
 </script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -30,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">Linear Regression
-   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Linear Regression IP-core in VHDL</div>
   </td>
@@ -41,7 +38,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generato da Doxygen 1.8.11 -->
+<!-- Generato da Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
@@ -95,7 +92,7 @@ $(document).ready(function(){initNavTree('_calcolo_errore_8m.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Gruppi</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,7 +110,7 @@ $(document).ready(function(){initNavTree('_calcolo_errore_8m.html','');});
 </div><!--header-->
 <div class="contents">
 <h2 class="groupheader">Documentazione delle funzioni</h2>
-<a class="anchor" id="af1c2eb3956d5eceaae8ae64526d80e59"></a>
+<a class="anchor" id="a88c557addef59ab6fd84f25b44aaea3f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -126,8 +123,8 @@ $(document).ready(function(){initNavTree('_calcolo_errore_8m.html','');});
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">'error.csv'&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>error_file</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -157,31 +154,79 @@ $(document).ready(function(){initNavTree('_calcolo_errore_8m.html','');});
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">dataset =textread('dataset.txt','%s')</td>
+          <td class="memname">dataset =textread(<a class="el" href="_calcolo_errore_8m.html#ab6dd4899c2c315660992279d8d20d0bb">dataset_file</a>,'%s')</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a27b96081eb8686462fb27b99c9fba619"></a>
+<a class="anchor" id="ab6dd4899c2c315660992279d8d20d0bb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">error_m = abs(<a class="el" href="_calcolo_errore_8m.html#a215b43bd10c1abaf6c2058614591f571">m_vivado</a> - <a class="el" href="_calcolo_errore_8m.html#a6280fd49598ab608d04d1614908bd985">m_matlab</a>)</td>
+          <td class="memname">dataset_file = 'dataset.txt'</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a601784e46ab9ea91a638e6ed95b74c0a"></a>
+<a class="anchor" id="aebac6c9afbb1c2fa4efd5a3026e59860"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">error_q =abs(<a class="el" href="_calcolo_errore_8m.html#aef958b87ed02ad2a876d2e5160ed0650">q_vivado</a>-<a class="el" href="_calcolo_errore_8m.html#ae0ba6f87f318da799b999bc44504e445">q_matlab</a>)</td>
+          <td class="memname">error_abs_m = abs(<a class="el" href="_calcolo_errore_8m.html#a215b43bd10c1abaf6c2058614591f571">m_vivado</a> - <a class="el" href="_calcolo_errore_8m.html#a6280fd49598ab608d04d1614908bd985">m_matlab</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1d6ab9cc0bea9cdef77ede925bd29cfe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">error_abs_q =abs(<a class="el" href="_calcolo_errore_8m.html#aef958b87ed02ad2a876d2e5160ed0650">q_vivado</a>-<a class="el" href="_calcolo_errore_8m.html#ae0ba6f87f318da799b999bc44504e445">q_matlab</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4e101179605aba551caa2576fd83a1dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">error_file = 'errorPostImp.csv'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a22ab2adb81549dec89cf31702ac51df0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">error_rel_m =abs(<a class="el" href="_calcolo_errore_8m.html#a215b43bd10c1abaf6c2058614591f571">m_vivado</a>-<a class="el" href="_calcolo_errore_8m.html#a6280fd49598ab608d04d1614908bd985">m_matlab</a>)./<a class="el" href="_calcolo_errore_8m.html#a6280fd49598ab608d04d1614908bd985">m_matlab</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad2984e86333b530866db72d826aacb2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">error_rel_q =abs(<a class="el" href="_calcolo_errore_8m.html#aef958b87ed02ad2a876d2e5160ed0650">q_vivado</a>-<a class="el" href="_calcolo_errore_8m.html#ae0ba6f87f318da799b999bc44504e445">q_matlab</a>)./<a class="el" href="_calcolo_errore_8m.html#ae0ba6f87f318da799b999bc44504e445">q_matlab</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -241,7 +286,7 @@ $(document).ready(function(){initNavTree('_calcolo_errore_8m.html','');});
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">out =textread('output.txt', '%s')</td>
+          <td class="memname">out =textread(<a class="el" href="_calcolo_errore_8m.html#a54143698f3805191fec1486e478ec51a">vivado_output_file</a>, '%s')</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -301,7 +346,19 @@ $(document).ready(function(){initNavTree('_calcolo_errore_8m.html','');});
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">T = table(<a class="el" href="_calcolo_errore_8m.html#a6280fd49598ab608d04d1614908bd985">m_matlab</a>, <a class="el" href="_calcolo_errore_8m.html#ae0ba6f87f318da799b999bc44504e445">q_matlab</a>,<a class="el" href="_calcolo_errore_8m.html#a215b43bd10c1abaf6c2058614591f571">m_vivado</a>,<a class="el" href="_calcolo_errore_8m.html#aef958b87ed02ad2a876d2e5160ed0650">q_vivado</a>, <a class="el" href="_calcolo_errore_8m.html#a27b96081eb8686462fb27b99c9fba619">error_m</a>, <a class="el" href="_calcolo_errore_8m.html#a601784e46ab9ea91a638e6ed95b74c0a">error_q</a>)</td>
+          <td class="memname">T = table(<a class="el" href="_calcolo_errore_8m.html#a6280fd49598ab608d04d1614908bd985">m_matlab</a>, <a class="el" href="_calcolo_errore_8m.html#ae0ba6f87f318da799b999bc44504e445">q_matlab</a>,<a class="el" href="_calcolo_errore_8m.html#a215b43bd10c1abaf6c2058614591f571">m_vivado</a>,<a class="el" href="_calcolo_errore_8m.html#aef958b87ed02ad2a876d2e5160ed0650">q_vivado</a>, <a class="el" href="_calcolo_errore_8m.html#aebac6c9afbb1c2fa4efd5a3026e59860">error_abs_m</a>, <a class="el" href="_calcolo_errore_8m.html#a1d6ab9cc0bea9cdef77ede925bd29cfe">error_abs_q</a>, <a class="el" href="_calcolo_errore_8m.html#a22ab2adb81549dec89cf31702ac51df0">error_rel_m</a>, <a class="el" href="_calcolo_errore_8m.html#ad2984e86333b530866db72d826aacb2c">error_rel_q</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a54143698f3805191fec1486e478ec51a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vivado_output_file = 'outputPostImp.txt'</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -314,9 +371,9 @@ $(document).ready(function(){initNavTree('_calcolo_errore_8m.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="dir_6d50f8fcbc69ad6630685948bb748e1c.html">testbench</a></li><li class="navelem"><a class="el" href="_calcolo_errore_8m.html">CalcoloErrore.m</a></li>
-    <li class="footer">Generato Gio 6 Lug 2017 18:16:50 per Linear Regression da
+    <li class="footer">Generato Mar 11 Lug 2017 13:53:04 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

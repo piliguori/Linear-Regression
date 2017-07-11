@@ -50,11 +50,48 @@ use ieee.numeric_std.all;
 --! <img src="../schemes/LinearRegressionBlackBox.png"/>
 --! </div>
 --! @endhtmlonly
---! <h3>Ingressi:</h3>
---! <h3>Uscite:</h3>
+--! <h3>Ingressi</h3>
+--! - clock: segnale di clock, fornisce il segnale di temporizzazione ai componenti interni
+--! - load: segnale di load, agisce solo sui registri di bufferizzazione dei segnali dati in ingresso; si veda la documentazione dell'architettura implementativa
+--! - reset_n: segnale di reset asincrono (active-low) per i registri interni
+--! - prim: costante in input, 6 bit di parte intera e 0 decimale (m.n = 5.0) 
+--! - A: 6 bit di parte intera e 18 decimale (m.n = 5.18)
+--! - B: msb di peso -1 (m.n = -1.24)
+--! - C: msb di peso -7  (m.n = -7.30)
+--! - Sum1: 9 bit di parte intera e 15 decimale (m.n = 8.15)
+--! - Sum2: 3 bit di parte intera e 21 decimale (m.n = 2.21)
+--!
+--! <h3>Uscite</h3>
+--!	 - m: coefficiente angolare della retta di regressione, 11 bit di parte intera e 13 decimale (m.n = 10.13)
+--!	 - q: intercetta della retta di regressione, 3 bit di parte intera e 21 decimale (m.n = 2.21)
+--!
+--! <h3>Rappresentazione dei segnali</h3>
+--! La rappresentazione dei segnali A, B, C e prim è calzante con i valori costanti degli stessi, forniti per effettuare il test
+--! del componente.
+--!	<table>
+--!	<tr><th>Segnale</th><th>Valore</th><th>Rappresentazione</th></tr>
+--!	<tr><td>A</td><td>30.769230769230795</td><td>Q<sub>5,18</sub></td></tr>
+--!	<tr><td>B</td><td>0.3</td><td>Q<sub>-1,24</sub></td></tr>
+--!	<tr><td>C</td><td>0.0049</td><td>Q<sub>-7,30</sub></td></tr>
+--!	<tr><td>prim</td><td>25</td><td>Q<sub>5,0</sub></td></tr>
+--! </table>
+--! La rappresentazione ottimale per i segnali Sum1 e Sum2 è stata scelta in base a valori trovati empiricamente con 10M test
+--! preliminari.
+--! <table>
+--!	<tr><th>Segnale</th><th>Valore</th><th>Rappresentazione</th></tr>
+--!	<tr><td>Sum1</td><td>[-3; 189]</td><td>Q<sub>5,18</sub></td></tr>
+--!	<tr><td>Sum2</td><td>[-0.09; 3]</td><td>Q<sub>2,21</sub></td></tr>
+--! </table>
+--! Come per i segnali precedenti, la rappresentazione per m e per q è stata scelta in base a valori trovati empiricamente
+--! con 10M test preliminari.
+--! <table>
+--!	<tr><th>Segnale</th><th>Valore</th><th>Rappresentazione</th></tr>
+--!	<tr><td>m</td><td>[-27; 606]</td><td>Q<sub>10,13</sub></td></tr>
+--!	<tr><td>q</td><td>[-2.62; 2.59]</td><td>Q<sub>2,21</sub></td></tr>
+--! </table>
 entity LinearRegression is
     Port (	clk 	: in std_logic;							--! segnale di clock, fornisce il segnale di temporizzazione ai componenti interni
-    		load	: in std_logic;							--! segnale di load, agisce solo sui registri di bufferizzazione dei segnali dati in ingresso; si veda la documentazione dell'architettura implementativa		
+    		load	: in std_logic;							--! segnale di load, agisce solo sui registri di bufferizzazione dei segnali dati in ingresso; si veda la documentazione dell'architettura implementativa
     		reset_n : in std_logic;							--! segnale di reset asincrono (active-low) per i registri interni
     		prim	: in STD_LOGIC_VECTOR (5 downto 0);		--! costante in input, 6 bit di parte intera e 0 decimale (m.n = 5.0)
 			Sum2	: in STD_LOGIC_VECTOR (23 downto 0);	--! segnale in input, 3 bit di parte intera e 21 decimale (m.n = 2.21)
@@ -62,8 +99,8 @@ entity LinearRegression is
 			Sum1	: in STD_LOGIC_VECTOR (23 downto 0);	--! segnale in input, 9 bit di parte intera e 15 decimale (m.n = 8.15)
 			C		: in STD_LOGIC_VECTOR (23 downto 0);	--! segnale in input, msb di peso -7  (m.n = -7.30)
 			A		: in STD_LOGIC_VECTOR (23 downto 0);	--! segnale in input, 6 bit di parte intera e 18 decimale (m.n = 5.18)
-			m		: out STD_LOGIC_VECTOR (23 downto 0);	--! segnale in output, 11 bit di parte intera e 13 decimale (m.n = 10.13)
-			q		: out STD_LOGIC_VECTOR (23 downto 0));	--! segnaes in output, 3 bit di parte intera e 21 decimale (m.n = 2.21)
+			m		: out STD_LOGIC_VECTOR (23 downto 0);	--! coefficiente angolare della retta di regressione, 11 bit di parte intera e 13 decimale (m.n = 10.13)
+			q		: out STD_LOGIC_VECTOR (23 downto 0));	--! intercetta della retta di regressione, 3 bit di parte intera e 21 decimale (m.n = 2.21)
 end LinearRegression;
 
 
@@ -78,6 +115,78 @@ end LinearRegression;
 --! <img src="../schemes/LinearRegression.png"/>
 --! </div>
 --! @endhtmlonly
+--! 
+--! <h3>Rappresentazione dei segnali intermedi</h3>
+--! La rappresentazione ottimale per i segnali intermedi è stata scelta in base a valori trovati empiricamente con 10M test
+--! preliminari, in modo da minimizzare il numero di bit usati per la loro rappresentazione ed, al contempo, minimizzare l'
+--! errore commesso nella loro rappresentazione.
+--!	<table>
+--!	<tr>
+--! 	<th>Componente</th>
+--! 	<th>Ingressi</th>
+--! 	<th>Uscita</th>
+--! 	<th>Intervallo</th>
+--! 	<th>Rappresentazione<br>Ottimale</th>
+--! </tr>
+--!	<tr>
+--! 	<td>MULT1</td>
+--! 	<td>B (Q<sub>-1.24</sub>)<br>Sum1 (Q<sub>8.15</sub>)</td>
+--! 	<td>mult1_out (Q<sub>8.39</sub>)</td>
+--! 	<td>[-0.3; 56]</td>
+--! 	<td>P1 (Q<sub>7.16</sub>)*</td>
+--! </tr>
+--!	<tr>
+--! 	<td>MULT2</td>
+--! 	<td>Sum2 (Q<sub>2.21</sub>)<br>B (Q<sub>-1.24</sub>)</td>
+--! 	<td>mult2_out (Q<sub>2.45</sub>)</td>
+--! 	<td>[-0.02; 0.9090]</td>
+--! 	<td>P2 (Q<sub>0.23</sub>)</td>
+--! </tr>
+--!	<tr>
+--! 	<td>MULT3</td>
+--! 	<td>Sum2 (Q<sub>2.21</sub>)<br>Prim (Q<sub>5.0</sub>)</td>
+--! 	<td>mult3_out (Q<sub>8.21</sub>)</td>
+--! 	<td>[-2.37; 80]</td>
+--! 	<td>P3 (Q<sub>7.16</sub>)</td>
+--! </tr>
+--!	<tr>
+--! 	<td>MULT4</td>
+--! 	<td>Sum1 (Q<sub>8.15</sub>)<br>C(Q<sub>-7.30</sub>)</td>
+--! 	<td>mult4_out (Q<sub>2.45</sub>)</td>
+--! 	<td>[-0.0049; 0.95]</td>
+--! 	<td>P4 (Q<sub>0.23</sub>)</td>
+--! </tr>
+--!	<tr>
+--! 	<td>SUB5</td>
+--! 	<td>P3(Q<sub>7.16</sub>)<br>P1(Q<sub>7.16</sub>)</td>
+--! 	<td>S5 (Q<sub>7.16</sub>)</td>
+--! 	<td>[-0.13; 19.21]</td>
+--! 	<td>Q<sub>7.16</sub></td>
+--! </tr>
+--!	<tr>
+--! 	<td>SUB6</td>
+--! 	<td>P4(Q<sub>0.23</sub>)<br>P2(Q<sub>0.23</sub>)</td>
+--! 	<td>S6 (Q<sub>0.23</sub>)</td>
+--! 	<td>[-0.08; 0.08]</td>
+--! 	<td>Q<sub>0.23</sub></td>
+--! </tr>
+--!	<tr>
+--! 	<td>MULTM</td>
+--! 	<td>A(Q<sub>5.18</sub>)<br>S5(Q<sub>7.16</sub>)</td>
+--! 	<td>multM_out (Q<sub>13.34</sub>)</td>
+--! 	<td>[-27; 606]</td>
+--! 	<td>m (Q<sub>10.13</sub>)</td>
+--! </tr>
+--!	<tr>
+--! 	<td>MULTQ</td>
+--! 	<td>A(Q<sub>5.18</sub>)<br>S6(Q<sub>0.23</sub>)</td>
+--! 	<td>multQ_out (Q<sub>6.41</sub>)</td>
+--! 	<td>[-2.62; 2.59]</td>
+--! 	<td>q (Q<sub>2.21</sub>)</td>
+--! </tr>
+--! </table>
+--! *N.B. La rappresentazione ottimale sarebbe Q<sub>6.17</sub>, ma il segnale va sommato con P3, la cui rappresentazione
+--! è Q<sub>7.16</sub>, per cui si è adottata quest'ultima.
 architecture Structural of LinearRegression is
 
 	component GenericBuffer is

@@ -3,24 +3,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.11"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Linear Regression: multiplier Entity  Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript">
   $(document).ready(initResizable);
   $(window).load(resizeHeight);
 </script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() { init_search(); });
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
@@ -30,9 +28,8 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td style="padding-left: 0.5em;">
    <div id="projectname">Linear Regression
-   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Linear Regression IP-core in VHDL</div>
   </td>
@@ -41,7 +38,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generato da Doxygen 1.8.11 -->
+<!-- Generato da Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
@@ -97,7 +94,7 @@ $(document).ready(function(){initNavTree('classmultiplier.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Gruppi</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,15 +111,15 @@ $(document).ready(function(){initNavTree('classmultiplier.html','');});
 <div class="title">multiplier Entity Reference<div class="ingroups"><a class="el" href="group___multiplier.html">Multiplier</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Moltiplicatore a due fattori.  
+ <a href="classmultiplier.html#details">Continua...</a></p>
 <div class="dynheader">
 Diagramma delle classi per multiplier</div>
 <div class="dyncontent">
 <div class="center"><img src="classmultiplier__inherit__graph.png" border="0" usemap="#multiplier_inherit__map" alt="Inheritance graph"/></div>
 <map name="multiplier_inherit__map" id="multiplier_inherit__map">
-<area shape="rect" id="node2" href="class_linear_regression.html" title="LinearRegression" alt="" coords="65,80,187,107"/>
-<area shape="rect" id="node3" href="classautomatic__tb.html" title="automatic_tb" alt="" coords="5,155,103,181"/>
-<area shape="rect" id="node4" href="classtb___linear_regression.html" title="tb_LinearRegression" alt="" coords="127,155,269,181"/>
-</map>
+<area shape="rect" id="node2" href="class_linear_regression.html" title="LinearRegression" alt="" coords="65,80,187,107"/><area shape="rect" id="node3" href="classautomatic__tb.html" title="automatic_tb" alt="" coords="5,155,103,181"/><area shape="rect" id="node4" href="classtb___linear_regression.html" title="tb_LinearRegression" alt="" coords="127,155,269,181"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -148,7 +145,7 @@ Ports</h2></td></tr>
 <tr class="memdesc:gaf168dc69ad77dc5791b5e0f99dcfb0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">prodotto dei due fattori  <a href="group___multiplier.html#gaf168dc69ad77dc5791b5e0f99dcfb0a9"></a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrizione dettagliata</h2>
-<div class="textblock"><p>Moltiplicatore a due fattori.</p>
+<div class="textblock"><p>Moltiplicatore a due fattori. </p>
 <p>Il moltiplicatore permette di effettuare un prodotto di due fattori espressi su un certo numero di bit. I due fattori possono essere espressi anche su un numero di bit e rappresentazioni differenti tra loro. Se nbit1 è il numero di bit su cui viene espresso il fattore 1, e nbit2 è il numero di bit su cui viene espresso il fattore 2, allora l'uscita prod risulta essere espressa su nbit1+nbit2. <br />
  Ad esempio, se il fattore 1 è rappresentato con mx.nx (con mx il peso del bit più significativo della parte intera ed nx il peso del bit meno significativo della parte decimale) e il fattore 2 è rappresentato con my.ny, allora l'uscita sarà rappresentata in mx+my+1.nx+ny </p>
 </div><hr/>La documentazione per questa classe è stata generata a partire dal seguente file:<ul>
@@ -160,9 +157,9 @@ Ports</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classmultiplier.html">multiplier</a></li>
-    <li class="footer">Generato Gio 6 Lug 2017 18:16:50 per Linear Regression da
+    <li class="footer">Generato Mar 11 Lug 2017 13:53:04 per Linear Regression da
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

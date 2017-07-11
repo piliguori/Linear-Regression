@@ -1,3 +1,47 @@
 Regressione Lineare. Il componente permette di effettuare la regressione lineare.
 
-Prende 6 segnali dati in ingresso e, attraverso l\textquotesingle{}utilizzo di moltiplicatori e sottrattori, oltre all\textquotesingle{}opportuno troncamento dei valori intermedi calcolati, restituisce i parametri di uscita m ed q, rispettivamente coefficiente angolare e intercetta della retta di regressione. La rappresentazione dei segnali è in signed fixed point. Lo schema a blocchi dell\textquotesingle{}interfaccia del componente è riportata di seguito.  
+Prende 6 segnali dati in ingresso e, attraverso l'utilizzo di moltiplicatori e sottrattori, oltre all'opportuno troncamento dei valori intermedi calcolati, restituisce i parametri di uscita m ed q, rispettivamente coefficiente angolare e intercetta della retta di regressione. La rappresentazione dei segnali è in signed fixed point. Lo schema a blocchi dell'interfaccia del componente è riportata di seguito.  \subsubsection*{Ingressi}
+
+
+\begin{DoxyItemize}
+\item clock\+: segnale di clock, fornisce il segnale di temporizzazione ai componenti interni
+\item load\+: segnale di load, agisce solo sui registri di bufferizzazione dei segnali dati in ingresso; si veda la documentazione dell'architettura implementativa
+\item reset\+\_\+n\+: segnale di reset asincrono (active-\/low) per i registri interni
+\item prim\+: costante in input, 6 bit di parte intera e 0 decimale (m.\+n = 5.\+0)
+\item A\+: 6 bit di parte intera e 18 decimale (m.\+n = 5.\+18)
+\item B\+: msb di peso -\/1 (m.\+n = -\/1.\+24)
+\item C\+: msb di peso -\/7 (m.\+n = -\/7.\+30)
+\item Sum1\+: 9 bit di parte intera e 15 decimale (m.\+n = 8.\+15)
+\item Sum2\+: 3 bit di parte intera e 21 decimale (m.\+n = 2.\+21)
+\end{DoxyItemize}
+
+\subsubsection*{Uscite}
+
+
+\begin{DoxyItemize}
+\item m\+: coefficiente angolare della retta di regressione, 11 bit di parte intera e 13 decimale (m.\+n = 10.\+13)
+\item q\+: intercetta della retta di regressione, 3 bit di parte intera e 21 decimale (m.\+n = 2.\+21)
+\end{DoxyItemize}
+
+\subsubsection*{Rappresentazione dei segnali}
+
+La rappresentazione dei segnali A, B, C e prim è calzante con i valori costanti degli stessi, forniti per effettuare il test del componente. \begin{TabularC}{3}
+\hline
+\rowcolor{lightgray}{\bf Segnale}&{\bf Valore}&{\bf Rappresentazione }\\\cline{1-3}
+A&30.\+769230769230795&Q\textsubscript{5,18} \\\cline{1-3}
+B&0.\+3&Q\textsubscript{-\/1,24} \\\cline{1-3}
+C&0.\+0049&Q\textsubscript{-\/7,30} \\\cline{1-3}
+prim&25&Q\textsubscript{5,0} \\\cline{1-3}
+\end{TabularC}
+La rappresentazione ottimale per i segnali Sum1 e Sum2 è stata scelta in base a valori trovati empiricamente con 10\+M test preliminari. \begin{TabularC}{3}
+\hline
+\rowcolor{lightgray}{\bf Segnale}&{\bf Valore}&{\bf Rappresentazione }\\\cline{1-3}
+Sum1&\mbox{[}-\/3; 189\mbox{]}&Q\textsubscript{5,18} \\\cline{1-3}
+Sum2&\mbox{[}-\/0.\+09; 3\mbox{]}&Q\textsubscript{2,21} \\\cline{1-3}
+\end{TabularC}
+Come per i segnali precedenti, la rappresentazione per m e per q è stata scelta in base a valori trovati empiricamente con 10\+M test preliminari. \begin{TabularC}{3}
+\hline
+\rowcolor{lightgray}{\bf Segnale}&{\bf Valore}&{\bf Rappresentazione }\\\cline{1-3}
+m&\mbox{[}-\/27; 606\mbox{]}&Q\textsubscript{10,13} \\\cline{1-3}
+q&\mbox{[}-\/2.\+62; 2.\+59\mbox{]}&Q\textsubscript{2,21} \\\cline{1-3}
+\end{TabularC}
