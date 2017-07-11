@@ -1,6 +1,5 @@
 <map id="automatic_tb" name="automatic_tb">
-<area shape="rect" id="node2" href="$class_linear_regression.html" title="LinearRegression" alt="" coords="137,80,259,107"/>
+<area shape="rect" id="node2" href="$class_linear_regression.html" title="LinearRegression" alt="" coords="71,80,194,107"/>
 <area shape="rect" id="node3" href="$class_generic_buffer.html" title="Registro di dimensione generica. " alt="" coords="5,5,129,32"/>
 <area shape="rect" id="node4" href="$classmultiplier.html" title="Moltiplicatore a due fattori. " alt="" coords="153,5,243,32"/>
-<area shape="rect" id="node5" href="$classsubtractor.html" title="Sottrattore di due numeri. " alt="" coords="267,5,361,32"/>
 </map>

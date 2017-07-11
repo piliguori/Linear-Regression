@@ -1,8 +1,7 @@
 <map id="Grafico della gerarchia delle classi" name="Grafico della gerarchia delle classi">
 <area shape="rect" id="node1" href="$class_generic_buffer.html" title="Registro di dimensione generica. " alt="" coords="5,5,108,32"/>
-<area shape="rect" id="node2" href="$class_linear_regression.html" title="LinearRegression" alt="" coords="156,56,279,83"/>
-<area shape="rect" id="node3" href="$classautomatic__tb.html" title="automatic_tb" alt="" coords="349,31,446,57"/>
-<area shape="rect" id="node4" href="$classtb___linear_regression.html" title="tb_LinearRegression" alt="" coords="327,81,468,108"/>
+<area shape="rect" id="node2" href="$class_linear_regression.html" title="LinearRegression" alt="" coords="156,31,279,57"/>
+<area shape="rect" id="node3" href="$classautomatic__tb.html" title="automatic_tb" alt="" coords="349,5,446,32"/>
+<area shape="rect" id="node4" href="$classtb___linear_regression.html" title="tb_LinearRegression" alt="" coords="327,56,468,83"/>
 <area shape="rect" id="node5" href="$classmultiplier.html" title="Moltiplicatore a due fattori. " alt="" coords="19,56,94,83"/>
-<area shape="rect" id="node6" href="$classsubtractor.html" title="Sottrattore di due numeri. " alt="" coords="17,107,97,133"/>
 </map>

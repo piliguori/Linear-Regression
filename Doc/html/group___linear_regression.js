@@ -1,5 +1,6 @@
 var group___linear_regression =
 [
+    [ "multiplier.vhd", "multiplier_8vhd.html", null ],
     [ "LinearRegression", "class_linear_regression.html", [
       [ "A", "group___linear_regression.html#gae1ad6503d157f6c26abdce1131d31ec2", null ],
       [ "B", "group___linear_regression.html#gab6685be06ffd9f2425d01307287a4454", null ],
@@ -32,9 +33,7 @@ var group___linear_regression =
       [ "mult4", "class_linear_regression_1_1_structural.html#a65ae62ab3b1e6675bf4e4bcf572d2025", null ],
       [ "mult4_out", "group___linear_regression.html#ga5a0832f93305c3e0a37293a00e17a538", null ],
       [ "multiplier", "group___linear_regression.html#ga3cf9cbfc3e637ae0660c32ceef50386f", null ],
-      [ "multm", "class_linear_regression_1_1_structural.html#ae1287e267811d8909891ccf15264a835", null ],
       [ "multM_out", "group___linear_regression.html#gae1fb15e247aa1abc0a406f879fbe6627", null ],
-      [ "multq", "class_linear_regression_1_1_structural.html#aea9e41f3216a842c46f31aa5a569fc8f", null ],
       [ "multQ_out", "group___linear_regression.html#gab45555807d57a057b5cd46161e28b6a5", null ],
       [ "P1_buff1", "group___linear_regression.html#gaa62b4451249556c1f9acb08b9bb1ba81", null ],
       [ "P2_buff1", "group___linear_regression.html#ga8f8c92d3996ed1be653d65bfa9a063da", null ],
@@ -50,17 +49,11 @@ var group___linear_regression =
       [ "pipestage1_buff_p1", "class_linear_regression_1_1_structural.html#aa4ecb297c24eee090576a63597934c3c", null ],
       [ "pipestage1_buff_p2", "class_linear_regression_1_1_structural.html#a9cb3bc10f620d667a657ecca4aa0b59a", null ],
       [ "pipestage1_buff_p3", "class_linear_regression_1_1_structural.html#a561aaea076fe5b5174fc967b43b9a50b", null ],
-      [ "pipestage1_buff_p4", "class_linear_regression_1_1_structural.html#a00c4727e954b8596179b1413d78368e3", null ],
-      [ "pipestage2_buff_a", "class_linear_regression_1_1_structural.html#a2b5633f36737627deb24a9d93d9bf872", null ],
-      [ "pipestage2_buff_s5", "class_linear_regression_1_1_structural.html#a6923b4db7acadf52a9972d4eebfa370f", null ],
-      [ "pipestage2_buff_s6", "class_linear_regression_1_1_structural.html#af53a49707b23b6676f25d84a39920009", null ],
       [ "prim_buff0", "group___linear_regression.html#ga2f2ba1395426f682c5257c7549946eba", null ],
       [ "S5", "group___linear_regression.html#gaf847f35901bdae7b10eff5f0576735ec", null ],
       [ "S5_buff2", "group___linear_regression.html#ga549acc079099c46203bf0354c074168e", null ],
       [ "S6", "group___linear_regression.html#gaad1e5951d0d38888c5deafab1b89df1a", null ],
       [ "S6_buff2", "group___linear_regression.html#ga83f2ab4c9d8081134917130650ea5756", null ],
-      [ "sub5", "class_linear_regression_1_1_structural.html#a3fd26266a39105aca90e2b7b13923619", null ],
-      [ "sub6", "class_linear_regression_1_1_structural.html#aa1ef9174550e2c151dd776bd1b40a330", null ],
       [ "subtractor", "group___linear_regression.html#ga11e2a27abb1e6d6d48bbaae0f5de7aeb", null ],
       [ "sum1_buff0", "group___linear_regression.html#ga105472cae8c43a185e95b2b4015eef7e", null ],
       [ "sum2_buff0", "group___linear_regression.html#ga78bc8ef63466051b7ffb10623742f533", null ]

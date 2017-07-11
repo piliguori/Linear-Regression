@@ -274,6 +274,7 @@ begin
 -- Istanze pipe-stage 0
 ----------------------------------------------------------------------------------------------------------------------------------
 
+	--! buffer di pipe-stage 0 per l'ingresso prim, 6 bit
 	pipestage0_buff_prim : GenericBuffer
 		Generic map (	width 		=> 6,
 						edge		=> '1')
@@ -282,7 +283,7 @@ begin
 						load 		=> load,
 						data_in 	=> prim,
 						data_out	=> prim_buff0);
-
+	--! buffer di pipe-stage 0 per l'ingresso A, 24 bit
 	pipestage0_buff_A : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
@@ -291,7 +292,7 @@ begin
 						load 		=> load,
 						data_in 	=> A,
 						data_out	=> A_buff0);
-						
+	--! buffer di pipe-stage 0 per l'ingresso B, 24 bit
 	pipestage0_buff_B : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
@@ -300,7 +301,7 @@ begin
 						load 		=> load,
 						data_in 	=> B,
 						data_out	=> B_buff0);
-	
+	--! buffer di pipe-stage 0 per l'ingresso C, 24 bit
 	pipestage0_buff_C : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
@@ -309,7 +310,7 @@ begin
 						load 		=> load,
 						data_in 	=> C,
 						data_out	=> C_buff0);
-	
+	--! buffer di pipe-stage 0 per l'ingresso Sum1, 24 bit
 	pipestage0_buff_Sum1 : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
@@ -318,7 +319,7 @@ begin
 						load 		=> load,
 						data_in 	=> Sum1,
 						data_out	=> Sum1_buff0);
-						
+	--! buffer di pipe-stage 0 per l'ingresso Sum2, 24 bit
 	pipestage0_buff_Sum2 : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
@@ -363,7 +364,7 @@ begin
 ----------------------------------------------------------------------------------------------------------------------------------
 -- Istanze pipe-stage 1
 ----------------------------------------------------------------------------------------------------------------------------------
-
+	--! buffer di pipe-stage 1 per l'ingresso A, 24 bit<br>
 	pipestage1_buff_A : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
@@ -372,45 +373,51 @@ begin
 						load 		=> '1',
 						data_in 	=> A_buff0,
 						data_out	=> A_buff1);
-
+	--! buffer di pipe-stage 1 per il segnale P1, 24 bit<br>
+	--! Viene effettuato anche il cambio di rappresentazione dell'uscita di MULT1 da 48 bit, di cui 9 per la parte intera
+	--! (m.n = 8.39) a 24 bit, di cui 8 per la parte intera (m.n = 7.16). Viene troncato 1 bit in testa e 23 in coda.
 	pipestage1_buff_P1 : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
 		Port map (		clock 		=> clk,
 						reset_n 	=> reset_n,
 						load 		=> '1',
-						data_in 	=> mult1_out(46 downto 23), -- Cambio di rappresentazione dell'uscita di MULT1 da 48 bit,
-						data_out	=> P1_buff1);				-- di cui 9 per la parte intera (m.n = 8.39) a 24 bit, di cui 8
-																-- per la parte intera (m.n = 7.16). Quindi tronchiamo 1 bit in
-																-- testa e 23 in coda.
+						data_in 	=> mult1_out(46 downto 23), 
+						data_out	=> P1_buff1);				
+	--! buffer di pipe-stage 1 per il segnale P2, 24 bit<br>
+	--! Viene effettuato il cambio di rappresentazione dell'uscita di MULT2 da 48 bit, di cui 3 per la parte intera
+	--! (m.n = 2.45) a 24 bit, di cui 1 per la parte intera (m.n = 0.23). Quindi tronchiamo 2 bit in testa e 22 in coda.
 	pipestage1_buff_P2 : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
 		Port map (		clock 		=> clk,
 						reset_n 	=> reset_n,
 						load 		=> '1',
-						data_in 	=> mult2_out(45 downto 22),	-- Cambio di rappresentazione dell'uscita di MULT2 da 48 bit, di 
-						data_out	=> P2_buff1);				-- cui 3 per la parte intera (m.n = 2.45) a 24 bit, di cui 1 pe
-																-- la parte intera (m.n = 0.23). Quindi tronchiamo 2 bit in testa e
-																-- 22 in coda.
+						data_in 	=> mult2_out(45 downto 22),	
+						data_out	=> P2_buff1);				
+	--! buffer di pipe-stage 1 per il segnale P3, 24 bit<br>
+	--! Viene effettuato il cambio di rappresentazione dell'uscita di MULT3 da 30 bit, di cui 9 per la parte intera 
+	--! (m.n = 8.21) a 24 bit, di cui 8 per la parte intera (m.n = 7.16). Quindi tronchiamo 1 bit in testa e 5 in coda.
 	pipestage1_buff_P3 : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
 		Port map (		clock 		=> clk,
 						reset_n 	=> reset_n,
 						load 		=> '1',
-						data_in 	=> mult3_out(28 downto 5),	-- Cambio di rappresentazione dell'uscita di MULT3 da 30 bit, di cui
-						data_out	=> P3_buff1);				--  9 per la parte intera (m.n = 8.21) a 24 bit, di cui 8 per la parte
-																-- intera (m.n = 7.16). Quindi tronchiamo 1 bit in testa e 5 in coda.
+						data_in 	=> mult3_out(28 downto 5),	
+						data_out	=> P3_buff1);				
+	--! buffer di pipe-stage 1 per il segnale P4, 24 bit<br>
+	--! Viene effettuato il cambio di rappresentazione dell'uscita di MULT4 da 48 bit, di cui 3 per la parte intera
+	--! (m.n = 2.45) a 24 bit, di cui 1 per la parte intera (m.n = 0.23). Quindi tronchiamo 2 bit in testa e 22 in coda.
 	pipestage1_buff_P4 : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
 		Port map (		clock 		=> clk,
 						reset_n 	=> reset_n,
 						load 		=> '1',
-						data_in 	=> mult4_out(45 downto 22),	-- Cambio di rappresentazione dell'uscita di MULT4 da 48 bit, di cui 3
-						data_out	=> P4_buff1);				-- per la parte intera (m.n = 2.45) a 24 bit, di cui 1 per la parte
-																-- intera (m.n = 0.23). Quindi tronchiamo 2 bit in testa e 22 in coda.
+						data_in 	=> mult4_out(45 downto 22),-
+						data_out	=> P4_buff1);				
+																
 
 ----------------------------------------------------------------------------------------------------------------------------------
 -- Instanze SUB5 e SUB6
@@ -431,7 +438,7 @@ begin
 ----------------------------------------------------------------------------------------------------------------------------------
 -- Istanze pipe-stage 2
 ----------------------------------------------------------------------------------------------------------------------------------
-
+	--! buffer di pipe-stage 2 per il segnale A, 24 bit
 	pipestage2_buff_A : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
@@ -440,7 +447,7 @@ begin
 						load 		=> load,
 						data_in 	=> A_buff1,
 						data_out	=> A_buff2);
-						
+	--! buffer di pipe-stage 2 per il segnale S5, 24 bit					
 	pipestage2_buff_S5 : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
@@ -449,7 +456,7 @@ begin
 						load 		=> '1',
 						data_in 	=> S5,
 						data_out	=> S5_buff2);
-						
+	--! buffer di pipe-stage 2 per il segnale S6, 24 bit					
 	pipestage2_buff_S6 : GenericBuffer
 		Generic map (	width 		=> 24,
 						edge		=> '1')
@@ -463,27 +470,31 @@ begin
 -- Instanze MULTM e MULTQ
 ----------------------------------------------------------------------------------------------------------------------------------
 				 
+	--! Istanziazione del moltiplicatore MULTM<br> 
+	--! Prende in ingresso i segnali S5_buff2 e A_buff2. L'uscita è espressa su 48bit.
+	--! L'uscita di  MULTM deve essere portata da una rappresentazione di 48 bit con 14 bit di parte intera e 34
+	--! decimale (m.n = 13.34), ad una di 24 bit con 11 bit di parte intera e 13 decimale (m.n = 10.13). 
+	--! Quindi tronca 3 bit in testa e 21 in coda.	
 	MULTM: multiplier
 		Generic map( nbits1 => 24,
 					 nbits2 => 24)
 		port map ( factor1 => S5_buff2,
 				   factor2 => A_buff2,
 				   prod => multM_out);
-				   
-	m <= multM_out (44 downto 21); -- L'uscita di  MULTM deve essere portata da una rappresentazione di 48 bit con
-	-- 14 bit di parte intera e 34 decimale (m.n = 13.34), ad una di 24 bit con 11 bit di parte intera e 13 decimale (m.n = 10.13). 
-	-- Quindi tronca 3 bit in testa e 21 in coda.		
-				   
+	m <= multM_out (44 downto 21);	
+	
+	--! Istanziazione del moltiplicatore MULTQ<br>
+	--! Prende in ingresso i segnali S6_buff2 e A_buff2. L'uscita è espressa su 48bit.
+	--! L'uscita di MULTQ deve essere portata da una rappresentazione di 48 bit con 7 bit di parte intera e 41 decimale.
+	--! (m.n = 6.41), ad una di 24 bit con 3 bit di parte intera e 21 decimale (m.n = 2.21). Qindi tronca 4 bit in testa
+	--! e 20 in coda.			   
 	MULTQ: multiplier
 		Generic map( nbits1 => 24,
 					 nbits2 => 24)
 		port map ( factor1 => A_buff2,
 				   factor2 => S6_buff2,
 				   prod => multQ_out);	  			  
-				   				  
-	q <= multQ_out(43 downto 20);	-- L'uscita di  MULTQ deve essere portata da una rappresentazione di 48 bit con
-	-- 7 bit di parte intera e 41 decimale (m.n = 6.41), ad una di 24 bit con 3 bit di parte intera e 21 decimale (m.n = 2.21). 
-	-- Qindi tronca 4 bit in testa e 20 in coda.
+	q <= multQ_out(43 downto 20);	
 
 end Structural;
 

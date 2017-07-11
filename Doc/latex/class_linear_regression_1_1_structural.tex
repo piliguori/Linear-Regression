@@ -66,17 +66,17 @@ Per il calcolo dei parametri della regressione vengono utilizzati opportunamente
  \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_linear_regression_1_1_structural_a18083ee6230f5eaa964e698d28b33c8e}{pipestage0\+\_\+buff\+\_\+prim}  {\bfseries Generic\+Buffer}   
-\item 
+\begin{DoxyCompactList}\small\item\em buffer di pipe-\/stage 0 per l'ingresso prim, 6 bit \end{DoxyCompactList}\item 
 \hyperlink{class_linear_regression_1_1_structural_a2cc966f9e487a342b140941f0e08b0e3}{pipestage0\+\_\+buff\+\_\+a}  {\bfseries Generic\+Buffer}   
-\item 
+\begin{DoxyCompactList}\small\item\em buffer di pipe-\/stage 0 per l'ingresso A, 24 bit \end{DoxyCompactList}\item 
 \hyperlink{class_linear_regression_1_1_structural_a9907462fa9f74221862307948f010a3f}{pipestage0\+\_\+buff\+\_\+b}  {\bfseries Generic\+Buffer}   
-\item 
+\begin{DoxyCompactList}\small\item\em buffer di pipe-\/stage 0 per l'ingresso B, 24 bit \end{DoxyCompactList}\item 
 \hyperlink{class_linear_regression_1_1_structural_a2a2f46e1cff149263f8bdbf752ab030c}{pipestage0\+\_\+buff\+\_\+c}  {\bfseries Generic\+Buffer}   
-\item 
+\begin{DoxyCompactList}\small\item\em buffer di pipe-\/stage 0 per l'ingresso C, 24 bit \end{DoxyCompactList}\item 
 \hyperlink{class_linear_regression_1_1_structural_a887437c4bb6b33e25dd4dda6a3a473d3}{pipestage0\+\_\+buff\+\_\+sum1}  {\bfseries Generic\+Buffer}   
-\item 
+\begin{DoxyCompactList}\small\item\em buffer di pipe-\/stage 0 per l'ingresso Sum1, 24 bit \end{DoxyCompactList}\item 
 \hyperlink{class_linear_regression_1_1_structural_a0713cfc68348d42071bc61be0790d6f5}{pipestage0\+\_\+buff\+\_\+sum2}  {\bfseries Generic\+Buffer}   
-\item 
+\begin{DoxyCompactList}\small\item\em buffer di pipe-\/stage 0 per l'ingresso Sum2, 24 bit \end{DoxyCompactList}\item 
 \hyperlink{class_linear_regression_1_1_structural_adf80c8ef67f9eb716830cfb9a6d3a980}{mult3}  {\bfseries multiplier}   
 \item 
 \hyperlink{class_linear_regression_1_1_structural_a7c5c7b6fb03b66e49b0eb767162f01a8}{mult2}  {\bfseries multiplier}   
@@ -86,29 +86,17 @@ Per il calcolo dei parametri della regressione vengono utilizzati opportunamente
 \hyperlink{class_linear_regression_1_1_structural_a65ae62ab3b1e6675bf4e4bcf572d2025}{mult4}  {\bfseries multiplier}   
 \item 
 \hyperlink{class_linear_regression_1_1_structural_a273de05d7892fd1febb31d1c6fab5120}{pipestage1\+\_\+buff\+\_\+a}  {\bfseries Generic\+Buffer}   
-\item 
+\begin{DoxyCompactList}\small\item\em buffer di pipe-\/stage 1 per l'ingresso A, 24 bit~\newline
+ \end{DoxyCompactList}\item 
 \hyperlink{class_linear_regression_1_1_structural_aa4ecb297c24eee090576a63597934c3c}{pipestage1\+\_\+buff\+\_\+p1}  {\bfseries Generic\+Buffer}   
-\item 
+\begin{DoxyCompactList}\small\item\em buffer di pipe-\/stage 1 per il segnale P1, 24 bit~\newline
+ Viene effettuato anche il cambio di rappresentazione dell'uscita di M\+U\+L\+T1 da 48 bit, di cui 9 per la parte intera (m.\+n = 8.\+39) a 24 bit, di cui 8 per la parte intera (m.\+n = 7.\+16). Viene troncato 1 bit in testa e 23 in coda. \end{DoxyCompactList}\item 
 \hyperlink{class_linear_regression_1_1_structural_a9cb3bc10f620d667a657ecca4aa0b59a}{pipestage1\+\_\+buff\+\_\+p2}  {\bfseries Generic\+Buffer}   
-\item 
+\begin{DoxyCompactList}\small\item\em buffer di pipe-\/stage 1 per il segnale P2, 24 bit~\newline
+ Viene effettuato il cambio di rappresentazione dell'uscita di M\+U\+L\+T2 da 48 bit, di cui 3 per la parte intera (m.\+n = 2.\+45) a 24 bit, di cui 1 per la parte intera (m.\+n = 0.\+23). Quindi tronchiamo 2 bit in testa e 22 in coda. \end{DoxyCompactList}\item 
 \hyperlink{class_linear_regression_1_1_structural_a561aaea076fe5b5174fc967b43b9a50b}{pipestage1\+\_\+buff\+\_\+p3}  {\bfseries Generic\+Buffer}   
-\item 
-\hyperlink{class_linear_regression_1_1_structural_a00c4727e954b8596179b1413d78368e3}{pipestage1\+\_\+buff\+\_\+p4}  {\bfseries Generic\+Buffer}   
-\item 
-\hyperlink{class_linear_regression_1_1_structural_a3fd26266a39105aca90e2b7b13923619}{sub5}  {\bfseries subtractor}   
-\item 
-\hyperlink{class_linear_regression_1_1_structural_aa1ef9174550e2c151dd776bd1b40a330}{sub6}  {\bfseries subtractor}   
-\item 
-\hyperlink{class_linear_regression_1_1_structural_a2b5633f36737627deb24a9d93d9bf872}{pipestage2\+\_\+buff\+\_\+a}  {\bfseries Generic\+Buffer}   
-\item 
-\hyperlink{class_linear_regression_1_1_structural_a6923b4db7acadf52a9972d4eebfa370f}{pipestage2\+\_\+buff\+\_\+s5}  {\bfseries Generic\+Buffer}   
-\item 
-\hyperlink{class_linear_regression_1_1_structural_af53a49707b23b6676f25d84a39920009}{pipestage2\+\_\+buff\+\_\+s6}  {\bfseries Generic\+Buffer}   
-\item 
-\hyperlink{class_linear_regression_1_1_structural_ae1287e267811d8909891ccf15264a835}{multm}  {\bfseries multiplier}   
-\item 
-\hyperlink{class_linear_regression_1_1_structural_aea9e41f3216a842c46f31aa5a569fc8f}{multq}  {\bfseries multiplier}   
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em buffer di pipe-\/stage 1 per il segnale P3, 24 bit~\newline
+ Viene effettuato il cambio di rappresentazione dell'uscita di M\+U\+L\+T3 da 30 bit, di cui 9 per la parte intera (m.\+n = 8.\+21) a 24 bit, di cui 8 per la parte intera (m.\+n = 7.\+16). Quindi tronchiamo 1 bit in testa e 5 in coda. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Descrizione dettagliata}
@@ -121,7 +109,7 @@ La rappresentazione ottimale per i segnali intermedi è stata scelta in base a v
 \rowcolor{lightgray}{\bf Componente }&{\bf Ingressi }&{\bf Uscita }&{\bf Intervallo }&{\bf Rappresentazione~\newline
 Ottimale  }\\\cline{1-5}
 M\+U\+L\+T1 &B (Q\textsubscript{-\/1.\+24})~\newline
-Sum1 (Q\textsubscript{8.\+15}) &mult1\+\_\+out (Q\textsubscript{8.\+39}) &\mbox{[}-\/0.\+3; 56\mbox{]} &P1 (Q\textsubscript{7.\+16})  \\\cline{1-5}
+Sum1 (Q\textsubscript{8.\+15}) &mult1\+\_\+out (Q\textsubscript{8.\+39}) &\mbox{[}-\/0.\+3; 56\mbox{]} &P1 (Q\textsubscript{7.\+16})$\ast$  \\\cline{1-5}
 M\+U\+L\+T2 &Sum2 (Q\textsubscript{2.\+21})~\newline
 B (Q\textsubscript{-\/1.\+24}) &mult2\+\_\+out (Q\textsubscript{2.\+45}) &\mbox{[}-\/0.\+02; 0.\+9090\mbox{]} &P2 (Q\textsubscript{0.\+23})  \\\cline{1-5}
 M\+U\+L\+T3 &Sum2 (Q\textsubscript{2.\+21})~\newline
@@ -152,60 +140,80 @@ $\ast$\+N.B. La rappresentazione ottimale sarebbe Q\textsubscript{6.\+17}, ma il
 \hypertarget{class_linear_regression_1_1_structural_a65ae62ab3b1e6675bf4e4bcf572d2025}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!mult4@{mult4}}
 \index{mult4@{mult4}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
 \subsubsection[{mult4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mult4} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a65ae62ab3b1e6675bf4e4bcf572d2025}
-\hypertarget{class_linear_regression_1_1_structural_ae1287e267811d8909891ccf15264a835}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!multm@{multm}}
-\index{multm@{multm}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{multm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf multm} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_ae1287e267811d8909891ccf15264a835}
-\hypertarget{class_linear_regression_1_1_structural_aea9e41f3216a842c46f31aa5a569fc8f}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!multq@{multq}}
-\index{multq@{multq}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{multq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf multq} {\bfseries \textcolor{vhdlchar}{multiplier}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_aea9e41f3216a842c46f31aa5a569fc8f}
 \hypertarget{class_linear_regression_1_1_structural_a2cc966f9e487a342b140941f0e08b0e3}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage0\+\_\+buff\+\_\+a@{pipestage0\+\_\+buff\+\_\+a}}
 \index{pipestage0\+\_\+buff\+\_\+a@{pipestage0\+\_\+buff\+\_\+a}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
 \subsubsection[{pipestage0\+\_\+buff\+\_\+a}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage0\+\_\+buff\+\_\+a} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a2cc966f9e487a342b140941f0e08b0e3}
+
+
+buffer di pipe-\/stage 0 per l'ingresso A, 24 bit 
+
 \hypertarget{class_linear_regression_1_1_structural_a9907462fa9f74221862307948f010a3f}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage0\+\_\+buff\+\_\+b@{pipestage0\+\_\+buff\+\_\+b}}
 \index{pipestage0\+\_\+buff\+\_\+b@{pipestage0\+\_\+buff\+\_\+b}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
 \subsubsection[{pipestage0\+\_\+buff\+\_\+b}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage0\+\_\+buff\+\_\+b} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a9907462fa9f74221862307948f010a3f}
+
+
+buffer di pipe-\/stage 0 per l'ingresso B, 24 bit 
+
 \hypertarget{class_linear_regression_1_1_structural_a2a2f46e1cff149263f8bdbf752ab030c}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage0\+\_\+buff\+\_\+c@{pipestage0\+\_\+buff\+\_\+c}}
 \index{pipestage0\+\_\+buff\+\_\+c@{pipestage0\+\_\+buff\+\_\+c}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
 \subsubsection[{pipestage0\+\_\+buff\+\_\+c}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage0\+\_\+buff\+\_\+c} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a2a2f46e1cff149263f8bdbf752ab030c}
+
+
+buffer di pipe-\/stage 0 per l'ingresso C, 24 bit 
+
 \hypertarget{class_linear_regression_1_1_structural_a18083ee6230f5eaa964e698d28b33c8e}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage0\+\_\+buff\+\_\+prim@{pipestage0\+\_\+buff\+\_\+prim}}
 \index{pipestage0\+\_\+buff\+\_\+prim@{pipestage0\+\_\+buff\+\_\+prim}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
 \subsubsection[{pipestage0\+\_\+buff\+\_\+prim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage0\+\_\+buff\+\_\+prim} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a18083ee6230f5eaa964e698d28b33c8e}
+
+
+buffer di pipe-\/stage 0 per l'ingresso prim, 6 bit 
+
 \hypertarget{class_linear_regression_1_1_structural_a887437c4bb6b33e25dd4dda6a3a473d3}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage0\+\_\+buff\+\_\+sum1@{pipestage0\+\_\+buff\+\_\+sum1}}
 \index{pipestage0\+\_\+buff\+\_\+sum1@{pipestage0\+\_\+buff\+\_\+sum1}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
 \subsubsection[{pipestage0\+\_\+buff\+\_\+sum1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage0\+\_\+buff\+\_\+sum1} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a887437c4bb6b33e25dd4dda6a3a473d3}
+
+
+buffer di pipe-\/stage 0 per l'ingresso Sum1, 24 bit 
+
 \hypertarget{class_linear_regression_1_1_structural_a0713cfc68348d42071bc61be0790d6f5}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage0\+\_\+buff\+\_\+sum2@{pipestage0\+\_\+buff\+\_\+sum2}}
 \index{pipestage0\+\_\+buff\+\_\+sum2@{pipestage0\+\_\+buff\+\_\+sum2}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
 \subsubsection[{pipestage0\+\_\+buff\+\_\+sum2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage0\+\_\+buff\+\_\+sum2} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a0713cfc68348d42071bc61be0790d6f5}
+
+
+buffer di pipe-\/stage 0 per l'ingresso Sum2, 24 bit 
+
 \hypertarget{class_linear_regression_1_1_structural_a273de05d7892fd1febb31d1c6fab5120}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage1\+\_\+buff\+\_\+a@{pipestage1\+\_\+buff\+\_\+a}}
 \index{pipestage1\+\_\+buff\+\_\+a@{pipestage1\+\_\+buff\+\_\+a}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
 \subsubsection[{pipestage1\+\_\+buff\+\_\+a}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage1\+\_\+buff\+\_\+a} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a273de05d7892fd1febb31d1c6fab5120}
+
+
+buffer di pipe-\/stage 1 per l'ingresso A, 24 bit~\newline
+ 
+
 \hypertarget{class_linear_regression_1_1_structural_aa4ecb297c24eee090576a63597934c3c}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage1\+\_\+buff\+\_\+p1@{pipestage1\+\_\+buff\+\_\+p1}}
 \index{pipestage1\+\_\+buff\+\_\+p1@{pipestage1\+\_\+buff\+\_\+p1}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
 \subsubsection[{pipestage1\+\_\+buff\+\_\+p1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage1\+\_\+buff\+\_\+p1} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_aa4ecb297c24eee090576a63597934c3c}
+
+
+buffer di pipe-\/stage 1 per il segnale P1, 24 bit~\newline
+ Viene effettuato anche il cambio di rappresentazione dell'uscita di M\+U\+L\+T1 da 48 bit, di cui 9 per la parte intera (m.\+n = 8.\+39) a 24 bit, di cui 8 per la parte intera (m.\+n = 7.\+16). Viene troncato 1 bit in testa e 23 in coda. 
+
 \hypertarget{class_linear_regression_1_1_structural_a9cb3bc10f620d667a657ecca4aa0b59a}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage1\+\_\+buff\+\_\+p2@{pipestage1\+\_\+buff\+\_\+p2}}
 \index{pipestage1\+\_\+buff\+\_\+p2@{pipestage1\+\_\+buff\+\_\+p2}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
 \subsubsection[{pipestage1\+\_\+buff\+\_\+p2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage1\+\_\+buff\+\_\+p2} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a9cb3bc10f620d667a657ecca4aa0b59a}
+
+
+buffer di pipe-\/stage 1 per il segnale P2, 24 bit~\newline
+ Viene effettuato il cambio di rappresentazione dell'uscita di M\+U\+L\+T2 da 48 bit, di cui 3 per la parte intera (m.\+n = 2.\+45) a 24 bit, di cui 1 per la parte intera (m.\+n = 0.\+23). Quindi tronchiamo 2 bit in testa e 22 in coda. 
+
 \hypertarget{class_linear_regression_1_1_structural_a561aaea076fe5b5174fc967b43b9a50b}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage1\+\_\+buff\+\_\+p3@{pipestage1\+\_\+buff\+\_\+p3}}
 \index{pipestage1\+\_\+buff\+\_\+p3@{pipestage1\+\_\+buff\+\_\+p3}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
 \subsubsection[{pipestage1\+\_\+buff\+\_\+p3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage1\+\_\+buff\+\_\+p3} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a561aaea076fe5b5174fc967b43b9a50b}
-\hypertarget{class_linear_regression_1_1_structural_a00c4727e954b8596179b1413d78368e3}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage1\+\_\+buff\+\_\+p4@{pipestage1\+\_\+buff\+\_\+p4}}
-\index{pipestage1\+\_\+buff\+\_\+p4@{pipestage1\+\_\+buff\+\_\+p4}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{pipestage1\+\_\+buff\+\_\+p4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage1\+\_\+buff\+\_\+p4} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a00c4727e954b8596179b1413d78368e3}
-\hypertarget{class_linear_regression_1_1_structural_a2b5633f36737627deb24a9d93d9bf872}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage2\+\_\+buff\+\_\+a@{pipestage2\+\_\+buff\+\_\+a}}
-\index{pipestage2\+\_\+buff\+\_\+a@{pipestage2\+\_\+buff\+\_\+a}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{pipestage2\+\_\+buff\+\_\+a}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage2\+\_\+buff\+\_\+a} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a2b5633f36737627deb24a9d93d9bf872}
-\hypertarget{class_linear_regression_1_1_structural_a6923b4db7acadf52a9972d4eebfa370f}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage2\+\_\+buff\+\_\+s5@{pipestage2\+\_\+buff\+\_\+s5}}
-\index{pipestage2\+\_\+buff\+\_\+s5@{pipestage2\+\_\+buff\+\_\+s5}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{pipestage2\+\_\+buff\+\_\+s5}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage2\+\_\+buff\+\_\+s5} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a6923b4db7acadf52a9972d4eebfa370f}
-\hypertarget{class_linear_regression_1_1_structural_af53a49707b23b6676f25d84a39920009}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!pipestage2\+\_\+buff\+\_\+s6@{pipestage2\+\_\+buff\+\_\+s6}}
-\index{pipestage2\+\_\+buff\+\_\+s6@{pipestage2\+\_\+buff\+\_\+s6}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{pipestage2\+\_\+buff\+\_\+s6}]{\setlength{\rightskip}{0pt plus 5cm}{\bf pipestage2\+\_\+buff\+\_\+s6} {\bfseries \textcolor{vhdlchar}{Generic\+Buffer}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_af53a49707b23b6676f25d84a39920009}
-\hypertarget{class_linear_regression_1_1_structural_a3fd26266a39105aca90e2b7b13923619}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!sub5@{sub5}}
-\index{sub5@{sub5}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{sub5}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sub5} {\bfseries \textcolor{vhdlchar}{subtractor}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_a3fd26266a39105aca90e2b7b13923619}
-\hypertarget{class_linear_regression_1_1_structural_aa1ef9174550e2c151dd776bd1b40a330}{\index{Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}!sub6@{sub6}}
-\index{sub6@{sub6}!Linear\+Regression\+::\+Structural@{Linear\+Regression\+::\+Structural}}
-\subsubsection[{sub6}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sub6} {\bfseries \textcolor{vhdlchar}{subtractor}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}}\label{class_linear_regression_1_1_structural_aa1ef9174550e2c151dd776bd1b40a330}
+
+
+buffer di pipe-\/stage 1 per il segnale P3, 24 bit~\newline
+ Viene effettuato il cambio di rappresentazione dell'uscita di M\+U\+L\+T3 da 30 bit, di cui 9 per la parte intera (m.\+n = 8.\+21) a 24 bit, di cui 8 per la parte intera (m.\+n = 7.\+16). Quindi tronchiamo 1 bit in testa e 5 in coda. 
+
 
 
 La documentazione per questa classe è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
