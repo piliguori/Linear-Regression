@@ -415,7 +415,7 @@ begin
 		Port map (		clock 		=> clk,
 						reset_n 	=> reset_n,
 						load 		=> '1',
-						data_in 	=> mult4_out(45 downto 22),-
+						data_in 	=> mult4_out(45 downto 22),
 						data_out	=> P4_buff1);				
 																
 
